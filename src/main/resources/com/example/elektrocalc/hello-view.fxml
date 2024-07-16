@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="698.0" prefWidth="1012.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.elektrocalc.Controller">
    <children>
-      <Button id="Calc" layoutX="109.0" layoutY="219.0" mnemonicParsing="false" onAction="#handleCalcButtonAction" text="Button" />
+      <Button id="Calc" layoutX="109.0" layoutY="239.0" mnemonicParsing="false" onAction="#handleCalcButtonAction" text="Button" />
       <GridPane layoutX="36.0" layoutY="113.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="28.0" />
