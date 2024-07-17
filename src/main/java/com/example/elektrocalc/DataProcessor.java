@@ -13,6 +13,7 @@ public  class DataProcessor {
         }
         return parsed;
     }
+
     public static String DoubleToString(double Data) {
         String parsed = "";
         try {

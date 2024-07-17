@@ -84,8 +84,9 @@ public class Controller {
             System.out.println(V_doub + U_doub + I_doub);
             System.out.println("Screw You");
             Result.setText(DataProcessor.DoubleToString(I_doub));
+            OneTextField.setEditable(false);
              */
-        OneTextField.setEditable(false);
+
     }
 
 }
