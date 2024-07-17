@@ -73,9 +73,9 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </LineChart>
-      <ImageView fitHeight="145.0" fitWidth="178.0" layoutX="698.0">
+      <ImageView fitHeight="151.0" fitWidth="152.0" layoutX="674.0">
          <image>
-            <Image url="@../../../pictures/cutecat.png" />
+            <Image url="@../../../pictures/mathcat-removebg-preview.png" />
          </image>
       </ImageView>
    </children>
