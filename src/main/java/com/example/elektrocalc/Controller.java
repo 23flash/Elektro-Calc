@@ -91,6 +91,7 @@ public class Controller {
         Result.setText(DataProcessor.DoubleToString(I_doub));
         ResultHistory.appendText(DataProcessor.DoubleToString(I_doub)+"\n");
 
+
     }
 
 }
