@@ -13,6 +13,8 @@ module com.example.elektrocalc {
     requires atlantafx.base;
     requires matheclipse.core;
     requires matheclipse.parser;
+    requires org.json;
+    requires com.fasterxml.jackson.databind;
 
     opens com.example.elektrocalc to javafx.fxml;
     exports com.example.elektrocalc;

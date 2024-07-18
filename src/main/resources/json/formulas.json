@@ -1,0 +1,14 @@
+{
+    "OhmsLAW": {
+      "formula": "V == I*R"
+    },
+    "Newton's Second Law of Motion": {
+      "formula": "F == m*a"
+    },
+    "Ideal Gas Law": {
+      "formula": "PV == n*RT"
+    },
+    "Pythagorean Theorem": {
+      "formula": "a^2 + b^2 == c^2"
+    }
+}

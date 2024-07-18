@@ -1,5 +1,6 @@
 package com.example.elektrocalc;
 
+
 import javafx.fxml.FXML;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
@@ -10,7 +11,6 @@ import javafx.scene.text.Text;
 import java.util.HashMap;
 import java.util.Map;
 
-import static java.lang.System.*;
 
 
 public class Controller {
@@ -91,21 +91,24 @@ public class Controller {
             System.out.println("Screw You");
             Result.setText(DataProcessor.DoubleToString(I_doub));
             OneTextField.setEditable(false);
-             */
-        double I_doub = DataProcessor.TextFieldToDouble(OneTextField);
-        Result.setText(DataProcessor.DoubleToString(I_doub));
-        ResultHistory.appendText(DataProcessor.DoubleToString(I_doub)+"\n");
 
 
-        Map<String, Double> variableAssignments = new HashMap<>();
-        variableAssignments.put("W", 3d);
-        variableAssignments.put("X", 2.5d);
-        variableAssignments.put("Y", 3.5d);
-        variableAssignments.put("Z", 7.5d);
-        out.println(EquationSolver.permute("X==W-Z*Y","X"));
-        out.println(EquationSolver.solve(EquationSolver.permute("X==W-Z*Y","X"),variableAssignments));
-        out.println(EquationSolver.permuteAndSolve("X==W-Z*Y","X",variableAssignments));
-        out.println(EquationSolver.solve("X==W-Z*Y", variableAssignments));
+            double I_doub = DataProcessor.TextFieldToDouble(OneTextField);
+               Result.setText(DataProcessor.DoubleToString(I_doub));
+            ResultHistory.appendText(DataProcessor.DoubleToString(I_doub)+"\n");
+
+
+            Map<String, Double> variableAssignments = new HashMap<>();
+            variableAssignments.put("W", 3d);
+            variableAssignments.put("X", 2.5d);
+            variableAssignments.put("Y", 3.5d);
+            variableAssignments.put("Z", 7.5d);
+            out.println(EquationSolver.permute("X==W-Z*Y","X"));
+            out.println(EquationSolver.solve(EquationSolver.permute("X==W-Z*Y","X"),variableAssignments));
+            out.println(EquationSolver.permuteAndSolve("X==W-Z*Y","X",variableAssignments));
+            out.println(EquationSolver.solve("X==W-Z*Y", variableAssignments));
+            */
+        System.out.println(Json.getFormula("OhmsLAW"));
     }
 
 }
