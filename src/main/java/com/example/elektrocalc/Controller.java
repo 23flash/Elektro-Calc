@@ -3,6 +3,7 @@ package com.example.elektrocalc;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
@@ -74,14 +75,22 @@ public class Controller {
 
 
 
-
     @FXML
     public void initialize() {
+        //turns radiobutton into one group
         CalcSelect = new ToggleGroup();
+        //Makes the history field non-editable
         ResultHistory.setEditable(false);
+        //automatically fills the combo box with values
         for (String key : Json.equations.keySet()) {
             EquationSelect.getItems().add(key);
         }
+
+
+    }
+    @FXML
+    void handleComboSelect(ActionEvent event) {
+
     }
 
     //Classes
@@ -128,11 +137,6 @@ public class Controller {
 
 
             */
-
-
-
-
-
 
     }
 
