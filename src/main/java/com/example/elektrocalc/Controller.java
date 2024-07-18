@@ -7,6 +7,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.text.Text;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static java.lang.System.*;
 
 
@@ -92,8 +95,17 @@ public class Controller {
         double I_doub = DataProcessor.TextFieldToDouble(OneTextField);
         Result.setText(DataProcessor.DoubleToString(I_doub));
         ResultHistory.appendText(DataProcessor.DoubleToString(I_doub)+"\n");
-        out.println(EquationSolver.permute("vt==22-zt+t^2","zt"));
 
+
+        Map<String, Double> variableAssignments = new HashMap<>();
+        variableAssignments.put("W", 3d);
+        variableAssignments.put("X", 2.5d);
+        variableAssignments.put("Y", 3.5d);
+        variableAssignments.put("Z", 7.5d);
+        out.println(EquationSolver.permute("X==W-Z*Y","X"));
+        out.println(EquationSolver.solve(EquationSolver.permute("X==W-Z*Y","X"),variableAssignments));
+        out.println(EquationSolver.permuteAndSolve("X==W-Z*Y","X",variableAssignments));
+        out.println(EquationSolver.solve("X==W-Z*Y", variableAssignments));
     }
 
 }

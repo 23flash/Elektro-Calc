@@ -1,17 +1,51 @@
 package com.example.elektrocalc;
+import org.matheclipse.core.eval.EvalUtilities;
 import org.matheclipse.core.eval.ExprEvaluator;
 import org.matheclipse.core.interfaces.IExpr;
+import org.matheclipse.core.parser.ExprParser;
+import org.matheclipse.parser.client.Parser;
+
+
+import java.util.Map;
 
 public class EquationSolver {
+
     public static String permute(String equation, String variableToSolveFor) {
         ExprEvaluator util = new ExprEvaluator();
-        IExpr solvedEquation = solveEquation(util, equation, variableToSolveFor);
+        IExpr solvedEquation = permuteEquation(util, equation, variableToSolveFor);
         return formatString(solvedEquation);
     }
 
 
 
-    private static IExpr solveEquation(ExprEvaluator util, String equation, String variable) {
+    public static Double solve(String equation, Map<String,Double> variableAssignments) {
+        // Create an expression parser
+        EvalUtilities util = new EvalUtilities(false, true);
+
+        // Substitute values into the equation
+        for (Map.Entry<String, Double> entry : variableAssignments.entrySet()) {
+            equation = equation.replace(entry.getKey(), entry.getValue().toString());
+        }
+
+        equation = equation.replace("==", "=");
+
+        // Parse and evaluate the equation
+        try {
+            IExpr result = util.evaluate(equation);
+            return result.toDoubleDefault();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0D;
+        }
+    }
+
+    public static Double permuteAndSolve(String equation, String variableToSolveFor,Map<String,Double> variableAssignments) {
+       return solve(permute(equation, variableToSolveFor), variableAssignments);
+    }
+
+
+    private static IExpr permuteEquation(ExprEvaluator util, String equation, String variable) {
         // Symja-Ausdruck für die Gleichung
         IExpr equationExpr = util.evaluate(equation);
 
