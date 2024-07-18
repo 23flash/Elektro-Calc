@@ -6,6 +6,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,10 +15,10 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="736.0" prefWidth="826.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.elektrocalc.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="761.0" prefWidth="926.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.elektrocalc.Controller">
    <children>
-      <Button id="Calc" layoutX="43.0" layoutY="250.0" mnemonicParsing="false" onAction="#handleCalcButtonAction" prefHeight="64.0" prefWidth="116.0" text="Calculate" />
-      <GridPane layoutX="59.0" layoutY="34.0" prefHeight="192.0" prefWidth="200.0">
+      <Button id="Calc" layoutX="50.0" layoutY="322.0" mnemonicParsing="false" onAction="#handleCalcButtonAction" prefHeight="46.0" prefWidth="162.0" text="Calculate" />
+      <GridPane alignment="CENTER" cacheShape="false" layoutX="38.0" layoutY="104.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="189.0" prefWidth="200.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="28.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="85.0" />
@@ -60,10 +61,10 @@
             <RadioButton fx:id="SevenRadio" mnemonicParsing="false" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="2" GridPane.rowIndex="6" />
          </children>
       </GridPane>
-      <Text fx:id="Result" layoutX="190.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result" wrappingWidth="68.99999999999994" />
-      <Separator layoutX="23.0" layoutY="27.0" orientation="VERTICAL" prefHeight="315.0" prefWidth="8.0" />
-      <Separator layoutX="31.0" layoutY="341.0" prefWidth="200.0" />
-      <LineChart layoutX="31.0" layoutY="384.0" prefHeight="324.0" prefWidth="756.0">
+      <Text fx:id="Result" layoutX="371.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="91.13330078125" />
+      <Separator layoutX="23.0" layoutY="69.0" orientation="VERTICAL" prefHeight="315.0" prefWidth="8.0" />
+      <Separator layoutX="31.0" layoutY="382.0" prefWidth="200.0" />
+      <LineChart layoutX="27.0" layoutY="423.0" prefHeight="324.0" prefWidth="756.0">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
@@ -71,5 +72,9 @@
           <NumberAxis side="LEFT" />
         </yAxis>
       </LineChart>
+      <TextArea fx:id="ResultHistory" layoutX="244.0" layoutY="103.0" prefHeight="190.0" prefWidth="227.0" />
+      <Text layoutX="252.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result History" />
+      <Text fx:id="Result1" layoutX="252.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Result:" wrappingWidth="105.60000000000008" />
+      <Text layoutX="31.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Variables" />
    </children>
 </AnchorPane>

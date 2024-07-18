@@ -2,6 +2,7 @@ package com.example.elektrocalc;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.text.Text;
@@ -10,7 +11,8 @@ import javafx.scene.text.Text;
 public class Controller {
     @FXML
     private Text Result;
-
+    @FXML
+    public TextArea ResultHistory;
     // Textfields
     @FXML
     private TextField OneTextField;
@@ -61,17 +63,16 @@ public class Controller {
     @FXML
     private RadioButton SevenRadioButton;
 
+
+
+
     @FXML
     public void initialize() {
         CalcSelect = new ToggleGroup();
+        ResultHistory.setEditable(false);
     }
 
-
-
     //Classes
-
-
-
     @FXML
     private void handleCalcButtonAction() {
             /*
@@ -86,6 +87,9 @@ public class Controller {
             Result.setText(DataProcessor.DoubleToString(I_doub));
             OneTextField.setEditable(false);
              */
+        double I_doub = DataProcessor.TextFieldToDouble(OneTextField);
+        Result.setText(DataProcessor.DoubleToString(I_doub));
+        ResultHistory.appendText(DataProcessor.DoubleToString(I_doub)+"\n");
 
     }
 
