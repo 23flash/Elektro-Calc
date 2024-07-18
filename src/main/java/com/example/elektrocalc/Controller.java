@@ -23,6 +23,8 @@ public class Controller {
     @FXML
     private ComboBox<String> EquationSelect;
 
+    @FXML Text currentEquation;
+
     // Textfields
     @FXML
     private TextField OneTextField;
@@ -85,12 +87,12 @@ public class Controller {
         for (String key : Json.equations.keySet()) {
             EquationSelect.getItems().add(key);
         }
-
-
     }
     @FXML
     void handleComboSelect(ActionEvent event) {
-
+        System.out.println(EquationSelect.getSelectionModel().getSelectedItem());
+        System.out.println(Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem()));
+        currentEquation.setText(Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem()));
     }
 
     //Classes

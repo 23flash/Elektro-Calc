@@ -77,6 +77,7 @@
       <Text layoutX="252.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result History" />
       <Text fx:id="Result1" layoutX="252.0" layoutY="327.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Result:" wrappingWidth="105.60000000000008" />
       <Text layoutX="31.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Variables" />
-      <ComboBox fx:id="EquationSelect" layoutX="482.0" layoutY="104.0" onAction="#handleComboSelect" prefWidth="150.0" />
+      <ComboBox fx:id="EquationSelect" layoutX="508.0" layoutY="104.0" onAction="#handleComboSelect" prefWidth="150.0" />
+      <Text fx:id="currentEquation" layoutX="512.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="227.0" />
    </children>
 </AnchorPane>
