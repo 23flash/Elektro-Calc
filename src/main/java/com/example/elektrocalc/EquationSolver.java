@@ -2,10 +2,6 @@ package com.example.elektrocalc;
 import org.matheclipse.core.eval.EvalUtilities;
 import org.matheclipse.core.eval.ExprEvaluator;
 import org.matheclipse.core.interfaces.IExpr;
-import org.matheclipse.core.parser.ExprParser;
-import org.matheclipse.parser.client.Parser;
-
-
 import java.util.Map;
 
 public class EquationSolver {
