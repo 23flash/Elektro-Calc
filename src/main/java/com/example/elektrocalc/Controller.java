@@ -7,6 +7,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.text.Text;
 
+import static java.lang.System.*;
+
 
 public class Controller {
     @FXML
@@ -90,7 +92,7 @@ public class Controller {
         double I_doub = DataProcessor.TextFieldToDouble(OneTextField);
         Result.setText(DataProcessor.DoubleToString(I_doub));
         ResultHistory.appendText(DataProcessor.DoubleToString(I_doub)+"\n");
-
+        out.println(EquationSolver.permute("vt==22-zt+t^2","zt"));
 
     }
 

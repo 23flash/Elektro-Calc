@@ -11,6 +11,7 @@ module com.example.elektrocalc {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires atlantafx.base;
+    requires matheclipse.core;
 
     opens com.example.elektrocalc to javafx.fxml;
     exports com.example.elektrocalc;
