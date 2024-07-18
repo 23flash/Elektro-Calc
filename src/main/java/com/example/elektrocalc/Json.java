@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Json {
-    public static JSONObject formulas= readJson();
+    public static JSONObject equations = readJson();
 
     private static JSONObject readJson(){
         JSONObject json = new JSONObject();
@@ -22,9 +22,20 @@ public class Json {
         return json;
     }
 
-    public static String getFormula(String formulaName){
-        JSONObject to_search = formulas.getJSONObject(formulaName);
-        String to_search_string = to_search.getString("formula");
+    public static String getEquation(String equationName){
+        JSONObject to_search = equations.getJSONObject(equationName);
+        String to_search_string = to_search.getString("equation");
+        return to_search_string;
+    }
+
+    public static String extractKey(String equationName){
+        String to_search_string = "";
+        for (String key : equations.keySet()) {
+            if (key.contains("Ohms")) {
+                to_search_string = key;
+                break;
+            }
+        }
         return to_search_string;
     }
 

@@ -1,14 +1,17 @@
 {
     "OhmsLAW": {
-      "formula": "V == I*R"
+      "equation": "v == i*r"
     },
     "Newton's Second Law of Motion": {
-      "formula": "F == m*a"
+      "equation": "F == m*a"
     },
     "Ideal Gas Law": {
-      "formula": "PV == n*RT"
+      "equation": "PV == n*RT"
     },
     "Pythagorean Theorem": {
-      "formula": "a^2 + b^2 == c^2"
+      "equation": "a^2 + b^2 == c^2"
+    },
+    "Random Theorem": {
+      "equation": "a^2 + b^2 == c^2 -1 +c"
     }
 }

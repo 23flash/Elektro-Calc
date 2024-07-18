@@ -1,23 +1,27 @@
 package com.example.elektrocalc;
 
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
 
 
 public class Controller {
+    //other
     @FXML
     private Text Result;
     @FXML
     public TextArea ResultHistory;
+    @FXML
+    private ComboBox<String> EquationSelect;
+
     // Textfields
     @FXML
     private TextField OneTextField;
@@ -75,6 +79,9 @@ public class Controller {
     public void initialize() {
         CalcSelect = new ToggleGroup();
         ResultHistory.setEditable(false);
+        for (String key : Json.equations.keySet()) {
+            EquationSelect.getItems().add(key);
+        }
     }
 
     //Classes
@@ -94,7 +101,7 @@ public class Controller {
 
 
             double I_doub = DataProcessor.TextFieldToDouble(OneTextField);
-               Result.setText(DataProcessor.DoubleToString(I_doub));
+            Result.setText(DataProcessor.DoubleToString(I_doub));
             ResultHistory.appendText(DataProcessor.DoubleToString(I_doub)+"\n");
 
 
@@ -107,8 +114,26 @@ public class Controller {
             out.println(EquationSolver.solve(EquationSolver.permute("X==W-Z*Y","X"),variableAssignments));
             out.println(EquationSolver.permuteAndSolve("X==W-Z*Y","X",variableAssignments));
             out.println(EquationSolver.solve("X==W-Z*Y", variableAssignments));
+
+
+         String Form= Json.getEquation("OhmsLAW");
+        Map<String, Double> variableAssignments = new HashMap<>();
+        variableAssignments.put("v", 3d);
+        variableAssignments.put("i", 2.5d);
+        variableAssignments.put("r", 3.5d);
+        System.out.println(EquationSolver.permuteAndSolve(Form,"r",variableAssignments));
+        ResultHistory.appendText(DataProcessor.DoubleToString(EquationSolver.permuteAndSolve(Form,"r",variableAssignments)) +"\n");
+
+
+
+
             */
-        System.out.println(Json.getFormula("OhmsLAW"));
+
+
+
+
+
+
     }
 
 }
