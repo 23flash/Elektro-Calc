@@ -5,10 +5,7 @@ import javafx.scene.control.*;
 import javafx.scene.text.Text;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
+import java.util.*;
 
 
 public class Controller {
@@ -40,6 +37,7 @@ public class Controller {
     @FXML
     private TextField SevenTextField;
 
+    private TextField[] TextFieldArray;
     //Text
     @FXML
     private Text OneText;
@@ -56,6 +54,7 @@ public class Controller {
     @FXML
     private Text SevenText;
 
+    private Text[] TextArray;
     //Radio Buttons
     @FXML
     private ToggleGroup CalcSelect;
@@ -74,6 +73,7 @@ public class Controller {
     @FXML
     private RadioButton SevenRadio;
 
+    private RadioButton[] RadioArray;
 
 
     @FXML
@@ -88,20 +88,58 @@ public class Controller {
         for (String key : Json.equations.keySet()) {
             EquationSelect.getItems().add(key);
         }
+        //Array to make them visible and in visible
+        TextArray = new Text[]{OneText,TwoText,ThreeText,FourText,FiveText,SixText,SevenText};
+        TextFieldArray = new TextField[]{OneTextField,TwoTextField,ThreeTextField,FourTextField,FiveTextField,SixTextField,SevenTextField};
+        RadioArray = new RadioButton[]{OneRadio,TwoRadio,ThreeRadio,FourRadio,FiveRadio,SixRadio,SevenRadio};
+        //hide Inputs
         hideAllInputs();
     }
     //Seek out the the wished Formula
     @FXML
     private void handleComboSelect(ActionEvent event) {
+        hideAllInputs();
+        String toSetSymbol = "";
         //gets the equation out of the json object
         globalEquation = Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem());
-        //set the global Equation so it can be used when calc is triggert
-        currentEquation.setText(globalEquation);
-        //Breaks up the String and activates Gui Elements
-        for (char ch : globalEquation.toCharArray()) {
-            System.out.println(ch);
+        //Makes Local Equation for GUI
+        String localEquation = globalEquation;
+        //hashmap to find duplicats
+        Set<String> printedStrings = new HashSet<>();
+        //Deletes Constants and doubble ==
+        localEquation = localEquation.replace("==","=");
+        currentEquation.setText(localEquation);
+        if (localEquation.contains("Sqrt")){
+            localEquation = localEquation.replace("Sqrt", "");
         }
 
+        //Breaks up the String and activates Gui Elements
+        int whichTextField = 0;
+        for (Character ch : localEquation.toCharArray()) {
+            if(Character.isLetter(ch)){
+                toSetSymbol += ch;
+            }else if(ch == '+' || ch == '-'|| ch == '*'|| ch == '/' || ch == '=' ){
+                if (!printedStrings.contains(toSetSymbol) && !toSetSymbol.isEmpty()) {
+                    System.out.println(toSetSymbol);
+                    TextArray[whichTextField].setVisible(true);
+                    TextArray[whichTextField].setText(toSetSymbol);
+                    TextFieldArray[whichTextField].setVisible(true);
+                    RadioArray[whichTextField].setVisible(true);
+                    RadioArray[whichTextField].setDisable(false);
+                    whichTextField ++;
+                    printedStrings.add(toSetSymbol);
+                }
+                toSetSymbol = "";
+            }
+        }
+        if (!printedStrings.contains(toSetSymbol) && !toSetSymbol.isEmpty()) {
+            System.out.println(toSetSymbol);
+            TextArray[whichTextField].setText(toSetSymbol);
+            TextArray[whichTextField].setVisible(true);
+            TextFieldArray[whichTextField].setVisible(true);
+            RadioArray[whichTextField].setVisible(true);
+            RadioArray[whichTextField].setDisable(false);
+        }
     }
 
     //
@@ -113,29 +151,19 @@ public class Controller {
     private void hideAllInputs(){
         //hide the all unused GUI Elements
         //Text
-        OneText.setVisible(false);
-        TwoText.setVisible(false);
-        ThreeText.setVisible(false);
-        FourText.setVisible(false);
-        FiveText.setVisible(false);
-        SixText.setVisible(false);
-        SevenText.setVisible(false);
+        for (int i = 0; i < TextArray.length; i++) {
+            TextArray[i].setVisible(false);
+        }
         //TextField
-        OneTextField.setVisible(false);
-        TwoTextField.setVisible(false);
-        ThreeTextField.setVisible(false);
-        FourTextField.setVisible(false);
-        FiveTextField.setVisible(false);
-        SixTextField.setVisible(false);
-        SevenTextField.setVisible(false);
-        //Radio Buttons //why must java switch to true here im happy for the following bugs
-        OneRadio.setDisable(true);
-        TwoRadio.setDisable(true);
-        ThreeRadio.setDisable(true);
-        FourRadio.setDisable(true);
-        FiveRadio.setDisable(true);
-        SixRadio.setDisable(true);
-        SevenRadio.setDisable(true);
-
+        for (int i = 0; i < TextFieldArray.length; i++) {
+            TextFieldArray[i].setVisible(false);
+        }
+        //Radio Buttons
+        for (int i = 0; i < RadioArray.length; i++) {
+            RadioArray[i].setVisible(false);
+        }
+        for (int i = 0; i < RadioArray.length; i++) {
+            RadioArray[i].setDisable(true);
+        }
     }
 }
