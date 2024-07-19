@@ -109,6 +109,7 @@ public class Controller {
         //Deletes Constants and doubble ==
         localEquation = localEquation.replace("==","=");
         currentEquation.setText(localEquation);
+        // modify the string to filter out constants and Special Keys Like SQRT etc
         if (localEquation.contains("Sqrt")){
             localEquation = localEquation.replace("Sqrt", "");
         }
@@ -120,12 +121,7 @@ public class Controller {
                 toSetSymbol += ch;
             }else if(ch == '+' || ch == '-'|| ch == '*'|| ch == '/' || ch == '=' ){
                 if (!printedStrings.contains(toSetSymbol) && !toSetSymbol.isEmpty()) {
-                    System.out.println(toSetSymbol);
-                    TextArray[whichTextField].setVisible(true);
-                    TextArray[whichTextField].setText(toSetSymbol);
-                    TextFieldArray[whichTextField].setVisible(true);
-                    RadioArray[whichTextField].setVisible(true);
-                    RadioArray[whichTextField].setDisable(false);
+                    enableRightFields(whichTextField, toSetSymbol);
                     whichTextField ++;
                     printedStrings.add(toSetSymbol);
                 }
@@ -133,13 +129,15 @@ public class Controller {
             }
         }
         if (!printedStrings.contains(toSetSymbol) && !toSetSymbol.isEmpty()) {
-            System.out.println(toSetSymbol);
-            TextArray[whichTextField].setText(toSetSymbol);
-            TextArray[whichTextField].setVisible(true);
-            TextFieldArray[whichTextField].setVisible(true);
-            RadioArray[whichTextField].setVisible(true);
-            RadioArray[whichTextField].setDisable(false);
+            enableRightFields(whichTextField, toSetSymbol);
         }
+    }
+    private void enableRightFields(int whichTextField, String toSetSymbol ) {
+        TextArray[whichTextField].setText(toSetSymbol);
+        TextArray[whichTextField].setVisible(true);
+        TextFieldArray[whichTextField].setVisible(true);
+        RadioArray[whichTextField].setVisible(true);
+        RadioArray[whichTextField].setDisable(false);
     }
 
     //
