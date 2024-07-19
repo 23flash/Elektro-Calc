@@ -49,7 +49,7 @@
             <TextField fx:id="FiveTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="SixTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <TextField fx:id="SevenTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <RadioButton fx:id="OneRadio" mnemonicParsing="false" prefHeight="19.0" prefWidth="112.0" textAlignment="RIGHT" GridPane.columnIndex="2">
+            <RadioButton fx:id="OneRadio" mnemonicParsing="false" prefHeight="19.0" prefWidth="112.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="2">
                <toggleGroup>
                   <ToggleGroup fx:id="CalcSelect" />
                </toggleGroup>

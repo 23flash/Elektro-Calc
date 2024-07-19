@@ -1,12 +1,9 @@
 package com.example.elektrocalc;
-
-
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
+
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,8 +20,10 @@ public class Controller {
     @FXML
     private ComboBox<String> EquationSelect;
 
-    @FXML Text currentEquation;
+    @FXML
+    private Text currentEquation;
 
+    private String globalEquation;
     // Textfields
     @FXML
     private TextField OneTextField;
@@ -61,19 +60,19 @@ public class Controller {
     @FXML
     private ToggleGroup CalcSelect;
     @FXML
-    private RadioButton OneRadioButton;
+    private RadioButton OneRadio;
     @FXML
-    private RadioButton TwoRadioButton;
+    private RadioButton TwoRadio;
     @FXML
-    private RadioButton ThreeRadioButton;
+    private RadioButton ThreeRadio;
     @FXML
-    private RadioButton FourRadioButton;
+    private RadioButton FourRadio;
     @FXML
-    private RadioButton FiveRadioButton;
+    private RadioButton FiveRadio;
     @FXML
-    private RadioButton SixRadioButton;
+    private RadioButton SixRadio;
     @FXML
-    private RadioButton SevenRadioButton;
+    private RadioButton SevenRadio;
 
 
 
@@ -83,63 +82,60 @@ public class Controller {
         CalcSelect = new ToggleGroup();
         //Makes the history field non-editable
         ResultHistory.setEditable(false);
+        //delete the pesky error when no Equation is selected
+        globalEquation= "";
         //automatically fills the combo box with values
         for (String key : Json.equations.keySet()) {
             EquationSelect.getItems().add(key);
         }
+        hideAllInputs();
     }
+    //Seek out the the wished Formula
     @FXML
-    void handleComboSelect(ActionEvent event) {
-        System.out.println(EquationSelect.getSelectionModel().getSelectedItem());
-        System.out.println(Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem()));
-        currentEquation.setText(Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem()));
+    private void handleComboSelect(ActionEvent event) {
+        //gets the equation out of the json object
+        globalEquation = Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem());
+        //set the global Equation so it can be used when calc is triggert
+        currentEquation.setText(globalEquation);
+        //Breaks up the String and activates Gui Elements
+        for (char ch : globalEquation.toCharArray()) {
+            System.out.println(ch);
+        }
+
     }
 
-    //Classes
+    //
     @FXML
     private void handleCalcButtonAction() {
-            /*
-            double I_doub = DataProcessor.TextFieldToDouble(I);
-            double U_doub = DataProcessor.TextFieldToDouble(U);
-            double V_doub = DataProcessor.TextFieldToDouble(V);
-            System.out.println(I_doub);
-            System.out.println(U_doub);
-            System.out.println(V_doub);
-            System.out.println(V_doub + U_doub + I_doub);
-            System.out.println("Screw You");
-            Result.setText(DataProcessor.DoubleToString(I_doub));
-            OneTextField.setEditable(false);
-
-
-            double I_doub = DataProcessor.TextFieldToDouble(OneTextField);
-            Result.setText(DataProcessor.DoubleToString(I_doub));
-            ResultHistory.appendText(DataProcessor.DoubleToString(I_doub)+"\n");
-
-
-            Map<String, Double> variableAssignments = new HashMap<>();
-            variableAssignments.put("W", 3d);
-            variableAssignments.put("X", 2.5d);
-            variableAssignments.put("Y", 3.5d);
-            variableAssignments.put("Z", 7.5d);
-            out.println(EquationSolver.permute("X==W-Z*Y","X"));
-            out.println(EquationSolver.solve(EquationSolver.permute("X==W-Z*Y","X"),variableAssignments));
-            out.println(EquationSolver.permuteAndSolve("X==W-Z*Y","X",variableAssignments));
-            out.println(EquationSolver.solve("X==W-Z*Y", variableAssignments));
-
-
-         String Form= Json.getEquation("OhmsLAW");
-        Map<String, Double> variableAssignments = new HashMap<>();
-        variableAssignments.put("v", 3d);
-        variableAssignments.put("i", 2.5d);
-        variableAssignments.put("r", 3.5d);
-        System.out.println(EquationSolver.permuteAndSolve(Form,"r",variableAssignments));
-        ResultHistory.appendText(DataProcessor.DoubleToString(EquationSolver.permuteAndSolve(Form,"r",variableAssignments)) +"\n");
-
-
-
-
-            */
-
+        System.out.println(CalcSelect.getSelectedToggle());
     }
 
+    private void hideAllInputs(){
+        //hide the all unused GUI Elements
+        //Text
+        OneText.setVisible(false);
+        TwoText.setVisible(false);
+        ThreeText.setVisible(false);
+        FourText.setVisible(false);
+        FiveText.setVisible(false);
+        SixText.setVisible(false);
+        SevenText.setVisible(false);
+        //TextField
+        OneTextField.setVisible(false);
+        TwoTextField.setVisible(false);
+        ThreeTextField.setVisible(false);
+        FourTextField.setVisible(false);
+        FiveTextField.setVisible(false);
+        SixTextField.setVisible(false);
+        SevenTextField.setVisible(false);
+        //Radio Buttons //why must java switch to true here im happy for the following bugs
+        OneRadio.setDisable(true);
+        TwoRadio.setDisable(true);
+        ThreeRadio.setDisable(true);
+        FourRadio.setDisable(true);
+        FiveRadio.setDisable(true);
+        SixRadio.setDisable(true);
+        SevenRadio.setDisable(true);
+
+    }
 }
