@@ -54,6 +54,7 @@ public class EquationSolver {
     }
 
     private static String formatString(IExpr expr){
+        /*
         String input = String.valueOf(expr);
         String trimmedInput = input.substring(2, input.length() - 2);
 
@@ -63,6 +64,22 @@ public class EquationSolver {
 
         String output = leftPart + " == " + rightPart;
 
+         */
+
+        // This Approch Delets Possible Outcomes When when using Sqrst adn ^2 as it deletes possible anwers
+        String input = expr.toString();
+        input = input.replace("->", "==");
+        input = input.replace("{", "");
+        input = input.replace("}", "");
+        String output = "";
+        for (Character ch : input.toCharArray()) {
+
+            if (ch == ',') {
+                break;
+            }else {
+                output += ch;
+            }
+        }
         return output;
     }
 

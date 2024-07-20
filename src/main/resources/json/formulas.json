@@ -12,12 +12,12 @@
       "equation": "a^2 + b^2 == c^2"
     },
     "Peter Theorem": {
-      "equation": "a-2 == b+c+d"
+      "equation": "a == b+c+d"
     },
     "Random Theorem": {
-      "equation": "a^2 + b^2 == c^2 -1 +c"
+      "equation": "a + b^2 == c^2 -1 +c"
     },
     "Pe Theorem": {
-      "equation": "a^2 + b^2 == c^2 -1 +c - Sqrt(X) +y / V"
+      "equation": "a== c^2 -1 +c - Sqrt(X) +y / V"
     }
 }

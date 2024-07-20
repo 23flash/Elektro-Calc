@@ -19,8 +19,8 @@ public class Controller {
     @FXML
     private Text currentEquation;
     private Map<RadioButton, UIElementMap<TextField, Text, RadioButton>> uiElementMap;
-
     private String globalEquation;
+    private String toCalcEquation;
     // Textfields
     @FXML
     private TextField OneTextField;
@@ -172,8 +172,8 @@ public class Controller {
             UIElementMap<TextField, Text, RadioButton> elements = uiElementMap.get(selectedRadioButton);
                 Text associatedText = elements.getSecond();
                 System.out.println("Text of associated Text: " + associatedText.getText());
-                //globalEquation = EquationSolver.permute(globalEquation,associatedText.getText());
-                // currentEquation.setText(globalEquation);
+                toCalcEquation = EquationSolver.permute(globalEquation,associatedText.getText());
+                currentEquation.setText(toCalcEquation);
         } else {
             System.out.println("No RadioButton selected");
         }
