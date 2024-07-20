@@ -16,9 +16,9 @@ public class Controller {
     public TextArea ResultHistory;
     @FXML
     private ComboBox<String> EquationSelect;
-
     @FXML
     private Text currentEquation;
+
 
     private String globalEquation;
     // Textfields
@@ -78,8 +78,8 @@ public class Controller {
 
     @FXML
     public void initialize() {
-        //turns radiobutton into one group
-        CalcSelect = new ToggleGroup();
+        //Map Button Text Textfield Together
+
         //Makes the history field non-editable
         ResultHistory.setEditable(false);
         //delete the pesky error when no Equation is selected
@@ -92,8 +92,14 @@ public class Controller {
         TextArray = new Text[]{OneText,TwoText,ThreeText,FourText,FiveText,SixText,SevenText};
         TextFieldArray = new TextField[]{OneTextField,TwoTextField,ThreeTextField,FourTextField,FiveTextField,SixTextField,SevenTextField};
         RadioArray = new RadioButton[]{OneRadio,TwoRadio,ThreeRadio,FourRadio,FiveRadio,SixRadio,SevenRadio};
+        //turns radiobutton into one group
+        CalcSelect = new ToggleGroup();
+        for (int i = 0; i < RadioArray.length; i++) {
+            RadioArray[i].setToggleGroup(CalcSelect);
+        }
         //hide Inputs
         hideAllInputs();
+
     }
     //Seek out the the wished Formula
     @FXML
@@ -143,7 +149,20 @@ public class Controller {
     //
     @FXML
     private void handleCalcButtonAction() {
-        System.out.println(CalcSelect.getSelectedToggle());
+
+    }
+    @FXML
+    private void handleCalcSelect() {
+        printSelectedRadioButtonId();
+    }
+    private void printSelectedRadioButtonId() {
+        Toggle selectedToggle = CalcSelect.getSelectedToggle();
+        if (selectedToggle != null) {
+            RadioButton selectedRadioButton = (RadioButton) selectedToggle;
+            System.out.println("Selected RadioButton ID: " + selectedRadioButton.getId());
+        } else {
+            System.out.println("No RadioButton selected");
+        }
     }
 
     private void hideAllInputs(){

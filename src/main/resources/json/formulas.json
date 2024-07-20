@@ -16,5 +16,8 @@
     },
     "Random Theorem": {
       "equation": "a^2 + b^2 == c^2 -1 +c"
+    },
+    "Pe Theorem": {
+      "equation": "a^2 + b^2 == c^2 -1 +c - Sqrt(X) +y / V"
     }
 }
