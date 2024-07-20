@@ -103,6 +103,8 @@ public class Controller {
     @FXML
     private void handleComboSelect(ActionEvent event) {
         hideAllInputs();
+        //insures at least one radio  button is selected
+        OneRadio.setSelected(true);
         String toSetSymbol = "";
         //gets the equation out of the json object
         globalEquation = Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem());
@@ -164,14 +166,14 @@ public class Controller {
 
     @FXML
     private void handleCalcSelect() {
-        printSelectedRadioButtonId();
-    }
-
-    private void printSelectedRadioButtonId() {
         Toggle selectedToggle = CalcSelect.getSelectedToggle();
         if (selectedToggle != null) {
             RadioButton selectedRadioButton = (RadioButton) selectedToggle;
-            System.out.println("Selected RadioButton ID: " + selectedRadioButton.getId());
+            UIElementMap<TextField, Text, RadioButton> elements = uiElementMap.get(selectedRadioButton);
+                Text associatedText = elements.getSecond();
+                System.out.println("Text of associated Text: " + associatedText.getText());
+                //globalEquation = EquationSolver.permute(globalEquation,associatedText.getText());
+                // currentEquation.setText(globalEquation);
         } else {
             System.out.println("No RadioButton selected");
         }

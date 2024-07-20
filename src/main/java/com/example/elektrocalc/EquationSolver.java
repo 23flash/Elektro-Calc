@@ -1,3 +1,4 @@
+
 package com.example.elektrocalc;
 import org.matheclipse.core.eval.EvalUtilities;
 import org.matheclipse.core.eval.ExprEvaluator;
@@ -11,8 +12,6 @@ public class EquationSolver {
         IExpr solvedEquation = permuteEquation(util, equation, variableToSolveFor);
         return formatString(solvedEquation);
     }
-
-
 
     public static Double solve(String equation, Map<String,Double> variableAssignments) {
         // Create an expression parser
@@ -63,6 +62,7 @@ public class EquationSolver {
         String rightPart = parts[1].trim();
 
         String output = leftPart + " == " + rightPart;
+
         return output;
     }
 
