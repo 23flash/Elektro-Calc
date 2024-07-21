@@ -9,13 +9,13 @@
       "equation": "PV == n*RT"
     },
     "Pythagorean Theorem": {
-      "equation": "a^2 + b^2 == c^2"
+      "equation": "a==Sqrt(c^2 + b^2) "
     },
     "Peter Theorem": {
       "equation": "a == b+c+d"
     },
     "Random Theorem": {
-      "equation": "a + b^2 == c^2 -1 +c"
+      "equation": "a == c^2 -1 +c"
     },
     "Pe Theorem": {
       "equation": "a== c^2 -1 +c - Sqrt(X) +y / V"

@@ -108,6 +108,8 @@ public class Controller {
         String toSetSymbol = "";
         //gets the equation out of the json object
         globalEquation = Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem());
+        //to calc equation always is set from global main equation
+        toCalcEquation = globalEquation;
         //Makes Local Equation for GUI
         String localEquation = globalEquation;
         //hashmap to find duplicats
@@ -158,10 +160,20 @@ public class Controller {
         }
     }
 
-    //
+
     @FXML
     private void handleCalcButtonAction() {
+        //map the variables to the right strings to calc
+        Map<String, Double> variableAssignments = new HashMap<>();
+        for (UIElementMap<TextField, Text, RadioButton> elements : uiElementMap.values()) {
+            TextField textField = elements.getFirst();
+            Text text = elements.getSecond();
 
+            variableAssignments.put(text.getText() ,DataProcessor.TextFieldToDouble(textField));
+        }
+        Double solved = EquationSolver.solve(toCalcEquation, variableAssignments);
+        Result.setText(DataProcessor.DoubleToString(solved));
+        ResultHistory.appendText(DataProcessor.DoubleToString(solved) + "\n");
     }
 
     @FXML
