@@ -85,7 +85,7 @@
          </font></Text>
       <Text layoutX="433.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition" />
       <TextArea fx:id="Definition" layoutX="433.0" layoutY="75.0" prefHeight="243.0" prefWidth="227.0" />
-      <ImageView fitHeight="101.0" fitWidth="151.0" layoutX="636.0" layoutY="-1.0">
+      <ImageView fitHeight="155.0" fitWidth="168.0" layoutX="619.0" layoutY="-1.0">
          <image>
             <Image url="@cat.png" />
          </image>
