@@ -10,7 +10,7 @@ public class Json {
 
     private static JSONObject readJson(){
         JSONObject json = new JSONObject();
-        try (BufferedReader reader = new BufferedReader(new FileReader(Objects.requireNonNull(Main.class.getResource("formulas.json")).getFile()))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(Objects.requireNonNull(Main.class.getResource("equations.json")).getFile()))) {
             StringBuilder stringBuilder = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null) {
@@ -26,17 +26,6 @@ public class Json {
     public static String getEquation(String equationName){
         JSONObject to_search = equations.getJSONObject(equationName);
         return to_search.getString("equation");
-    }
-
-    public static String extractKey(String equationName){
-        String to_search_string = "";
-        for (String key : equations.keySet()) {
-            if (key.contains("Ohms")) {
-                to_search_string = key;
-                break;
-            }
-        }
-        return to_search_string;
     }
 
 }
