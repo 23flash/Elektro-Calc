@@ -35,11 +35,6 @@ public class EquationSolver {
         }
     }
 
-    public static Double permuteAndSolve(String equation, String variableToSolveFor,Map<String,Double> variableAssignments) {
-       return solve(permute(equation, variableToSolveFor), variableAssignments);
-    }
-
-
     private static IExpr permuteEquation(ExprEvaluator util, String equation, String variable) {
         // Symja-Ausdruck für die Gleichung
         IExpr equationExpr = util.eval(equation);
@@ -53,19 +48,7 @@ public class EquationSolver {
     }
 
     private static String formatString(IExpr expr){
-        /*
-        String input = String.valueOf(expr);
-        String trimmedInput = input.substring(2, input.length() - 2);
 
-        String[] parts = trimmedInput.split("->");
-        String leftPart = parts[0].trim();
-        String rightPart = parts[1].trim();
-
-        String output = leftPart + " == " + rightPart;
-
-         */
-
-        // Processes Symja Expression but loses Possible Answers
         String input = expr.toString();
         input = input.replace("->", "==");
         input = input.replace("{", "");
