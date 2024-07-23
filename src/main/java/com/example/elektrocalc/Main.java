@@ -5,6 +5,7 @@ import atlantafx.base.theme.PrimerDark;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -15,6 +16,10 @@ public class Main extends Application {
         Application.setUserAgentStylesheet(new PrimerDark().getUserAgentStylesheet());
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("app.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+
+        Image icon = new Image(Main.class.getResourceAsStream("cat.png"));
+        stage.getIcons().add(icon);
+
         stage.setTitle("Electro-Calc");
         stage.setScene(scene);
         stage.show();

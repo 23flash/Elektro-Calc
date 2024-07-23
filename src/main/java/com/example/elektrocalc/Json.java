@@ -9,7 +9,7 @@ public class Json {
 
     private static JSONObject readJson(){
         JSONObject json = new JSONObject();
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/json/formulas.json"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(Main.class.getResource("formulas.json").getFile()))) {
             StringBuilder stringBuilder = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null) {

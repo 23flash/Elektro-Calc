@@ -109,7 +109,7 @@ public class Controller {
         //gets the equation out of the json object
         globalEquation = Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem());
         //to calc equation always is set from global main equation
-        toCalcEquation = globalEquation;
+        toCalcEquation = Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem());
         //Makes Local Equation for GUI
         String localEquation = globalEquation;
         //hashmap to find duplicats
