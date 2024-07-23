@@ -23,6 +23,9 @@ public class Main extends Application {
 
         stage.setTitle("Electro-Calc");
         stage.setScene(scene);
+        //cant be hidden under other programs
+        stage.setAlwaysOnTop(true);
+
         stage.show();
     }
 
