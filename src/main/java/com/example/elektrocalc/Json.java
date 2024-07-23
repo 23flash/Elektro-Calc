@@ -28,4 +28,8 @@ public class Json {
         return to_search.getString("equation");
     }
 
+    public static String getDefinition(String equationName){
+        JSONObject to_search = equations.getJSONObject(equationName);
+        return to_search.getString("definition");}
+
 }

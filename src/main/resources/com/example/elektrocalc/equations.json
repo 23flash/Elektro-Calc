@@ -1,15 +1,19 @@
 {
     "OhmsLAW": {
-      "equation": "v == i*r"
+      "equation": "v == i*r",
+      "definition": "wadawd"
     },
     "Newton's Second Law of Motion": {
-      "equation": "F == m*a"
+      "equation": "F == m*a",
+      "definition": "wadawd"
     },
     "Ideal Gas Law": {
-      "equation": "PV == n*RT"
+      "equation": "PV == n*RT",
+      "definition": "wadawd"
     },
     "Pythagorean Theorem": {
-      "equation": "a==Sqrt(c^2 + b^2) "
+      "equation": "a==Sqrt(c^2 + b^2) ",
+      "definition": "wadawd"
     },
     "Peter Theorem": {
       "equation": "a == b+c+d"

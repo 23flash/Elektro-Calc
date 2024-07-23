@@ -13,7 +13,9 @@ public class Controller {
     @FXML
     private Text Result;
     @FXML
-    public TextArea ResultHistory;
+    private TextArea ResultHistory;
+    @FXML
+    private TextArea Definition;
     @FXML
     private ComboBox<String> EquationSelect;
     @FXML
@@ -76,6 +78,7 @@ public class Controller {
     public void initialize() {
         //Makes the history field non-editable
         ResultHistory.setEditable(false);
+        Definition.setEditable(false);
         //delete the pesky error when no Equation is selected
         globalEquation= "";
         //automatically fills the combo box with values
@@ -103,20 +106,21 @@ public class Controller {
     @FXML
     private void handleComboSelect(ActionEvent event) {
         hideAllInputs();
-        //insures at least one radio  button is selected
-        OneRadio.setSelected(true);
+
         String toSetSymbol = "";
         //gets the equation out of the json object
         globalEquation = Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem());
         //to calc equation always is set from global main equation
         toCalcEquation = Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem());
+        //Sets Definition
+        Definition.setText(Json.getDefinition(EquationSelect.getSelectionModel().getSelectedItem()));
         //Makes Local Equation for GUI
         String localEquation = globalEquation;
         //hashmap to find duplicats
         Set<String> printedStrings = new HashSet<>();
+        currentEquation.setText(localEquation);
         //Deletes Constants and doubble ==
         localEquation = localEquation.replace("==","=");
-        currentEquation.setText(localEquation);
         // modify the string to filter out constants and Special Keys Like SQRT etc
         if (localEquation.contains("Sqrt")){
             localEquation = localEquation.replace("Sqrt", "");
@@ -201,6 +205,7 @@ public class Controller {
             text.setVisible(false);
             textField.setVisible(false);
             radioButton.setVisible(false);
+            radioButton.setSelected(false);
             radioButton.setDisable(true);
         }
     }
