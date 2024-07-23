@@ -1,6 +1,6 @@
 package com.example.elektrocalc;
 
-import atlantafx.base.theme.NordDark;
+
 import atlantafx.base.theme.PrimerDark;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class Main extends Application {
     @Override
@@ -17,7 +18,7 @@ public class Main extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("app.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
-        Image icon = new Image(Main.class.getResourceAsStream("cat.png"));
+        Image icon = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("cat.png")));
         stage.getIcons().add(icon);
 
         stage.setTitle("Electro-Calc");

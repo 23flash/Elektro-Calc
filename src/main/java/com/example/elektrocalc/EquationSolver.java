@@ -42,15 +42,14 @@ public class EquationSolver {
 
     private static IExpr permuteEquation(ExprEvaluator util, String equation, String variable) {
         // Symja-Ausdruck für die Gleichung
-        IExpr equationExpr = util.evaluate(equation);
+        IExpr equationExpr = util.eval(equation);
 
         // Symbol für die Variable, nach der umgestellt werden soll
-        IExpr variableSymbol = util.evaluate(variable);
+        IExpr variableSymbol = util.eval(variable);
 
         // Gleichung umstellen
-        IExpr solved = util.evaluate("Solve(" + equation + ", " + variable + ")");
 
-        return solved;
+        return util.eval("Solve(" + equation + ", " + variable + ")");
     }
 
     private static String formatString(IExpr expr){
@@ -66,21 +65,21 @@ public class EquationSolver {
 
          */
 
-        // This Approch Delets Possible Outcomes When when using Sqrst adn ^2 as it deletes possible anwers
+        // Processes Symja Expression but loses Possible Answers
         String input = expr.toString();
         input = input.replace("->", "==");
         input = input.replace("{", "");
         input = input.replace("}", "");
-        String output = "";
+        StringBuilder output = new StringBuilder();
         for (Character ch : input.toCharArray()) {
 
             if (ch == ',') {
                 break;
             }else {
-                output += ch;
+                output.append(ch);
             }
         }
-        return output;
+        return output.toString();
     }
 
 }
