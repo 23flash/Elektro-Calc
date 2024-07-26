@@ -7,10 +7,6 @@
     "equation": "p == u*l",
     "definition": "Die elektrische Leistung P ist das Produkt aus der elektrischen Spannung U und der elektrischen Stromstärke I und beschreibt die Menge an Energie, die pro Zeiteinheit übertragen oder verbraucht wird, wobei die Spannung U die potenzielle Differenz zwischen zwei Punkten im elektrischen Feld angibt und der Strom I die Flussrate der elektrischen Ladung darstellt; somit stellt die elektrische Leistung ein Maß für die Effizienz dar, mit der elektrische Energie in eine andere Energieform, wie Licht, Wärme oder mechanische Energie, umgewandelt wird."
   },
-  "Template": {
-    "equation": "",
-    "definition": ""
-  },
   "1.17 Ohmsches Gesetz": {
     "equation": "r == u/i",
     "definition": "Das Ohmsche Gesetz beschreibt den Zusammenhang zwischen der elektrischen Spannung U, dem elektrischen Strom I und dem elektrischen Widerstand R in einem Leiter, wobei der Widerstand R als das Verhältnis der Spannung U zum Strom I definiert ist; dieses Gesetz bildet die Grundlage für das Verständnis der elektrischen Eigenschaften von Materialien und zeigt, dass der Widerstand eine Konstante ist, die unabhängig von der angelegten Spannung oder dem fließenden Strom ist, solange die physikalischen Bedingungen konstant bleiben."
@@ -33,7 +29,7 @@
   },
   "2.45 Parallelwiderstands-Gleichung": {
     "equation": "rges == (rOne * rTwo) / (rOne + RTwo)",
-    "definition": "Die Formel beschreibt den effektiven Widerstand RparallelRparallelvon zwei parallel geschalteten Widerständen R1R1 und R2R2, wobei der Parallelwiderstand RparallelRparallel durch das Produkt der beiden Widerstände R1R1und R2R2 geteilt durch die Summe der beiden Widerstände berechnet wird; diese Beziehung wird verwendet, um den Gesamtwiderstand einer Schaltung zu bestimmen, in der Widerstände parallel geschaltet sind, und zeigt, dass der effektive Widerstand immer kleiner ist als der kleinste Widerstand in der Parallelkombination."
+    "definition": "Die Formel beschreibt den effektiven Widerstand Rparallel von zwei parallel geschalteten Widerständen R1 und R2 wobei der Parallelwiderstand Rparallel durch das Produkt der beiden Widerstände R1R1und R2R2 geteilt durch die Summe der beiden Widerstände berechnet wird; diese Beziehung wird verwendet, um den Gesamtwiderstand einer Schaltung zu bestimmen, in der Widerstände parallel geschaltet sind, und zeigt, dass der effektive Widerstand immer kleiner ist als der kleinste Widerstand in der Parallelkombination."
   },
   "3.14 Kapazitätsformel für einen Plattenkondensator": {
     "equation": "c == (8.854*10^(-12)) * er * (a/d)",
@@ -45,7 +41,7 @@
   },
   "3.42 Zeitkonstante für einen R-C-Kreis exp": {
     "equation": "uCt == U*(q-LösExp^(t/(r*c)))",
-    "definition": "Die Formel beschreibt die Spannung uC(t)uC\u200B(t) über einem Kondensator in einem Widerstands-Kondensator-Kreis (R-C-Kreis) als Funktion der Zeit tt nach einer plötzlichen Änderung der angelegten Spannung UU, wobei ττ die Zeitkonstante des Kreises ist, die als τ=R⋅Cτ=R⋅C definiert ist; die Formel zeigt, dass die Spannung des Kondensators exponentiell ansteigt und asymptotisch gegen den Wert der angelegten Spannung UU konvergiert, wobei die Rate dieses Anstiegs durch die Zeitkonstante ττ bestimmt wird. Dies beschreibt den Vorgang, bei dem sich der Kondensator nach einer plötzlichen Spannungsänderung langsam auf den neuen Spannungswert auflädt."
+    "definition": "Die Formel beschreibt die Spannung uC(t)uC über einem Kondensator in einem Widerstands-Kondensator-Kreis (R-C-Kreis) als Funktion der Zeit tt nach einer plötzlichen Änderung der angelegten Spannung UU, wobei ττ die Zeitkonstante des Kreises ist, die als τ=R⋅Cτ=R⋅C definiert ist; die Formel zeigt, dass die Spannung des Kondensators exponentiell ansteigt und asymptotisch gegen den Wert der angelegten Spannung UU konvergiert, wobei die Rate dieses Anstiegs durch die Zeitkonstante ττ bestimmt wird. Dies beschreibt den Vorgang, bei dem sich der Kondensator nach einer plötzlichen Spannungsänderung langsam auf den neuen Spannungswert auflädt."
   },
   "3.59 Magnetische Flussdichte-Gleichung": {
     "equation": "b == u * h",
@@ -61,26 +57,26 @@
   },
   "3.92 Induktivität einer Spule": {
     "equation": "l == (uz * n^2 * a)  / l",
-    "definition": " Die Formel beschreibt die Induktivität L einer Spule mit NN Windungen, die sich um einen Kern mit der Querschnittsfläche Aund der Länge ll wickelt, wobei μ0μ0\u200B die Permeabilität des Vakuums ist; die Induktivität LL ist proportional zum Quadrat der Anzahl der Windungen NN der Spule und zur Querschnittsfläche AA, und invers proportional zur Länge ll der Spule. Diese Beziehung zeigt, wie die geometrischen und materialbezogenen Eigenschaften der Spule die Fähigkeit beeinflussen, ein Magnetfeld zu speichern, wenn ein elektrischer Strom durch sie fließt, und wie die Induktivität durch die Anordnung und Anzahl der Windungen sowie die Abmessungen der Spule bestimmt wird."
+    "definition": " Die Formel beschreibt die Induktivität L einer Spule mit NN Windungen, die sich um einen Kern mit der Querschnittsfläche und der Länge ll wickelt, wobei μ0 die Permeabilität des Vakuums ist; die Induktivität LL ist proportional zum Quadrat der Anzahl der Windungen NN der Spule und zur Querschnittsfläche AA, und invers proportional zur Länge ll der Spule. Diese Beziehung zeigt, wie die geometrischen und materialbezogenen Eigenschaften der Spule die Fähigkeit beeinflussen, ein Magnetfeld zu speichern, wenn ein elektrischer Strom durch sie fließt, und wie die Induktivität durch die Anordnung und Anzahl der Windungen sowie die Abmessungen der Spule bestimmt wird."
   },
   "3.116 Spannung über einer Induktivität exp": {
     "equation": "",
-    "definition": "Die Formel beschreibt die Spannung uL(t)uL(t) über einer Induktivität L als Funktion der Zeit tt, nachdem ein plötzlicher Spannungssprung von Uangelegt wurde, wobei ττ die Zeitkonstante des Kreises ist, die durch das Verhältnis der Induktivität LL und des Widerstands RR gegeben ist (τ=L/Rτ=L/R). Die Spannung über der Induktivität nimmt exponentiell ab und ist negativ gegenüber der angelegten Spannung UU; die Zeitkonstante ττ bestimmt, wie schnell die Spannung auf den neuen Zustand reagiert, wobei der exponentielle Abfall die natürliche Antwort der Induktivität auf eine plötzliche Änderung der Spannung beschreibt."
+    "definition": "Die Formel beschreibt die Spannung uL(t) über einer Induktivität L als Funktion der Zeit t, nachdem ein plötzlicher Spannungssprung von Uangelegt wurde, wobei ττ die Zeitkonstante des Kreises ist, die durch das Verhältnis der Induktivität L und des Widerstands RR gegeben ist (τ=L/Rτ=L/R). Die Spannung über der Induktivität nimmt exponentiell ab und ist negativ gegenüber der angelegten Spannung UU; die Zeitkonstante ττ bestimmt, wie schnell die Spannung auf den neuen Zustand reagiert, wobei der exponentielle Abfall die natürliche Antwort der Induktivität auf eine plötzliche Änderung der Spannung beschreibt."
   },
   "4.22 Echtleistung": {
   "equation": "p== u*i*cos(phi)",
-  "definition": "Die Formel beschreibt die tatsächliche elektrische Leistung PP, die in einem Wechselstromkreis erbracht wird, als Produkt der elektrischen Spannung UU, des elektrischen Stroms II und des Kosinus des Phasenwinkels φφ zwischen der Spannung und dem Strom; der Faktor cos⁡φcosφ, auch als Leistungsfaktor bekannt, berücksichtigt die Phasenverschiebung zwischen Spannung und Strom und zeigt, wie viel der gesamten Leistung tatsächlich in nützliche Arbeit oder Wärme umgesetzt wird. Diese Gleichung ist zentral für die Berechnung der effektiven Leistung in einem Wechselstromkreis und unterscheidet sich von der scheinbaren Leistung, die keine Berücksichtigung der Phasenverschiebung enthält."
+  "definition": "Die Formel beschreibt die tatsächliche elektrische Leistung PP, die in einem Wechselstromkreis erbracht wird, als Produkt der elektrischen Spannung UU, des elektrischen Stroms II und des Kosinus des Phasenwinkels φφ zwischen der Spannung und dem Strom; der Faktor cos⁡ auch als Leistungsfaktor bekannt, berücksichtigt die Phasenverschiebung zwischen Spannung und Strom und zeigt, wie viel der gesamten Leistung tatsächlich in nützliche Arbeit oder Wärme umgesetzt wird. Diese Gleichung ist zentral für die Berechnung der effektiven Leistung in einem Wechselstromkreis und unterscheidet sich von der scheinbaren Leistung, die keine Berücksichtigung der Phasenverschiebung enthält."
 },
   "4.28 Resonanzfrequenz": {
     "equation": "f == 1 /(2*Pi*sqrt(L*C))",
-    "definition": "Die Formel beschreibt die Resonanzfrequenz f0 eines seriellen RLC-Schaltkreises, wobei LL die Induktivität und CC die Kapazität des Schaltkreises darstellen; f0f0​ ist die Frequenz, bei der der Schaltkreis eine maximale Resonanz und minimale Impedanz aufweist, und die Formel zeigt, dass die Resonanzfrequenz umgekehrt proportional zur Quadratwurzel des Produkts von Induktivität und Kapazität ist. Diese Frequenz ist entscheidend für die Anwendungen in der Signalverarbeitung und Kommunikationssystemen, da bei dieser Frequenz der Schaltkreis optimal auf externe Signale reagiert."
+    "definition": "Die Formel beschreibt die Resonanzfrequenz f0 eines seriellen RLC-Schaltkreises, wobei L die Induktivität und CC die Kapazität des Schaltkreises darstellen; f0 ist die Frequenz, bei der der Schaltkreis eine maximale Resonanz und minimale Impedanz aufweist, und die Formel zeigt, dass die Resonanzfrequenz umgekehrt proportional zur Quadratwurzel des Produkts von Induktivität und Kapazität ist. Diese Frequenz ist entscheidend für die Anwendungen in der Signalverarbeitung und Kommunikationssystemen, da bei dieser Frequenz der Schaltkreis optimal auf externe Signale reagiert."
   },
   "4.49 Impedanz der Induktivität": {
     "equation": "zl == j* (2*Pi *f * L)",
-    "definition": " Die Formel beschreibt die Impedanz ZL eines Induktors in einem Wechselstromkreis, wobei jj die imaginäre Einheit und XLXL​ die Induktive Reaktanz ist; die Induktive Reaktanz XLXL​ ist gegeben durch XL=2πfLXL​=2πfL, wobei ff die Frequenz des Wechselstroms und LL die Induktivität des Induktors darstellt. Die Impedanz ZLZL​ ist somit rein imaginär und stellt den Widerstand dar, den der Induktor dem Wechselstrom entgegensetzt, wobei die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist."
+    "definition": " Die Formel beschreibt die Impedanz ZL eines Induktors in einem Wechselstromkreis, wobei j die imaginäre Einheit und XL die Induktive Reaktanz ist; die Induktive Reaktanz XL ist gegeben durch XL=2πfxl=2πfL, wobei ff die Frequenz des Wechselstroms und LL die Induktivität des Induktors darstellt. Die Impedanz ZL ist somit rein imaginär und stellt den Widerstand dar, den der Induktor dem Wechselstrom entgegensetzt, wobei die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist."
   },
   "4.50 Impedanz der Induktivität": {
     "equation": "zc== -j * 1/((2*Pi*f)*c)  ",
-    "definition": "Die Formel beschreibt die Impedanz ZCZC​ eines Kondensators in einem Wechselstromkreis, wobei jj die imaginäre Einheit und XCXC​ die Kapazitive Reaktanz ist; die Kapazitive Reaktanz XCXC​ ist gegeben durch XC=1ωCXC​=ωC1​, wobei ωω die Kreisfrequenz (ω=2πfω=2πf) und CC die Kapazität des Kondensators darstellt. Die Impedanz ZCZC​ ist daher ebenfalls rein imaginär und hat einen negativen Vorzeichenwert, was bedeutet, dass die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist. Diese Formel zeigt, wie der Widerstand eines Kondensators gegenüber Wechselstrom von der Frequenz des Stroms und der Kapazität des Kondensators abhängt."
+    "definition": "Die Formel beschreibt die Impedanz ZC eines Kondensators in einem Wechselstromkreis, wobei j die imaginäre Einheit und XC die Kapazitive Reaktanz ist; die Kapazitive Reaktanz XC ist gegeben durch XC=1ωXC, wobei ωω die Kreisfrequenz (ω=2πfω=2πf) und C die Kapazität des Kondensators darstellt. Die Impedanz ZC ist daher ebenfalls rein imaginär und hat einen negativen Vorzeichenwert, was bedeutet, dass die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist. Diese Formel zeigt, wie der Widerstand eines Kondensators gegenüber Wechselstrom von der Frequenz des Stroms und der Kapazität des Kondensators abhängt."
   }
 }
