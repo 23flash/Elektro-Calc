@@ -1,27 +1,58 @@
 {
-    "OhmsLAW": {
-      "equation": "v == i*r",
-      "definition": "wadawd"
-    },
-    "Newton's Second Law of Motion": {
-      "equation": "F == m*a",
-      "definition": "wadawd"
-    },
-    "Ideal Gas Law": {
-      "equation": "PV == n*RT",
-      "definition": "wadawd"
-    },
-    "Pythagorean Theorem": {
-      "equation": "a==Sqrt(c^2 + b^2) ",
-      "definition": "waawd AWdawddawd \n awda wda d awæ\n ad awd awd awdawdaw "
-    },
-    "Peter Theorem": {
-      "equation": "a == b+c+d"
-    },
-    "Random Theorem": {
-      "equation": "a == c^2 -1 +c"
-    },
-    "Pe Theorem": {
-      "equation": "a== c^2 -1 +c - Sqrt(X) +y / V"
-    }
+  "1.10 Definition des elekt. Stroms": {
+    "equation": "i == (q / t)",
+    "definition": "Der elektrische Strom ist die Menge der Ladung, die in einer bestimmten Zeitspanne durch einen Leiterquerschnitt fließt. Der Strom I wird durch die Gleichung I = ΔQ/Δt definiert, wobei ΔQ die durch den Querschnitt fließende Ladung und Δt die Zeitspanne ist. Der elektrische Strom fließt entgegen der tatsächlichen Bewegungsrichtung der Elektronen. Die Einheit der elektrischen Stromstärke ist 1 Ampere (A)."
+  },
+  "1.16 Elektrische Leistung": {
+    "equation": "p == u*l",
+    "definition": "Die elektrische Leistung P ist das Produkt aus der elektrischen Spannung U und der elektrischen Stromstärke I und beschreibt die Menge an Energie, die pro Zeiteinheit übertragen oder verbraucht wird, wobei die Spannung U die potenzielle Differenz zwischen zwei Punkten im elektrischen Feld angibt und der Strom I die Flussrate der elektrischen Ladung darstellt; somit stellt die elektrische Leistung ein Maß für die Effizienz dar, mit der elektrische Energie in eine andere Energieform, wie Licht, Wärme oder mechanische Energie, umgewandelt wird."
+  },
+  "Template": {
+    "equation": "",
+    "definition": ""
+  },
+  "1.17 Ohmsches Gesetz": {
+    "equation": "r == u/i",
+    "definition": "Das Ohmsche Gesetz beschreibt den Zusammenhang zwischen der elektrischen Spannung U, dem elektrischen Strom I und dem elektrischen Widerstand R in einem Leiter, wobei der Widerstand R als das Verhältnis der Spannung U zum Strom I definiert ist; dieses Gesetz bildet die Grundlage für das Verständnis der elektrischen Eigenschaften von Materialien und zeigt, dass der Widerstand eine Konstante ist, die unabhängig von der angelegten Spannung oder dem fließenden Strom ist, solange die physikalischen Bedingungen konstant bleiben."
+  },
+  "1.18 Sinuswellen Geichung": {
+    "equation": "ut== u * Sin(2 * Pi * f * t)",
+    "definition": "Die Definition lautet: Die sinusförmige Wechselspannung u(t) beschreibt die zeitliche Variation der elektrischen Spannung als eine Sinusfunktion, wobei ˆu die Amplitude der Spannung ist, die den maximalen Wert der Spannung angibt, 2π die Kreisfrequenz, f die Frequenz der Wechselspannung in Hertz und t die Zeit darstellt; diese Gleichung wird verwendet, um die periodische Natur von Wechselspannungen zu modellieren, die sich kontinuierlich mit der Zeit ändern und in vielen elektrischen und elektronischen Anwendungen vorkommen."
+  },
+  "2.11 Widerstandsgleichung": {
+    "equation": "r == (roh * l)/a",
+    "definition": "Der elektrische Widerstand R eines Leiters ist proportional zur Länge L des Leiters und dem spezifischen Widerstand ρ (Rho) des Materials, aus dem der Leiter besteht, und umgekehrt proportional zur Querschnittsfläche A des Leiters; diese Gleichung beschreibt, wie der Widerstand eines Leiters durch seine physikalischen Eigenschaften beeinflusst wird, wobei ein längerer oder dünnerer Leiter einen höheren Widerstand aufweist und ein kürzerer oder dickeren Leiter einen niedrigeren Widerstand hat."
+  },
+  "1.15 Widerstand-Temperatur-Gesetz": {
+    "equation": "rv == rTwenty (1 +alpha* (v-20))",
+    "definition": "Die Formel beschreibt, wie der elektrische Widerstand Rϑ eines Materials bei einer Temperatur ϑ von der Widerstandswerte R20 bei einer Referenztemperatur von 20°C abhängt, wobei α der Temperaturkoeffizient des Widerstands ist, der angibt, wie stark sich der Widerstand mit der Temperatur ändert, und Δϑ20 die Differenz zwischen der aktuellen Temperatur ϑ und der Referenztemperatur 20°C darstellt; diese Beziehung ermöglicht es, den Widerstand eines Materials bei verschiedenen Temperaturen zu berechnen und zu verstehen, wie sich der Widerstand durch Temperaturänderungen beeinflussen lässt."
+  },
+  "2.33 Spannungsteiler-Gleichung": {
+    "equation": "uj/uq == rj/rges",
+    "definition": "Die Spannungsteiler-Gleichung beschreibt das Verhältnis der Teilspannung Uj über einem Widerstand Rj zu der Gesamtspannung Uq und dem Gesamtwiderstand Rges eines Serienschaltung von Widerständen, wobei die Spannung Uj proportional zum Widerstand Rj und die Gesamtspannung Uq proportional zum Gesamtwiderstand Rges ist; diese Beziehung wird verwendet, um die Verteilung der Spannung in einer Serie-Schaltung von Widerständen zu berechnen und zu verstehen, wie die Spannung aufgeteilt wird, abhängig von den Widerstandswerten der einzelnen Komponenten im Schaltkreis."
+  },
+  "2.45 Parallelwiderstands-Gleichung": {
+    "equation": "rges == (rOne * rTwo) / (rOne + RTwo)",
+    "definition": "Die Formel beschreibt den effektiven Widerstand RparallelRparallelvon zwei parallel geschalteten Widerständen R1R1 und R2R2, wobei der Parallelwiderstand RparallelRparallel durch das Produkt der beiden Widerstände R1R1und R2R2 geteilt durch die Summe der beiden Widerstände berechnet wird; diese Beziehung wird verwendet, um den Gesamtwiderstand einer Schaltung zu bestimmen, in der Widerstände parallel geschaltet sind, und zeigt, dass der effektive Widerstand immer kleiner ist als der kleinste Widerstand in der Parallelkombination."
+  },
+  "3.14 Kapazitätsformel für einen Plattenkondensator": {
+    "equation": "c == (8.854*10^(-12)) * er * (a/d)",
+    "definition": "Die Formel beschreibt die elektrische Kapazität C eines Plattenkondensators, die sich aus der Dielektrizitätskonstante εε des Vakuums (auch als Permittivität des freien Raums bekannt), der relativen Dielektrizitätskonstante εr\u200B des Materials zwischen den Platten, der Fläche AA der Platten und dem Abstand dd zwischen ihnen ergibt; die Kapazität ist direkt proportional zur Fläche der Platten und der Dielektrizitätskonstante und invers proportional zum Abstand zwischen den Platten, was bedeutet, dass ein größerer Abstand oder eine niedrigere Permittivität die Kapazität verringert."
+  },
+  "3.28 Ladungsformel für einen Kondensator": {
+    "equation": "qi==ci*u",
+    "definition": " Die Formel beschreibt die elektrische Ladung Qi\u200B eines Kondensators, die sich als Produkt der Kapazität CiCi\u200B des Kondensators und der angelegten Spannung UU berechnet; dies bedeutet, dass die Ladung direkt proportional zur Kapazität und zur Spannung ist, wobei eine höhere Kapazität oder Spannung zu einer größeren Ladung führt. Die Formel zeigt, wie viel elektrische Ladung der Kondensator speichern kann, wenn eine bestimmte Spannung angelegt wird, und ist grundlegend für das Verständnis der Energie- und Ladungsspeicherung in Kondensatoren."
+  },
+  "3.42 Zeitkonstante für einen R-C-Kreis\"": {
+    "equation": "uCt == U*(q-LösExp^(t/(r*c)))",
+    "definition": "Die Formel beschreibt die Spannung uC(t)uC\u200B(t) über einem Kondensator in einem Widerstands-Kondensator-Kreis (R-C-Kreis) als Funktion der Zeit tt nach einer plötzlichen Änderung der angelegten Spannung UU, wobei ττ die Zeitkonstante des Kreises ist, die als τ=R⋅Cτ=R⋅C definiert ist; die Formel zeigt, dass die Spannung des Kondensators exponentiell ansteigt und asymptotisch gegen den Wert der angelegten Spannung UU konvergiert, wobei die Rate dieses Anstiegs durch die Zeitkonstante ττ bestimmt wird. Dies beschreibt den Vorgang, bei dem sich der Kondensator nach einer plötzlichen Spannungsänderung langsam auf den neuen Spannungswert auflädt."
+  },
+  "3.59 Magnetische Flussdichte-Gleichung": {
+    "equation": "b == u * h",
+    "definition": "Die Formel beschreibt die Beziehung zwischen der magnetischen Flussdichte BB und dem Magnetfeld HH, wobei μμ die magnetische Permeabilität des Mediums ist; BB ist die Größe, die die Stärke und Richtung des Magnetfelds beschreibt, das durch ein Material erzeugt wird, und HH ist die Magnetfeldstärke. Die magnetische Permeabilität μμ ist ein Materialparameter, der angibt, wie leicht das Material magnetisiert werden kann, und beeinflusst, wie das Magnetfeld HH in das Magnetfeld BB übersetzt wird."
+  },
+  "Magnetische Flussdichte-Gleichung": {
+    "equation": "b == u * h",
+    "definition": "    Die Definition lautet: Die Formel beschreibt die Beziehung zwischen der magnetischen Flussdichte BB und dem Magnetfeld HH, wobei μμ die magnetische Permeabilität des Mediums ist; BB ist die Größe, die die Stärke und Richtung des Magnetfelds beschreibt, das durch ein Material erzeugt wird, und HH ist die Magnetfeldstärke. Die magnetische Permeabilität μμ ist ein Materialparameter, der angibt, wie leicht das Material magnetisiert werden kann, und beeinflusst, wie das Magnetfeld HH in das Magnetfeld BB übersetzt wird."
+  }
 }

@@ -79,6 +79,7 @@ public class Controller {
         //Makes the history field non-editable
         ResultHistory.setEditable(false);
         Definition.setEditable(false);
+        Definition.setWrapText(true);
         //delete the pesky error when no Equation is selected
         globalEquation= "";
         //automatically fills the combo box with values
@@ -125,13 +126,19 @@ public class Controller {
         if (localEquation.contains("Sqrt")){
             localEquation = localEquation.replace("Sqrt", "");
         }
+        if (localEquation.contains("Pi")){
+            localEquation = localEquation.replace("Pi", "");
+        }
+        if (localEquation.contains("Sin")){
+            localEquation = localEquation.replace("Sin", "");
+        }
 
         //Breaks up the String and activates Gui Elements
         int whichTextField = 0;
         for (Character ch : localEquation.toCharArray()) {
             if(Character.isLetter(ch)){
                 toSetSymbol += ch;
-            }else if(ch == '+' || ch == '-'|| ch == '*'|| ch == '/' || ch == '=' ){
+            }else if(ch == '+' || ch == '-'|| ch == '*'|| ch == '/' || ch == '='|| ch == '^' ){
                 if (!printedStrings.contains(toSetSymbol) && !toSetSymbol.isEmpty()) {
                     enableRightFields(whichTextField, toSetSymbol);
                     whichTextField ++;
