@@ -126,6 +126,9 @@ public class Controller {
         if (localEquation.contains("Sqrt")){
             localEquation = localEquation.replace("Sqrt", "");
         }
+        if (localEquation.contains("Cos")){
+            localEquation = localEquation.replace("Cos", "");
+        }
         if (localEquation.contains("Pi")){
             localEquation = localEquation.replace("Pi", "");
         }

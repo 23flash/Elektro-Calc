@@ -43,16 +43,44 @@
     "equation": "qi==ci*u",
     "definition": " Die Formel beschreibt die elektrische Ladung Qi\u200B eines Kondensators, die sich als Produkt der Kapazität CiCi\u200B des Kondensators und der angelegten Spannung UU berechnet; dies bedeutet, dass die Ladung direkt proportional zur Kapazität und zur Spannung ist, wobei eine höhere Kapazität oder Spannung zu einer größeren Ladung führt. Die Formel zeigt, wie viel elektrische Ladung der Kondensator speichern kann, wenn eine bestimmte Spannung angelegt wird, und ist grundlegend für das Verständnis der Energie- und Ladungsspeicherung in Kondensatoren."
   },
-  "3.42 Zeitkonstante für einen R-C-Kreis\"": {
+  "3.42 Zeitkonstante für einen R-C-Kreis exp": {
     "equation": "uCt == U*(q-LösExp^(t/(r*c)))",
     "definition": "Die Formel beschreibt die Spannung uC(t)uC\u200B(t) über einem Kondensator in einem Widerstands-Kondensator-Kreis (R-C-Kreis) als Funktion der Zeit tt nach einer plötzlichen Änderung der angelegten Spannung UU, wobei ττ die Zeitkonstante des Kreises ist, die als τ=R⋅Cτ=R⋅C definiert ist; die Formel zeigt, dass die Spannung des Kondensators exponentiell ansteigt und asymptotisch gegen den Wert der angelegten Spannung UU konvergiert, wobei die Rate dieses Anstiegs durch die Zeitkonstante ττ bestimmt wird. Dies beschreibt den Vorgang, bei dem sich der Kondensator nach einer plötzlichen Spannungsänderung langsam auf den neuen Spannungswert auflädt."
   },
   "3.59 Magnetische Flussdichte-Gleichung": {
     "equation": "b == u * h",
-    "definition": "Die Formel beschreibt die Beziehung zwischen der magnetischen Flussdichte BB und dem Magnetfeld HH, wobei μμ die magnetische Permeabilität des Mediums ist; BB ist die Größe, die die Stärke und Richtung des Magnetfelds beschreibt, das durch ein Material erzeugt wird, und HH ist die Magnetfeldstärke. Die magnetische Permeabilität μμ ist ein Materialparameter, der angibt, wie leicht das Material magnetisiert werden kann, und beeinflusst, wie das Magnetfeld HH in das Magnetfeld BB übersetzt wird."
+    "definition": "Die Formel beschreibt die Beziehung zwischen der magnetischen Flussdichte BB und dem Magnetfeld HH, wobei μμ die magnetische Permeabilität des Mediums ist; B ist die Größe, die die Stärke und Richtung des Magnetfelds beschreibt, das durch ein Material erzeugt wird, und HH ist die Magnetfeldstärke. Die magnetische Permeabilität μμ ist ein Materialparameter, der angibt, wie leicht das Material magnetisiert werden kann, und beeinflusst, wie das Magnetfeld HH in das Magnetfeld BB übersetzt wird."
   },
-  "Magnetische Flussdichte-Gleichung": {
-    "equation": "b == u * h",
-    "definition": "    Die Definition lautet: Die Formel beschreibt die Beziehung zwischen der magnetischen Flussdichte BB und dem Magnetfeld HH, wobei μμ die magnetische Permeabilität des Mediums ist; BB ist die Größe, die die Stärke und Richtung des Magnetfelds beschreibt, das durch ein Material erzeugt wird, und HH ist die Magnetfeldstärke. Die magnetische Permeabilität μμ ist ein Materialparameter, der angibt, wie leicht das Material magnetisiert werden kann, und beeinflusst, wie das Magnetfeld HH in das Magnetfeld BB übersetzt wird."
+  "3.63 Magnetischer Kreis": {
+    "equation": "r == l/(k*A)",
+    "definition": " Die Formel beschreibt die Induktivität LL eines Spulenwickels als Funktion der geometrischen und materialbezogenen Eigenschaften der Spule, wobei κκ die magnetische Permeabilität des Kerns ist, AA die Querschnittsfläche der Spule und RR die Länge der Spule darstellt; die Induktivität LL misst die Fähigkeit der Spule, ein Magnetfeld zu speichern und zu beeinflussen, wenn ein elektrischer Strom durch sie fließt, und ist direkt proportional zur Permeabilität und der Fläche und invers proportional zur Länge der Spule"
+  },
+  "3.83 Lorentzkraft-Gleichung": {
+    "equation": "f == i*l*b * sin(alpha) ",
+    "definition": " Die Formel beschreibt die Magnitude der Lorentzkraft ∣F∣∣F∣, die auf einen stromdurchflossenen Draht von Länge ∣L∣ wirkt, wenn er sich in einem Magnetfeld ∣B∣∣B∣ befindet, wobei ∣I∣∣I∣ die Größe des elektrischen Stroms und αα der Winkel zwischen der Richtung des Stroms und dem Magnetfeld ist; die Lorentzkraft ist proportional zum Produkt des Stroms, der Länge des Drahts und der Magnetfeldstärke, sowie zum Sinus des Winkels αα, der den Winkel zwischen der Stromrichtung und dem Magnetfeld beschreibt. Diese Formel ist zentral für das Verständnis der Wechselwirkung von elektrischem Strom und Magnetfeldern und erklärt die physikalische Grundlage von elektromagnetischen Kräften in der Elektrodynamik."
+  },
+  "3.92 Induktivität einer Spule": {
+    "equation": "l == (uz * n^2 * a)  / l",
+    "definition": " Die Formel beschreibt die Induktivität L einer Spule mit NN Windungen, die sich um einen Kern mit der Querschnittsfläche Aund der Länge ll wickelt, wobei μ0μ0\u200B die Permeabilität des Vakuums ist; die Induktivität LL ist proportional zum Quadrat der Anzahl der Windungen NN der Spule und zur Querschnittsfläche AA, und invers proportional zur Länge ll der Spule. Diese Beziehung zeigt, wie die geometrischen und materialbezogenen Eigenschaften der Spule die Fähigkeit beeinflussen, ein Magnetfeld zu speichern, wenn ein elektrischer Strom durch sie fließt, und wie die Induktivität durch die Anordnung und Anzahl der Windungen sowie die Abmessungen der Spule bestimmt wird."
+  },
+  "3.116 Spannung über einer Induktivität exp": {
+    "equation": "",
+    "definition": "Die Formel beschreibt die Spannung uL(t)uL(t) über einer Induktivität L als Funktion der Zeit tt, nachdem ein plötzlicher Spannungssprung von Uangelegt wurde, wobei ττ die Zeitkonstante des Kreises ist, die durch das Verhältnis der Induktivität LL und des Widerstands RR gegeben ist (τ=L/Rτ=L/R). Die Spannung über der Induktivität nimmt exponentiell ab und ist negativ gegenüber der angelegten Spannung UU; die Zeitkonstante ττ bestimmt, wie schnell die Spannung auf den neuen Zustand reagiert, wobei der exponentielle Abfall die natürliche Antwort der Induktivität auf eine plötzliche Änderung der Spannung beschreibt."
+  },
+  "4.22 Echtleistung": {
+  "equation": "p== u*i*cos(phi)",
+  "definition": "Die Formel beschreibt die tatsächliche elektrische Leistung PP, die in einem Wechselstromkreis erbracht wird, als Produkt der elektrischen Spannung UU, des elektrischen Stroms II und des Kosinus des Phasenwinkels φφ zwischen der Spannung und dem Strom; der Faktor cos⁡φcosφ, auch als Leistungsfaktor bekannt, berücksichtigt die Phasenverschiebung zwischen Spannung und Strom und zeigt, wie viel der gesamten Leistung tatsächlich in nützliche Arbeit oder Wärme umgesetzt wird. Diese Gleichung ist zentral für die Berechnung der effektiven Leistung in einem Wechselstromkreis und unterscheidet sich von der scheinbaren Leistung, die keine Berücksichtigung der Phasenverschiebung enthält."
+},
+  "4.28 Resonanzfrequenz": {
+    "equation": "f == 1 /(2*Pi*sqrt(L*C))",
+    "definition": "Die Formel beschreibt die Resonanzfrequenz f0 eines seriellen RLC-Schaltkreises, wobei LL die Induktivität und CC die Kapazität des Schaltkreises darstellen; f0f0​ ist die Frequenz, bei der der Schaltkreis eine maximale Resonanz und minimale Impedanz aufweist, und die Formel zeigt, dass die Resonanzfrequenz umgekehrt proportional zur Quadratwurzel des Produkts von Induktivität und Kapazität ist. Diese Frequenz ist entscheidend für die Anwendungen in der Signalverarbeitung und Kommunikationssystemen, da bei dieser Frequenz der Schaltkreis optimal auf externe Signale reagiert."
+  },
+  "4.49 Impedanz der Induktivität": {
+    "equation": "zl == j* (2*Pi *f * L)",
+    "definition": " Die Formel beschreibt die Impedanz ZL eines Induktors in einem Wechselstromkreis, wobei jj die imaginäre Einheit und XLXL​ die Induktive Reaktanz ist; die Induktive Reaktanz XLXL​ ist gegeben durch XL=2πfLXL​=2πfL, wobei ff die Frequenz des Wechselstroms und LL die Induktivität des Induktors darstellt. Die Impedanz ZLZL​ ist somit rein imaginär und stellt den Widerstand dar, den der Induktor dem Wechselstrom entgegensetzt, wobei die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist."
+  },
+  "4.50 Impedanz der Induktivität": {
+    "equation": "zc== -j * 1/((2*Pi*f)*c)  ",
+    "definition": "Die Formel beschreibt die Impedanz ZCZC​ eines Kondensators in einem Wechselstromkreis, wobei jj die imaginäre Einheit und XCXC​ die Kapazitive Reaktanz ist; die Kapazitive Reaktanz XCXC​ ist gegeben durch XC=1ωCXC​=ωC1​, wobei ωω die Kreisfrequenz (ω=2πfω=2πf) und CC die Kapazität des Kondensators darstellt. Die Impedanz ZCZC​ ist daher ebenfalls rein imaginär und hat einen negativen Vorzeichenwert, was bedeutet, dass die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist. Diese Formel zeigt, wie der Widerstand eines Kondensators gegenüber Wechselstrom von der Frequenz des Stroms und der Kapazität des Kondensators abhängt."
   }
 }
