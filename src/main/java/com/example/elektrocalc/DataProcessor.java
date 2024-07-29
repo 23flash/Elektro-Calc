@@ -29,7 +29,7 @@ public  class DataProcessor {
     public static String DoubleToString(double Data) {
         String parsed = "";
         try {
-            parsed = Double.toString(Data);
+            parsed = String.format("%.3f", Data);
         }catch (NumberFormatException e) {
             parsed = "Invalid input";
         }

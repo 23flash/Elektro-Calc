@@ -3,13 +3,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.text.Text;
-
-
 import java.util.*;
 
 
 public class Controller {
-    //other
+    // UI elements
     @FXML
     private Text Result;
     @FXML
@@ -20,9 +18,14 @@ public class Controller {
     private ComboBox<String> EquationSelect;
     @FXML
     private Text currentEquation;
-    private Map<RadioButton, UIElementMap<TextField, Text, RadioButton>> uiElementMap;
+    // Global Variabel
     private String globalEquation;
     private String toCalcEquation;
+    private TextField lastTextField = null;
+    private String currentHistoryRes;
+    // Maps RadioButtons to UIElementMap objects
+    private Map<RadioButton, UIElementMap<TextField, Text, RadioButton>> uiElementMap;
+
     // Textfields
     @FXML
     private TextField OneTextField;
@@ -73,6 +76,10 @@ public class Controller {
     @FXML
     private RadioButton SevenRadio;
 
+    /**
+     * Initializes the controller.
+     * Sets up UI components and fills the equation selection combo box.
+     */
 
     @FXML
     public void initialize() {
@@ -83,14 +90,10 @@ public class Controller {
         //delete the pesky error when no Equation is selected
         globalEquation= "";
         //automatically fills the combo box with values as to first put them into a array List to sort the elements
-        ArrayList<String> equationNames = new ArrayList<>();
-        for (int i = 0; i < Json.equations.keySet().size() ; i++) {
-            equationNames.add((String) Json.equations.keySet().toArray()[i]);
-        }
+        // Populate the equation selection combo box with sorted equation names
+        ArrayList<String> equationNames = new ArrayList<>(Json.equations.keySet());
         equationNames.sort(Comparator.naturalOrder());
-        for (int i = 0; i < equationNames.size(); i++) {
-            EquationSelect.getItems().add(equationNames.get(i));
-        }
+        EquationSelect.getItems().addAll(equationNames);
 
         //Map UI ElementsTogether
         uiElementMap = new HashMap<>();
@@ -102,24 +105,30 @@ public class Controller {
         uiElementMap.put(SixRadio, new UIElementMap<>(SixTextField, SixText, SixRadio));
         uiElementMap.put(SevenRadio, new UIElementMap<>(SevenTextField, SevenText, SevenRadio));
 
-        //turns radiobutton into one group
+        // Add radio buttons to the toggle group
         CalcSelect = new ToggleGroup();
         addToToggleGroup();
         //hide Inputs
         hideAllInputs();
 
     }
-    //Seek out the the wished Formula
+    /**
+     * Handles the selection of an equation from the combo box.
+     * Sets up the UI elements based on the selected equation.
+     *
+     * @param event the action event
+     */
     @FXML
     private void handleComboSelect(ActionEvent event) {
         hideAllInputs();
 
         String toSetSymbol = "";
-        //gets the equation out of the json object
-        globalEquation = Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem());
-        //to calc equation always is set from global main equation
-        toCalcEquation = Json.getEquation(EquationSelect.getSelectionModel().getSelectedItem());
-        //Sets Definition
+        // Get the selected equation and set the global and calculation equations
+        String selectedEquation = EquationSelect.getSelectionModel().getSelectedItem();
+        globalEquation = Json.getEquation(selectedEquation);
+        toCalcEquation = Json.getEquation(selectedEquation);
+
+        //Sets Definition Text
         Definition.setText(Json.getDefinition(EquationSelect.getSelectionModel().getSelectedItem()));
         //Makes Local Equation for GUI
         String localEquation = globalEquation;
@@ -129,17 +138,20 @@ public class Controller {
         //Deletes Constants and doubble ==
         localEquation = localEquation.replace("==","=");
         // modify the string to filter out constants and Special Keys Like SQRT etc
-        if (localEquation.contains("Sqrt")){
-            localEquation = localEquation.replace("Sqrt", "");
+        if (localEquation.contains("sqrt")){
+            localEquation = localEquation.replace("sqrt", "");
         }
-        if (localEquation.contains("Cos")){
-            localEquation = localEquation.replace("Cos", "");
+        if (localEquation.contains("cos")){
+            localEquation = localEquation.replace("cos", "");
         }
         if (localEquation.contains("Pi")){
             localEquation = localEquation.replace("Pi", "");
         }
-        if (localEquation.contains("Sin")){
-            localEquation = localEquation.replace("Sin", "");
+        if (localEquation.contains("sin")){
+            localEquation = localEquation.replace("sin", "");
+        }
+        if (localEquation.contains("tan")){
+            localEquation = localEquation.replace("tan", "");
         }
 
         //Breaks up the String and activates Gui Elements
@@ -160,7 +172,12 @@ public class Controller {
             enableRightFields(whichTextField, toSetSymbol);
         }
     }
-
+    /**
+     * Enables the appropriate text field, label, and radio button based on the specified index.
+     *
+     * @param whichTextField the index of the text field to enable
+     * @param toSetSymbol the symbol to set for the label
+     */
     private void enableRightFields(int whichTextField, String toSetSymbol ) {
         if (whichTextField >= 0 && whichTextField < uiElementMap.size()) {
             RadioButton[] radioButtons = {OneRadio, TwoRadio, ThreeRadio, FourRadio, FiveRadio, SixRadio, SevenRadio};
@@ -179,8 +196,10 @@ public class Controller {
             }
         }
     }
-
-
+    /**
+     * Handles the calculation action when the Calculate button is pressed.
+     * Evaluates the equation with the provided input values and displays the result.
+     */
     @FXML
     private void handleCalcButtonAction() {
         //map the variables to the right strings to calc
@@ -188,29 +207,44 @@ public class Controller {
         for (UIElementMap<TextField, Text, RadioButton> elements : uiElementMap.values()) {
             TextField textField = elements.getFirst();
             Text text = elements.getSecond();
-
+            if (textField.isVisible()||textField.isDisabled()){
             variableAssignments.put(text.getText() ,DataProcessor.TextFieldToDouble(textField));
+            }
         }
+        // Solve the equation and display the result
         Double solved = EquationSolver.solve(toCalcEquation, variableAssignments);
         Result.setText(DataProcessor.DoubleToString(solved));
-        ResultHistory.appendText(DataProcessor.DoubleToString(solved) + "\n");
+        ResultHistory.appendText( currentHistoryRes+ "= " + DataProcessor.DoubleToString(solved) + "\n");
     }
-
+    /**
+     * Handles the selection of a calculation variable via radio buttons.
+     * Updates the equation to solve for the selected variable.
+     */
     @FXML
     private void handleCalcSelect() {
+
+
+        if (lastTextField != null){
+            lastTextField.setDisable(false);
+        }
         Toggle selectedToggle = CalcSelect.getSelectedToggle();
         if (selectedToggle != null) {
             RadioButton selectedRadioButton = (RadioButton) selectedToggle;
             UIElementMap<TextField, Text, RadioButton> elements = uiElementMap.get(selectedRadioButton);
+                TextField textField = elements.getFirst();
                 Text associatedText = elements.getSecond();
-                System.out.println("Text of associated Text: " + associatedText.getText());
+                textField.setDisable(true);
+                currentHistoryRes = associatedText.getText();
+                lastTextField = textField;
                 toCalcEquation = EquationSolver.permute(globalEquation,associatedText.getText());
                 currentEquation.setText(toCalcEquation);
         } else {
             System.out.println("No RadioButton selected");
         }
     }
-
+    /**
+     * Hides all input fields, labels, and radio buttons.
+     */
     private void hideAllInputs(){
         //hide the all unused GUI Elements
         for (UIElementMap<TextField, Text, RadioButton> elements : uiElementMap.values()) {
@@ -225,7 +259,9 @@ public class Controller {
             radioButton.setDisable(true);
         }
     }
-
+    /**
+     * Adds all radio buttons to the toggle group.
+     */
     private void addToToggleGroup(){
         for (UIElementMap<TextField, Text, RadioButton> elements : uiElementMap.values()) {
             RadioButton radioButton = elements.getThird();
