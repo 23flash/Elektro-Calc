@@ -82,10 +82,16 @@ public class Controller {
         Definition.setWrapText(true);
         //delete the pesky error when no Equation is selected
         globalEquation= "";
-        //automatically fills the combo box with values
-        for (String key : Json.equations.keySet()) {
-            EquationSelect.getItems().add(key);
+        //automatically fills the combo box with values as to first put them into a array List to sort the elements
+        ArrayList<String> equationNames = new ArrayList<>();
+        for (int i = 0; i < Json.equations.keySet().size() ; i++) {
+            equationNames.add((String) Json.equations.keySet().toArray()[i]);
         }
+        equationNames.sort(Comparator.naturalOrder());
+        for (int i = 0; i < equationNames.size(); i++) {
+            EquationSelect.getItems().add(equationNames.get(i));
+        }
+
         //Map UI ElementsTogether
         uiElementMap = new HashMap<>();
         uiElementMap.put(OneRadio, new UIElementMap<>(OneTextField, OneText, OneRadio));
