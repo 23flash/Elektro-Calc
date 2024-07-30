@@ -1,8 +1,98 @@
 {
-  "u": {
-    "unit" : "daawd"
+  "i": {
+    "unit": "Amperes (A)"
   },
-  "v": {
-    "unit": "dadaw"
+  "q": {
+    "unit": "Coulombs (C)"
+  },
+  "t": {
+    "unit": "Seconds (s)"
+  },
+  "p": {
+    "unit": "Watts (W)"
+  },
+  "u": {
+    "unit": "Volts (V)"
+  },
+  "r": {
+    "unit": "Ohms (Ω)"
+  },
+  "f": {
+    "unit": "Hertz (Hz)"
+  },
+  "roh": {
+    "unit": "Ohm-meters (Ω·m)"
+  },
+  "l": {
+    "unit": "Meters (m)"
+  },
+  "a": {
+    "unit": "Square meters (m²)"
+  },
+  "alpha": {
+    "unit": "1/°C"
+  },
+  "v (temperature)": {
+    "unit": "Degrees Celsius (°C)"
+  },
+  "rj": {
+    "unit": "Ohms (Ω)"
+  },
+  "rges": {
+    "unit": "Ohms (Ω)"
+  },
+  "rOne": {
+    "unit": "Ohms (Ω)"
+  },
+  "rTwo": {
+    "unit": "Ohms (Ω)"
+  },
+  "er": {
+    "unit": "Dimensionless (relative permittivity)"
+  },
+  "c": {
+    "unit": "Farads (F)"
+  },
+  "ci": {
+    "unit": "Farads (F)"
+  },
+  "qi": {
+    "unit": "Coulombs (C)"
+  },
+  "UCt": {
+    "unit": "Volts (V)"
+  },
+  "mu": {
+    "unit": "Henries per meter (H/m)"
+  },
+  "h": {
+    "unit": "Amperes per meter (A/m)"
+  },
+  "k": {
+    "unit": "Henries per meter (H/m)"
+  },
+  "r (magnetic)": {
+    "unit": "Ohms (Ω)"
+  },
+  "f (Lorentz)": {
+    "unit": "Newtons (N)"
+  },
+  "L": {
+    "unit": "Henries (H)"
+  },
+  "mu0": {
+    "unit": "Henries per meter (H/m)"
+  },
+  "n": {
+    "unit": "Dimensionless (number of turns)"
+  },
+  "phi": {
+    "unit": "Radians (rad)"
+  },
+  "zl": {
+    "unit": "Ohms (Ω)"
+  },
+  "zc": {
+    "unit": "Ohms (Ω)"
   }
 }

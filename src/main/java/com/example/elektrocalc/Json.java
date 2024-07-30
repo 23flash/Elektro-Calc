@@ -7,15 +7,16 @@ import java.util.Objects;
 
 public class Json {
     // Holds the equations loaded from the JSON file
-    public static JSONObject equations = readJson();
+    public static JSONObject equations = readJson("equations.json");
+    public static JSONObject units = readJson("units.json");
     /**
      * Reads a JSON file and returns its contents as a JSONObject.
      *
      * @return JSONObject containing data from the JSON file
      */
-    private static JSONObject readJson(){
+    private static JSONObject readJson(String toSearch){
         JSONObject json = new JSONObject();
-        try (BufferedReader reader = new BufferedReader(new FileReader(Objects.requireNonNull(Main.class.getResource("equations.json")).getFile()))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(Objects.requireNonNull(Main.class.getResource(toSearch)).getFile()))) {
             StringBuilder stringBuilder = new StringBuilder();
             String line;
             while ((line = reader.readLine()) != null) {
@@ -45,6 +46,17 @@ public class Json {
      */
     public static String getDefinition(String equationName){
         JSONObject to_search = equations.getJSONObject(equationName);
-        return to_search.getString("definition");}
+        return to_search.getString("definition");
+    }
+    /**
+     * Retrieves the definition for the given equation name from the JSON object.
+     *
+     * @param unitName the name of the equation whose definition is to be retrieved
+     * @return the definition string
+     */
+    public static String getUnit(String unitName){
+        JSONObject to_search = units.getJSONObject(unitName);
+        return to_search.getString("unit");
+    }
 
 }
