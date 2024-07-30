@@ -8,11 +8,11 @@
 
 # Aufbau der Applikation
 ## GUI
-Das Folgende Bild ist das Handgezeichnete Icon der Applikation damit es schnell zu Finden
+Das Folgende Bild ist das Handgezeichnete Icon der Applikation damit es schnell im "icon tray" zu Finden
 ![cat.png](src%2Fmain%2Fresources%2Fcom%2Fexample%2Felektrocalc%2Fcat.png)
 
 ## Handhabung
-
+- die 
 ## Formeln oder Einheiten hinzufügen
 ### alle Formeln sowie deren definitionen werden in der equations.json gespeichert
   ```json
