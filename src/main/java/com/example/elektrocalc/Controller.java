@@ -121,7 +121,6 @@ public class Controller {
     @FXML
     private void handleComboSelect(ActionEvent event) {
         hideAllInputs();
-
         String toSetSymbol = "";
         // Get the selected equation and set the global and calculation equations
         String selectedEquation = EquationSelect.getSelectionModel().getSelectedItem();
@@ -138,20 +137,20 @@ public class Controller {
         //Deletes Constants and doubble ==
         localEquation = localEquation.replace("==","=");
         // modify the string to filter out constants and Special Keys Like SQRT etc
-        if (localEquation.contains("sqrt")){
-            localEquation = localEquation.replace("sqrt", "");
+        if (localEquation.contains("Sqrt")){
+            localEquation = localEquation.replace("Sqrt", "");
         }
-        if (localEquation.contains("cos")){
-            localEquation = localEquation.replace("cos", "");
+        if (localEquation.contains("Cos")){
+            localEquation = localEquation.replace("Cos", "");
         }
         if (localEquation.contains("Pi")){
             localEquation = localEquation.replace("Pi", "");
         }
-        if (localEquation.contains("sin")){
-            localEquation = localEquation.replace("sin", "");
+        if (localEquation.contains("Sin")){
+            localEquation = localEquation.replace("Sin", "");
         }
-        if (localEquation.contains("tan")){
-            localEquation = localEquation.replace("tan", "");
+        if (localEquation.contains("Tan")){
+            localEquation = localEquation.replace("Tan", "");
         }
 
         //Breaks up the String and activates Gui Elements
@@ -171,6 +170,7 @@ public class Controller {
         if (!printedStrings.contains(toSetSymbol) && !toSetSymbol.isEmpty()) {
             enableRightFields(whichTextField, toSetSymbol);
         }
+
     }
     /**
      * Enables the appropriate text field, label, and radio button based on the specified index.
@@ -253,7 +253,9 @@ public class Controller {
             RadioButton radioButton = elements.getThird();
 
             text.setVisible(false);
+            text.setText("");
             textField.setVisible(false);
+            textField.setText("");
             radioButton.setVisible(false);
             radioButton.setSelected(false);
             radioButton.setDisable(true);
