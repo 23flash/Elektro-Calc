@@ -4,6 +4,8 @@
 - Intellij Idea 
 - Internet Verbindung (Einige Dependencys werden durch Maven aus dem Netz gezogen)
 - am besten Linux basiertes Betriebssystem aber auch Windows
+# Instalation
+https://www.jetbrains.com/idea/download/?section=windows
 # Ausführen der Applikation
 
 # Aufbau der Applikation
