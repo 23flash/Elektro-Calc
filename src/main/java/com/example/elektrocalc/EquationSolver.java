@@ -26,7 +26,7 @@ public class EquationSolver {
      * @return The numerical result of the solved equation.
      */
 
-    public static Double solve(String equation, Map<String,Double> variableAssignments) {
+    public static String solve(String equation, Map<String,Double> variableAssignments) {
         // Create an expression parser
         EvalUtilities util = new EvalUtilities(false, true);
 
@@ -40,11 +40,11 @@ public class EquationSolver {
         // Parse and evaluate the equation
         try {
             IExpr result = util.evaluate(equation);
-            return result.toDoubleDefault();
+            return result.toString();
 
         } catch (Exception e) {
             e.printStackTrace();
-            return 0D;
+            return "cant solve this expression";
         }
     }
     /**

@@ -19,8 +19,8 @@
     "equation": "r == (roh * l)/a",
     "definition": "Der elektrische Widerstand R eines Leiters ist proportional zur Länge L des Leiters und dem spezifischen Widerstand ρ (Rho) des Materials, aus dem der Leiter besteht, und umgekehrt proportional zur Querschnittsfläche A des Leiters; diese Gleichung beschreibt, wie der Widerstand eines Leiters durch seine physikalischen Eigenschaften beeinflusst wird, wobei ein längerer oder dünnerer Leiter einen höheren Widerstand aufweist und ein kürzerer oder dickeren Leiter einen niedrigeren Widerstand hat."
   },
-  "1.15 Widerstand-Temperatur-Gesetz": {
-    "equation": "rv == rTwenty (1 +alpha* (v-20))",
+  "2.15 Widerstand-Temperatur-Gesetz": {
+    "equation": "rv == r * (1* alp * (v - 20))",
     "definition": "Die Formel beschreibt, wie der elektrische Widerstand Rϑ eines Materials bei einer Temperatur ϑ von der Widerstandswerte R20 bei einer Referenztemperatur von 20°C abhängt, wobei α der Temperaturkoeffizient des Widerstands ist, der angibt, wie stark sich der Widerstand mit der Temperatur ändert, und Δϑ20 die Differenz zwischen der aktuellen Temperatur ϑ und der Referenztemperatur 20°C darstellt; diese Beziehung ermöglicht es, den Widerstand eines Materials bei verschiedenen Temperaturen zu berechnen und zu verstehen, wie sich der Widerstand durch Temperaturänderungen beeinflussen lässt."
   },
   "2.33 Spannungsteiler-Gleichung": {
@@ -28,7 +28,7 @@
     "definition": "Die Spannungsteiler-Gleichung beschreibt das Verhältnis der Teilspannung Uj über einem Widerstand Rj zu der Gesamtspannung Uq und dem Gesamtwiderstand Rges eines Serienschaltung von Widerständen, wobei die Spannung Uj proportional zum Widerstand Rj und die Gesamtspannung Uq proportional zum Gesamtwiderstand Rges ist; diese Beziehung wird verwendet, um die Verteilung der Spannung in einer Serie-Schaltung von Widerständen zu berechnen und zu verstehen, wie die Spannung aufgeteilt wird, abhängig von den Widerstandswerten der einzelnen Komponenten im Schaltkreis."
   },
   "2.45 Parallelwiderstands-Gleichung": {
-    "equation": "rges == (rOne * rTwo) / (rOne + rTwo)",
+    "equation": "rges == (rone * rtwo) / (rone + rtwo)",
     "definition": "Die Formel beschreibt den effektiven Widerstand Rges von zwei parallel geschalteten Widerständen R1 und R2 wobei der Parallelwiderstand Rges durch das Produkt der beiden Widerstände R1 und R2 geteilt durch die Summe der beiden Widerstände berechnet wird; diese Beziehung wird verwendet, um den Gesamtwiderstand einer Schaltung zu bestimmen, in der Widerstände parallel geschaltet sind, und zeigt, dass der effektive Widerstand immer kleiner ist als der kleinste Widerstand in der Parallelkombination."
   },
   "3.14 Kapazitätsformel für einen Plattenkondensator": {
@@ -40,7 +40,7 @@
     "definition": " Die Formel beschreibt die elektrische Ladung Qi eines Kondensators, die sich als Produkt der Kapazität Ci des Kondensators und der angelegten Spannung U berechnet; dies bedeutet, dass die Ladung direkt proportional zur Kapazität und zur Spannung ist, wobei eine höhere Kapazität oder Spannung zu einer größeren Ladung führt. Die Formel zeigt, wie viel elektrische Ladung der Kondensator speichern kann, wenn eine bestimmte Spannung angelegt wird, und ist grundlegend für das Verständnis der Energie- und Ladungsspeicherung in Kondensatoren."
   },
   "3.42 Zeitkonstante für einen R-C-Kreis exp": {
-    "equation": "uCt == U*(q-LösExp^(t/(r*c)))",
+    "equation": "uCt == u*(q-lösexp^(t/(r*c)))",
     "definition": "Die Formel beschreibt die Spannung uC(t) über einem Kondensator in einem Widerstands-Kondensator-Kreis (R-C-Kreis) als Funktion der Zeit t nach einer plötzlichen Änderung der angelegten Spannung U, wobei τ die Zeitkonstante des Kreises ist, die als τ=R⋅Cτ=R⋅C definiert ist; die Formel zeigt, dass die Spannung des Kondensators exponentiell ansteigt und asymptotisch gegen den Wert der angelegten Spannung UU konvergiert, wobei die Rate dieses Anstiegs durch die Zeitkonstante ττ bestimmt wird. Dies beschreibt den Vorgang, bei dem sich der Kondensator nach einer plötzlichen Spannungsänderung langsam auf den neuen Spannungswert auflädt."
   },
   "3.59 Magnetische Flussdichte-Gleichung": {
@@ -48,7 +48,7 @@
     "definition": "Die Formel beschreibt die Beziehung zwischen der magnetischen Flussdichte B und dem Magnetfeld H, wobei μ die magnetische Permeabilität des Mediums ist; B ist die Größe, die die Stärke und Richtung des Magnetfelds beschreibt, das durch ein Material erzeugt wird, und H ist die Magnetfeldstärke. Die magnetische Permeabilität μμ ist ein Materialparameter, der angibt, wie leicht das Material magnetisiert werden kann, und beeinflusst, wie das Magnetfeld H in das Magnetfeld B übersetzt wird."
   },
   "3.63 Magnetischer Kreis": {
-    "equation": "r == l/(k*A)",
+    "equation": "r == l/(k*a)",
     "definition": " Die Formel beschreibt die Induktivität L eines Spulenwickels als Funktion der geometrischen und materialbezogenen Eigenschaften der Spule, wobei κ die magnetische Permeabilität des Kerns ist, A die Querschnittsfläche der Spule und R die Länge der Spule darstellt; die Induktivität L misst die Fähigkeit der Spule, ein Magnetfeld zu speichern und zu beeinflussen, wenn ein elektrischer Strom durch sie fließt, und ist direkt proportional zur Permeabilität und der Fläche und invers proportional zur Länge der Spule"
   },
   "3.83 Lorentzkraft-Gleichung": {
@@ -68,11 +68,11 @@
   "definition": "Die Formel beschreibt die tatsächliche elektrische Leistung P, die in einem Wechselstromkreis erbracht wird, als Produkt der elektrischen Spannung U, des elektrischen Stroms I und des Kosinus des Phasenwinkels φφ zwischen der Spannung und dem Strom; der Faktor cos⁡ auch als Leistungsfaktor bekannt, berücksichtigt die Phasenverschiebung zwischen Spannung und Strom und zeigt, wie viel der gesamten Leistung tatsächlich in nützliche Arbeit oder Wärme umgesetzt wird. Diese Gleichung ist zentral für die Berechnung der effektiven Leistung in einem Wechselstromkreis und unterscheidet sich von der scheinbaren Leistung, die keine Berücksichtigung der Phasenverschiebung enthält."
 },
   "4.28 Resonanzfrequenz": {
-    "equation": "f == 1 /(2*Pi*sqrt(L*C))",
+    "equation": "f == 1 /(2*Pi*sqrt(l*c))",
     "definition": "Die Formel beschreibt die Resonanzfrequenz f0 eines seriellen RLC-Schaltkreises, wobei L die Induktivität und C die Kapazität des Schaltkreises darstellen; f0 ist die Frequenz, bei der der Schaltkreis eine maximale Resonanz und minimale Impedanz aufweist, und die Formel zeigt, dass die Resonanzfrequenz umgekehrt proportional zur Quadratwurzel des Produkts von Induktivität und Kapazität ist. Diese Frequenz ist entscheidend für die Anwendungen in der Signalverarbeitung und Kommunikationssystemen, da bei dieser Frequenz der Schaltkreis optimal auf externe Signale reagiert."
   },
   "4.49 Impedanz der Induktivität": {
-    "equation": "zl == j* (2*Pi *f * L)",
+    "equation": "zl == j* (2*Pi *f * l)",
     "definition": " Die Formel beschreibt die Impedanz ZL eines Induktors in einem Wechselstromkreis, wobei j die imaginäre Einheit und XL die Induktive Reaktanz ist; die Induktive Reaktanz XL ist gegeben durch XL=2πfxl=2πfL, wobei ff die Frequenz des Wechselstroms und L die Induktivität des Induktors darstellt. Die Impedanz ZL ist somit rein imaginär und stellt den Widerstand dar, den der Induktor dem Wechselstrom entgegensetzt, wobei die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist."
   },
   "4.50 Impedanz der Induktivität": {

@@ -154,6 +154,9 @@ public class Controller {
             enableRightFields(whichTextField, toSetSymbol);
         }
 
+        //new Equation reset input
+        if (lastTextField!=null) lastTextField.setDisable(false);
+
     }
     /**
      * Enables the appropriate text field, label, and radio button based on the specified index.
@@ -195,9 +198,9 @@ public class Controller {
             }
         }
         // Solve the equation and display the result
-        Double solved = EquationSolver.solve(toCalcEquation, variableAssignments);
-        Result.setText(DataProcessor.DoubleToString(solved));
-        ResultHistory.appendText( currentHistoryRes+ "= " + DataProcessor.DoubleToString(solved) + "\n");
+        String solved = EquationSolver.solve(toCalcEquation, variableAssignments);
+        Result.setText(solved);
+        ResultHistory.appendText( currentHistoryRes+ "= " + solved + "\n");
     }
     /**
      * Handles the selection of a calculation variable via radio buttons.
@@ -243,6 +246,7 @@ public class Controller {
             radioButton.setSelected(false);
             radioButton.setDisable(true);
         }
+
     }
     /**
      * Adds all radio buttons to the toggle group.
