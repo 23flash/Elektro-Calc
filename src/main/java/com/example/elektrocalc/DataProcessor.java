@@ -35,5 +35,21 @@ public  class DataProcessor {
         }
         return parsed;
     }
+    public static String FormatStringToAnalyse(String data) {
+        // Deletes double ==
+        data = data.replace("==", "=");
 
+        // Converts the string to lower case to handle case-insensitive replacements
+        data = data.toLowerCase();
+
+        // Array of constants and special keys to be filtered out
+        String[] keys = {"sqrt", "cos", "pi", "sin", "tan"};
+
+        // Loop through the array and replace occurrences
+        for (String key : keys) {
+            data = data.replace(key, "");
+        }
+
+        return data;
+    }
 }

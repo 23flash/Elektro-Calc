@@ -134,24 +134,7 @@ public class Controller {
         //hashmap to find duplicats
         Set<String> printedStrings = new HashSet<>();
         currentEquation.setText(localEquation);
-        //Deletes Constants and doubble ==
-        localEquation = localEquation.replace("==","=");
-        // modify the string to filter out constants and Special Keys Like SQRT etc
-        if (localEquation.contains("Sqrt")){
-            localEquation = localEquation.replace("Sqrt", "");
-        }
-        if (localEquation.contains("Cos")){
-            localEquation = localEquation.replace("Cos", "");
-        }
-        if (localEquation.contains("Pi")){
-            localEquation = localEquation.replace("Pi", "");
-        }
-        if (localEquation.contains("Sin")){
-            localEquation = localEquation.replace("Sin", "");
-        }
-        if (localEquation.contains("Tan")){
-            localEquation = localEquation.replace("Tan", "");
-        }
+        localEquation  = DataProcessor.FormatStringToAnalyse(localEquation);
 
         //Breaks up the String and activates Gui Elements
         int whichTextField = 0;
@@ -207,7 +190,7 @@ public class Controller {
         for (UIElementMap<TextField, Text, RadioButton> elements : uiElementMap.values()) {
             TextField textField = elements.getFirst();
             Text text = elements.getSecond();
-            if (textField.isVisible()||textField.isDisabled()){
+            if (textField.isVisible()== true&&textField.isDisabled()==false){
             variableAssignments.put(text.getText() ,DataProcessor.TextFieldToDouble(textField));
             }
         }
