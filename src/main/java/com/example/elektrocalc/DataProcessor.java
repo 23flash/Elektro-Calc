@@ -1,5 +1,4 @@
 package com.example.elektrocalc;
-
 import javafx.scene.control.TextField;
 /**
  * Utility class for processing data between TextField and double representations.
