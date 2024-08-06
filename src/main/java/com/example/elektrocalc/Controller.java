@@ -208,8 +208,6 @@ public class Controller {
      */
     @FXML
     private void handleCalcSelect() {
-
-
         if (lastTextField != null){
             lastTextField.setDisable(false);
         }

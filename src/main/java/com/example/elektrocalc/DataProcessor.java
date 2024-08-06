@@ -1,5 +1,10 @@
 package com.example.elektrocalc;
 import javafx.scene.control.TextField;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 import static java.lang.String.format;
 
 /**
@@ -36,6 +41,7 @@ public  class DataProcessor {
         }
         return parsed;
     }
+
     public static String FormatStringToAnalyse(String data) {
         // Deletes double ==
         data = data.replace("==", "=");
@@ -52,5 +58,65 @@ public  class DataProcessor {
         }
 
         return data;
+    }
+    /**
+     * Formats a given equation string by encapsulating variable names with '#' and preserving certain keywords.
+     * Ensures that for Example u is not replaced in variable ut
+     * @param equation the input equation string to format
+     * @return the formatted equation string with variables encapsulated and keywords preserved
+     */
+    public static String FormatStringToReplace(String equation) {
+        // StringBuilder to construct the new formatted equation
+        StringBuilder newEquation = new StringBuilder();
+        // String to accumulate variable names
+        String toRepSymbol = "";
+        // Array of keywords to preserve in the equation
+        String[] keysArray = {"sqrt", "cos", "pi", "sin", "tan","Sqrt", "Cos", "Pi", "Sin", "Tan","ArcSin","ArcCos","ArcTan"};
+        // Convert the array to a HashSet for efficient lookup
+        Set<String> keys = new HashSet<>(Arrays.asList(keysArray));
+        // Iterate through each character in the equation string
+        for (int i = 0; i < equation.length(); i++) {
+            char ch = equation.charAt(i);
+
+            // Check if a keyword starts at the current position
+            boolean isKey = false;
+            for (String key : keys) {
+                if (equation.startsWith(key, i)) {
+                    // Add any accumulated variable encapsulated in #
+                    if (!toRepSymbol.isEmpty()) {
+                        newEquation.append("#").append(toRepSymbol).append("#");
+                        toRepSymbol = "";
+                    }
+                    // Append the keyword
+                    newEquation.append(key);
+                    // Move the index forward by the length of the keyword
+                    i += key.length() - 1;
+                    isKey = true;
+                    break;
+                }
+            }
+            // Continue to the next character if a keyword was found
+            if (isKey) {
+                continue;
+            }
+            // Accumulate variable names or append special characters
+            if (Character.isLetter(ch)) {
+                toRepSymbol += ch;
+            } else if (ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '=' || ch == '^' || Character.isWhitespace(ch) || ch == '(' || ch == ')') {
+                if (!toRepSymbol.isEmpty()) {
+                    newEquation.append("#").append(toRepSymbol).append("#");
+                    toRepSymbol = "";
+                }
+                newEquation.append(ch);
+            } else {
+                newEquation.append(ch);
+            }
+        }
+        // Append the last variable if there is one
+        if (!toRepSymbol.isEmpty()) {
+            newEquation.append("#").append(toRepSymbol).append("#");
+        }
+        // Return the newly formatted equation
+        return newEquation.toString();
     }
 }

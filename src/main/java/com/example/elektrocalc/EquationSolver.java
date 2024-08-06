@@ -30,16 +30,28 @@ public class EquationSolver {
         // Create an expression parser
         EvalUtilities util = new EvalUtilities(false, true);
 
-        // Substitute values into the equation
+        //Make the Variabels Unique
+        String newEquation = DataProcessor.FormatStringToReplace(equation);
+
+        //Debug
+        System.out.println(newEquation);
+        ////
+
         for (Map.Entry<String, Double> entry : variableAssignments.entrySet()) {
-            equation = equation.replace(entry.getKey(), entry.getValue().toString());
+            newEquation = newEquation.replace("#"+entry.getKey()+"#", entry.getValue().toString());
         }
+
+        //Debug
+        System.out.println(newEquation);
+        ////
+
+
         // Replace '==' with '=' for evaluation
-        equation = equation.replace("==", "=");
+        newEquation = newEquation.replace("==", "=");
 
         // Parse and evaluate the equation
         try {
-            IExpr result = util.evaluate(equation);
+            IExpr result = util.evaluate(newEquation);
             return result.toString();
 
         } catch (Exception e) {

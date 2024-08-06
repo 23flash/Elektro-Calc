@@ -78,5 +78,9 @@
   "4.50 Impedanz der Induktivität": {
     "equation": "zc== -j * 1/((2*Pi*f)*c)  ",
     "definition": "Die Formel beschreibt die Impedanz ZC eines Kondensators in einem Wechselstromkreis, wobei j die imaginäre Einheit und XC die Kapazitive Reaktanz ist; die Kapazitive Reaktanz XC ist gegeben durch XC=1ωXC, wobei ωω die Kreisfrequenz (ω=2πfω=2πf) und C die Kapazität des Kondensators darstellt. Die Impedanz ZC ist daher ebenfalls rein imaginär und hat einen negativen Vorzeichenwert, was bedeutet, dass die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist. Diese Formel zeigt, wie der Widerstand eines Kondensators gegenüber Wechselstrom von der Frequenz des Stroms und der Kapazität des Kondensators abhängt."
+  },
+  "Test": {
+    "equation": "zc== -j * 1/((2*Pi*f)*c*c)  ",
+    "definition": "Test"
   }
 }
