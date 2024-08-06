@@ -2,6 +2,7 @@ package com.example.elektrocalc;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import java.util.*;
 
@@ -9,15 +10,16 @@ import java.util.*;
 public class Controller {
     // UI elements
     @FXML
-    private Text Result;
+    private Label Result;
+    @FXML
+    private Label currentEquation;
     @FXML
     private TextArea ResultHistory;
     @FXML
     private TextArea Definition;
     @FXML
     private ComboBox<String> EquationSelect;
-    @FXML
-    private Text currentEquation;
+
     // Global Variabel
     private String globalEquation;
     private String toCalcEquation;
@@ -110,7 +112,10 @@ public class Controller {
         addToToggleGroup();
         //hide Inputs
         hideAllInputs();
-
+        //Bigger Font for Labels
+        int fontsizse = 20;
+        Result.setFont(new Font(fontsizse));
+        currentEquation.setFont(new Font(fontsizse));
     }
     /**
      * Handles the selection of an equation from the combo box.
@@ -133,7 +138,7 @@ public class Controller {
         String localEquation = globalEquation;
         //hashmap to find duplicats
         Set<String> printedStrings = new HashSet<>();
-        currentEquation.setText(localEquation);
+        currentEquation.setText(localEquation.replace("==","="));
         localEquation  = DataProcessor.FormatStringToAnalyse(localEquation);
 
         //Breaks up the String and activates Gui Elements
@@ -199,8 +204,8 @@ public class Controller {
         }
         // Solve the equation and display the result
         String solved = EquationSolver.solve(toCalcEquation, variableAssignments);
-        Result.setText(solved);
-        ResultHistory.appendText( currentHistoryRes+ "= " + solved + "\n");
+        Result.setText(currentHistoryRes+ " = " + solved);
+        ResultHistory.appendText( currentHistoryRes+ " = " + solved + "\n");
     }
     /**
      * Handles the selection of a calculation variable via radio buttons.
@@ -221,7 +226,7 @@ public class Controller {
                 currentHistoryRes = associatedText.getText();
                 lastTextField = textField;
                 toCalcEquation = EquationSolver.permute(globalEquation,associatedText.getText());
-                currentEquation.setText(toCalcEquation);
+                currentEquation.setText(toCalcEquation.replace("==" ,"="));
         } else {
             System.out.println("No RadioButton selected");
         }
@@ -254,5 +259,12 @@ public class Controller {
             RadioButton radioButton = elements.getThird();
             radioButton.setToggleGroup(CalcSelect);
         }
+    }
+    /**
+     * Clears Result History
+     */
+    @FXML
+    private void handleClearHistory(ActionEvent event) {
+        ResultHistory.setText("");
     }
 }

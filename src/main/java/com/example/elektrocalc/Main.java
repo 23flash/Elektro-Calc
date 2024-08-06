@@ -37,6 +37,8 @@ public class Main extends Application {
         stage.setScene(scene);
         // Ensures the application window is always on top of other windows
         stage.setAlwaysOnTop(true);
+        //Resizable false
+        stage.setResizable(false);
         // Displays the stage
         stage.show();
     }

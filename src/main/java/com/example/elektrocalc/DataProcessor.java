@@ -71,7 +71,7 @@ public  class DataProcessor {
         // String to accumulate variable names
         String toRepSymbol = "";
         // Array of keywords to preserve in the equation
-        String[] keysArray = {"sqrt", "cos", "pi", "sin", "tan","Sqrt", "Cos", "Pi", "Sin", "Tan","ArcSin","ArcCos","ArcTan"};
+        String[] keysArray = {"sqrt", "cos", "pi", "sin", "tan","Sqrt", "Cos", "Pi", "Sin", "Tan","ArcSin","ArcCos","ArcTan","Csc","Sec"};
         // Convert the array to a HashSet for efficient lookup
         Set<String> keys = new HashSet<>(Arrays.asList(keysArray));
         // Iterate through each character in the equation string
