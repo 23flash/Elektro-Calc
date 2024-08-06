@@ -1,5 +1,7 @@
 package com.example.elektrocalc;
 import javafx.scene.control.TextField;
+import static java.lang.String.format;
+
 /**
  * Utility class for processing data between TextField and double representations.
  */
@@ -28,7 +30,7 @@ public  class DataProcessor {
     public static String DoubleToString(double Data) {
         String parsed = "";
         try {
-            parsed = String.format("%.3f", Data);
+            parsed = format("%.3f", Data);
         }catch (NumberFormatException e) {
             parsed = "Invalid input";
         }
