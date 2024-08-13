@@ -58,7 +58,7 @@
     "equation": "b == u * h",
     "definition": "Die Formel beschreibt die Beziehung zwischen der magnetischen Flussdichte B und dem Magnetfeld H, wobei μ die magnetische Permeabilität des Mediums ist; B ist die Größe, die die Stärke und Richtung des Magnetfelds beschreibt, das durch ein Material erzeugt wird, und H ist die Magnetfeldstärke. Die magnetische Permeabilität μμ ist ein Materialparameter, der angibt, wie leicht das Material magnetisiert werden kann, und beeinflusst, wie das Magnetfeld H in das Magnetfeld B übersetzt wird.",
     "image": "flussdichte.png"
-  },e
+  },
   "3.63 Magnetischer Kreis": {
     "equation": "rm == lm/(u*a)",
     "definition": " Die Formel beschreibt die Induktivität L eines Spulenwickels als Funktion der geometrischen und materialbezogenen Eigenschaften der Spule, wobei κ die magnetische Permeabilität des Kerns ist, A die Querschnittsfläche der Spule und R die Länge der Spule darstellt; die Induktivität L misst die Fähigkeit der Spule, ein Magnetfeld zu speichern und zu beeinflussen, wenn ein elektrischer Strom durch sie fließt, und ist direkt proportional zur Permeabilität und der Fläche und invers proportional zur Länge der Spule",
