@@ -53,4 +53,9 @@ Das Folgende Bild ist das Handgezeichnete Icon der Applikation damit es schnell 
   - org.json (json) um Json files zu verarbeiten und zu Nutzen
   - org.matheclipse (Symja) zum Interpretieren der Formeln und umstellen
   - io.github.mkpaz (atlantafx-base) für fertige themes der app
-  - org.openjfx (java fx) für alle möglichen GUI elemente 
+  - org.openjfx (java fx) für alle möglichen GUI elemente
+# Grobeinschätzung der Eigenden Arbeits Zeit
+- Zeichnen ca. 13 Stunden 
+- Dokumentaion ca. 20 Stunden
+- Programmieren ca. 100 Stunden 
+- Rechereche ( GUI Pogrammierung ,Libarys, welche Pogrammiersprache) ca. 12 Stunden

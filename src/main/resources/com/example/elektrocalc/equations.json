@@ -52,13 +52,13 @@
   "3.42 Zeitkonstante für einen R-C-Kreis exp": {
     "equation": "uCt == u*(q-lösexp^(t/(r*c)))",
     "definition": "Die Formel beschreibt die Spannung uC(t) über einem Kondensator in einem Widerstands-Kondensator-Kreis (R-C-Kreis) als Funktion der Zeit t nach einer plötzlichen Änderung der angelegten Spannung U, wobei τ die Zeitkonstante des Kreises ist, die als τ=R⋅Cτ=R⋅C definiert ist; die Formel zeigt, dass die Spannung des Kondensators exponentiell ansteigt und asymptotisch gegen den Wert der angelegten Spannung U konvergiert, wobei die Rate dieses Anstiegs durch die Zeitkonstante τ bestimmt wird. Dies beschreibt den Vorgang, bei dem sich der Kondensator nach einer plötzlichen Spannungsänderung langsam auf den neuen Spannungswert auflädt.",
-    "image": "cat.png"
+    "image": ""
   },
   "3.59 Magnetische Flussdichte-Gleichung": {
     "equation": "b == u * h",
     "definition": "Die Formel beschreibt die Beziehung zwischen der magnetischen Flussdichte B und dem Magnetfeld H, wobei μ die magnetische Permeabilität des Mediums ist; B ist die Größe, die die Stärke und Richtung des Magnetfelds beschreibt, das durch ein Material erzeugt wird, und H ist die Magnetfeldstärke. Die magnetische Permeabilität μμ ist ein Materialparameter, der angibt, wie leicht das Material magnetisiert werden kann, und beeinflusst, wie das Magnetfeld H in das Magnetfeld B übersetzt wird.",
     "image": "flussdichte.png"
-  },
+  },e
   "3.63 Magnetischer Kreis": {
     "equation": "rm == lm/(u*a)",
     "definition": " Die Formel beschreibt die Induktivität L eines Spulenwickels als Funktion der geometrischen und materialbezogenen Eigenschaften der Spule, wobei κ die magnetische Permeabilität des Kerns ist, A die Querschnittsfläche der Spule und R die Länge der Spule darstellt; die Induktivität L misst die Fähigkeit der Spule, ein Magnetfeld zu speichern und zu beeinflussen, wenn ein elektrischer Strom durch sie fließt, und ist direkt proportional zur Permeabilität und der Fläche und invers proportional zur Länge der Spule",
@@ -66,42 +66,37 @@
   },
   "3.83 Lorentzkraft-Gleichung": {
     "equation": "f == i*l*b * sin(alpha) ",
-    "definition": " Die Formel beschreibt die Magnitude der Lorentzkraft ∣F∣, die auf einen stromdurchflossenen Draht von Länge ∣L∣ wirkt, wenn er sich in einem Magnetfeld ∣B∣befindet, wobei ∣I∣ die Größe des elektrischen Stroms und αα der Winkel zwischen der Richtung des Stroms und dem Magnetfeld ist; die Lorentzkraft ist proportional zum Produkt des Stroms, der Länge des Drahts und der Magnetfeldstärke, sowie zum Sinus des Winkels αα, der den Winkel zwischen der Stromrichtung und dem Magnetfeld beschreibt. Diese Formel ist zentral für das Verständnis der Wechselwirkung von elektrischem Strom und Magnetfeldern und erklärt die physikalische Grundlage von elektromagnetischen Kräften in der Elektrodynamik.",
-    "image": "cat.png"
+    "definition": " Die Formel beschreibt die Magnitude der Lorentzkraft ∣F∣, die auf einen stromdurchflossenen Draht von Länge ∣L∣ wirkt, wenn er sich in einem Magnetfeld ∣B∣befindet, wobei ∣I∣ die Größe des elektrischen Stroms und αα der Winkel zwischen der Richtung des Stroms und dem Magnetfeld ist; die Lorentzkraft ist proportional zum Produkt des Stroms, der Länge des Drahts und der Magnetfeldstärke, sowie zum Sinus des Winkels αα, der den Winkel zwischen der Stromrichtung und dem Magnetfeld beschreibt. Diese Formel ist zentral für das Verständnis der Wechselwirkung von elektrischem Strom und Magnetfeldern und erklärt die physikalische Grundlage von elektromagnetischen Kräften in der Elektrodynamik. Vektor muss einzeln Berechnet werdenm",
+    "image": "Lorentkraft.png"
   },
   "3.92 Induktivität einer Spule": {
-    "equation": "l == (uz * n^2 * a)  / l",
+    "equation": "induktivitätL == (uz * n^2 * a)  / l",
     "definition": " Die Formel beschreibt die Induktivität L einer Spule mit N Windungen, die sich um einen Kern mit der Querschnittsfläche und der Länge l wickelt, wobei μ0 die Permeabilität des Vakuums ist; die Induktivität L ist proportional zum Quadrat der Anzahl der Windungen N der Spule und zur Querschnittsfläche A, und invers proportional zur Länge l der Spule. Diese Beziehung zeigt, wie die geometrischen und materialbezogenen Eigenschaften der Spule die Fähigkeit beeinflussen, ein Magnetfeld zu speichern, wenn ein elektrischer Strom durch sie fließt, und wie die Induktivität durch die Anordnung und Anzahl der Windungen sowie die Abmessungen der Spule bestimmt wird.",
-    "image": "cat.png"
+    "image": "Induktivität.png"
   },
   "3.116 Spannung über einer Induktivität exp": {
     "equation": "",
     "definition": "Die Formel beschreibt die Spannung uL(t) über einer Induktivität L als Funktion der Zeit t, nachdem ein plötzlicher Spannungssprung von U angelegt wurde, wobei τ die Zeitkonstante des Kreises ist, die durch das Verhältnis der Induktivität L und des Widerstands RR gegeben ist (τ=L/Rτ=L/R). Die Spannung über der Induktivität nimmt exponentiell ab und ist negativ gegenüber der angelegten Spannung UU; die Zeitkonstante τ bestimmt, wie schnell die Spannung auf den neuen Zustand reagiert, wobei der exponentielle Abfall die natürliche Antwort der Induktivität auf eine plötzliche Änderung der Spannung beschreibt.",
-    "image": "cat.png"
+    "image": ""
   },
   "4.22 Echtleistung": {
   "equation": "p== u*i*cos(phi)",
   "definition": "Die Formel beschreibt die tatsächliche elektrische Leistung P, die in einem Wechselstromkreis erbracht wird, als Produkt der elektrischen Spannung U, des elektrischen Stroms I und des Kosinus des Phasenwinkels φφ zwischen der Spannung und dem Strom; der Faktor cos⁡ auch als Leistungsfaktor bekannt, berücksichtigt die Phasenverschiebung zwischen Spannung und Strom und zeigt, wie viel der gesamten Leistung tatsächlich in nützliche Arbeit oder Wärme umgesetzt wird. Diese Gleichung ist zentral für die Berechnung der effektiven Leistung in einem Wechselstromkreis und unterscheidet sich von der scheinbaren Leistung, die keine Berücksichtigung der Phasenverschiebung enthält.",
-  "image": "cat.png"
+  "image": "EchtLeistung.png"
 },
   "4.28 Resonanzfrequenz": {
     "equation": "f == 1 /(2*Pi*sqrt(l*c))",
     "definition": "Die Formel beschreibt die Resonanzfrequenz f0 eines seriellen RLC-Schaltkreises, wobei L die Induktivität und C die Kapazität des Schaltkreises darstellen; f0 ist die Frequenz, bei der der Schaltkreis eine maximale Resonanz und minimale Impedanz aufweist, und die Formel zeigt, dass die Resonanzfrequenz umgekehrt proportional zur Quadratwurzel des Produkts von Induktivität und Kapazität ist. Diese Frequenz ist entscheidend für die Anwendungen in der Signalverarbeitung und Kommunikationssystemen, da bei dieser Frequenz der Schaltkreis optimal auf externe Signale reagiert.",
-    "image": "cat.png"
+    "image": "Resonanzfrequenz.png"
   },
   "4.49 Impedanz der Induktivität": {
     "equation": "zl == j* (2*Pi *f * l)",
     "definition": " Die Formel beschreibt die Impedanz ZL eines Induktors in einem Wechselstromkreis, wobei j die imaginäre Einheit und XL die Induktive Reaktanz ist; die Induktive Reaktanz XL ist gegeben durch XL=2πfxl=2πfL, wobei ff die Frequenz des Wechselstroms und L die Induktivität des Induktors darstellt. Die Impedanz ZL ist somit rein imaginär und stellt den Widerstand dar, den der Induktor dem Wechselstrom entgegensetzt, wobei die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist.",
-    "image": "cat.png"
+    "image": "impetanz.png"
   },
   "4.50 Impedanz der Induktivität": {
     "equation": "zc== -j * 1/((2*Pi*f)*c)  ",
     "definition": "Die Formel beschreibt die Impedanz ZC eines Kondensators in einem Wechselstromkreis, wobei j die imaginäre Einheit und XC die Kapazitive Reaktanz ist; die Kapazitive Reaktanz XC ist gegeben durch XC=1ωXC, wobei ωω die Kreisfrequenz (ω=2πfω=2πf) und C die Kapazität des Kondensators darstellt. Die Impedanz ZC ist daher ebenfalls rein imaginär und hat einen negativen Vorzeichenwert, was bedeutet, dass die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist. Diese Formel zeigt, wie der Widerstand eines Kondensators gegenüber Wechselstrom von der Frequenz des Stroms und der Kapazität des Kondensators abhängt.",
-    "image": "cat.png"
-  },
-  "Test": {
-    "equation": "zc== -j * 1/((2*Pi*f)*c*c)  ",
-    "definition": "Test",
-    "image": "cat.png"
+    "image": "impetanz.png"
   }
 }

@@ -177,8 +177,13 @@ public class Controller {
      */
     private void enableDefinitions(String selectedEquation){
         Definition.setText(Json.getDefinition(selectedEquation));
-        Image image = new Image(Objects.requireNonNull(Main.class.getResourceAsStream(Json.getImage(selectedEquation))));
-        drawing.setImage(image);
+        try {
+            Image image = new Image(Objects.requireNonNull(Main.class.getResourceAsStream(Json.getImage(selectedEquation))));
+            drawing.setImage(image);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     /**
