@@ -1,86 +1,107 @@
 {
   "1.10 Definition des elekt. Stroms": {
     "equation": "i == (q / t)",
-    "definition": "Der elektrische Strom ist die Menge der Ladung, die in einer bestimmten Zeitspanne durch einen Leiterquerschnitt fließt. Der Strom I wird durch die Gleichung I = ΔQ/Δt definiert, wobei ΔQ die durch den Querschnitt fließende Ladung und Δt die Zeitspanne ist. Der elektrische Strom fließt entgegen der tatsächlichen Bewegungsrichtung der Elektronen. Die Einheit der elektrischen Stromstärke ist 1 Ampere (A)."
+    "definition": "Der elektrische Strom ist die Menge der Ladung, die in einer bestimmten Zeitspanne durch einen Leiterquerschnitt fließt. Der Strom I wird durch die Gleichung I = ΔQ/Δt definiert, wobei ΔQ die durch den Querschnitt fließende Ladung und Δt die Zeitspanne ist. Der elektrische Strom fließt entgegen der tatsächlichen Bewegungsrichtung der Elektronen. Die Einheit der elektrischen Stromstärke ist 1 Ampere (A).",
+    "image": "ElekStrom.png"
   },
   "1.16 Elektrische Leistung": {
-    "equation": "p == u*l",
-    "definition": "Die elektrische Leistung P ist das Produkt aus der elektrischen Spannung U und der elektrischen Stromstärke I und beschreibt die Menge an Energie, die pro Zeiteinheit übertragen oder verbraucht wird, wobei die Spannung U die potenzielle Differenz zwischen zwei Punkten im elektrischen Feld angibt und der Strom I die Flussrate der elektrischen Ladung darstellt; somit stellt die elektrische Leistung ein Maß für die Effizienz dar, mit der elektrische Energie in eine andere Energieform, wie Licht, Wärme oder mechanische Energie, umgewandelt wird."
+    "equation": "p == u*i",
+    "definition": "Die elektrische Leistung P ist das Produkt aus der elektrischen Spannung U und der elektrischen Stromstärke I und beschreibt die Menge an Energie, die pro Zeiteinheit übertragen oder verbraucht wird, wobei die Spannung U die potenzielle Differenz zwischen zwei Punkten im elektrischen Feld angibt und der Strom I die Flussrate der elektrischen Ladung darstellt; somit stellt die elektrische Leistung ein Maß für die Effizienz dar, mit der elektrische Energie in eine andere Energieform, wie Licht, Wärme oder mechanische Energie, umgewandelt wird.",
+    "image": "ElekLeistung.png"
   },
   "1.17 Ohmsches Gesetz": {
     "equation": "r == u/i",
-    "definition": "Das Ohmsche Gesetz beschreibt den Zusammenhang zwischen der elektrischen Spannung U, dem elektrischen Strom I und dem elektrischen Widerstand R in einem Leiter, wobei der Widerstand R als das Verhältnis der Spannung U zum Strom I definiert ist; dieses Gesetz bildet die Grundlage für das Verständnis der elektrischen Eigenschaften von Materialien und zeigt, dass der Widerstand eine Konstante ist, die unabhängig von der angelegten Spannung oder dem fließenden Strom ist, solange die physikalischen Bedingungen konstant bleiben."
+    "definition": "Das Ohmsche Gesetz beschreibt den Zusammenhang zwischen der elektrischen Spannung U, dem elektrischen Strom I und dem elektrischen Widerstand R in einem Leiter, wobei der Widerstand R als das Verhältnis der Spannung U zum Strom I definiert ist; dieses Gesetz bildet die Grundlage für das Verständnis der elektrischen Eigenschaften von Materialien und zeigt, dass der Widerstand eine Konstante ist, die unabhängig von der angelegten Spannung oder dem fließenden Strom ist, solange die physikalischen Bedingungen konstant bleiben.",
+    "image": "rui.png"
   },
   "1.18 Sinuswellen Geichung": {
     "equation": "ut== u * Sin(2 * Pi * f * t)",
-    "definition": "Die Definition lautet: Die sinusförmige Wechselspannung u(t) beschreibt die zeitliche Variation der elektrischen Spannung als eine Sinusfunktion, wobei ˆu die Amplitude der Spannung ist, die den maximalen Wert der Spannung angibt, 2π die Kreisfrequenz, f die Frequenz der Wechselspannung in Hertz und t die Zeit darstellt; diese Gleichung wird verwendet, um die periodische Natur von Wechselspannungen zu modellieren, die sich kontinuierlich mit der Zeit ändern und in vielen elektrischen und elektronischen Anwendungen vorkommen."
+    "definition": "Die Definition lautet: Die sinusförmige Wechselspannung u(t) beschreibt die zeitliche Variation der elektrischen Spannung als eine Sinusfunktion, wobei ˆu die Amplitude der Spannung ist, die den maximalen Wert der Spannung angibt, 2π die Kreisfrequenz, f die Frequenz der Wechselspannung in Hertz und t die Zeit darstellt; diese Gleichung wird verwendet, um die periodische Natur von Wechselspannungen zu modellieren, die sich kontinuierlich mit der Zeit ändern und in vielen elektrischen und elektronischen Anwendungen vorkommen.",
+    "image": "SinusWellen.png"
   },
   "2.11 Widerstandsgleichung": {
     "equation": "r == (roh * l)/a",
-    "definition": "Der elektrische Widerstand R eines Leiters ist proportional zur Länge L des Leiters und dem spezifischen Widerstand ρ (Rho) des Materials, aus dem der Leiter besteht, und umgekehrt proportional zur Querschnittsfläche A des Leiters; diese Gleichung beschreibt, wie der Widerstand eines Leiters durch seine physikalischen Eigenschaften beeinflusst wird, wobei ein längerer oder dünnerer Leiter einen höheren Widerstand aufweist und ein kürzerer oder dickeren Leiter einen niedrigeren Widerstand hat."
+    "definition": "Der elektrische Widerstand R eines Leiters ist proportional zur Länge L des Leiters und dem spezifischen Widerstand ρ (Rho) des Materials, aus dem der Leiter besteht, und umgekehrt proportional zur Querschnittsfläche A des Leiters; diese Gleichung beschreibt, wie der Widerstand eines Leiters durch seine physikalischen Eigenschaften beeinflusst wird, wobei ein längerer oder dünnerer Leiter einen höheren Widerstand aufweist und ein kürzerer oder dickeren Leiter einen niedrigeren Widerstand hat.",
+    "image": "Wiederstand.png"
   },
   "2.15 Widerstand-Temperatur-Gesetz": {
-    "equation": "rv == r * (1* alp * (v - 20))",
-    "definition": "Die Formel beschreibt, wie der elektrische Widerstand Rϑ eines Materials bei einer Temperatur ϑ von der Widerstandswerte R20 bei einer Referenztemperatur von 20°C abhängt, wobei α der Temperaturkoeffizient des Widerstands ist, der angibt, wie stark sich der Widerstand mit der Temperatur ändert, und Δϑ20 die Differenz zwischen der aktuellen Temperatur ϑ und der Referenztemperatur 20°C darstellt; diese Beziehung ermöglicht es, den Widerstand eines Materials bei verschiedenen Temperaturen zu berechnen und zu verstehen, wie sich der Widerstand durch Temperaturänderungen beeinflussen lässt."
+    "equation": "pT= (pTz)(1 +alpa * T - Tz)",
+    "definition": "Die Formel beschreibt, wie der elektrische Widerstand Rϑ eines Materials bei einer Temperatur ϑ von der Widerstandswerte R20 bei einer Referenztemperatur von 20°C abhängt, wobei α der Temperaturkoeffizient des Widerstands ist, der angibt, wie stark sich der Widerstand mit der Temperatur ändert, und Δϑ20 die Differenz zwischen der aktuellen Temperatur ϑ und der Referenztemperatur 20°C darstellt; diese Beziehung ermöglicht es, den Widerstand eines Materials bei verschiedenen Temperaturen zu berechnen und zu verstehen, wie sich der Widerstand durch Temperaturänderungen beeinflussen lässt.",
+    "image": "Wiederstand_Temp.png"
   },
   "2.33 Spannungsteiler-Gleichung": {
     "equation": "uj/uq == rj/rges",
-    "definition": "Die Spannungsteiler-Gleichung beschreibt das Verhältnis der Teilspannung Uj über einem Widerstand Rj zu der Gesamtspannung Uq und dem Gesamtwiderstand Rges eines Serienschaltung von Widerständen, wobei die Spannung Uj proportional zum Widerstand Rj und die Gesamtspannung Uq proportional zum Gesamtwiderstand Rges ist; diese Beziehung wird verwendet, um die Verteilung der Spannung in einer Serie-Schaltung von Widerständen zu berechnen und zu verstehen, wie die Spannung aufgeteilt wird, abhängig von den Widerstandswerten der einzelnen Komponenten im Schaltkreis."
+    "definition": "Die Spannungsteiler-Gleichung beschreibt das Verhältnis der Teilspannung Uj über einem Widerstand Rj zu der Gesamtspannung Uq und dem Gesamtwiderstand Rges eines Serienschaltung von Widerständen, wobei die Spannung Uj proportional zum Widerstand Rj und die Gesamtspannung Uq proportional zum Gesamtwiderstand Rges ist; diese Beziehung wird verwendet, um die Verteilung der Spannung in einer Serie-Schaltung von Widerständen zu berechnen und zu verstehen, wie die Spannung aufgeteilt wird, abhängig von den Widerstandswerten der einzelnen Komponenten im Schaltkreis.",
+    "image": "Spannungs_Teiler.png"
   },
   "2.45 Parallelwiderstands-Gleichung": {
     "equation": "rges == (rone * rtwo) / (rone + rtwo)",
-    "definition": "Die Formel beschreibt den effektiven Widerstand Rges von zwei parallel geschalteten Widerständen R1 und R2 wobei der Parallelwiderstand Rges durch das Produkt der beiden Widerstände R1 und R2 geteilt durch die Summe der beiden Widerstände berechnet wird; diese Beziehung wird verwendet, um den Gesamtwiderstand einer Schaltung zu bestimmen, in der Widerstände parallel geschaltet sind, und zeigt, dass der effektive Widerstand immer kleiner ist als der kleinste Widerstand in der Parallelkombination."
+    "definition": "Die Formel beschreibt den effektiven Widerstand Rges von zwei parallel geschalteten Widerständen R1 und R2 wobei der Parallelwiderstand Rges durch das Produkt der beiden Widerstände R1 und R2 geteilt durch die Summe der beiden Widerstände berechnet wird; diese Beziehung wird verwendet, um den Gesamtwiderstand einer Schaltung zu bestimmen, in der Widerstände parallel geschaltet sind, und zeigt, dass der effektive Widerstand immer kleiner ist als der kleinste Widerstand in der Parallelkombination.",
+    "image": "Parra_Wiederstand.png"
   },
   "3.14 Kapazitätsformel für einen Plattenkondensator": {
     "equation": "c == (8.854*10^(-12)) * er * (a/d)",
-    "definition": "Die Formel beschreibt die elektrische Kapazität C eines Plattenkondensators, die sich aus der Dielektrizitätskonstante εε des Vakuums (auch als Permittivität des freien Raums bekannt), der relativen Dielektrizitätskonstante εr\u200B des Materials zwischen den Platten, der Fläche A der Platten und dem Abstand d zwischen ihnen ergibt; die Kapazität ist direkt proportional zur Fläche der Platten und der Dielektrizitätskonstante und invers proportional zum Abstand zwischen den Platten, was bedeutet, dass ein größerer Abstand oder eine niedrigere Permittivität die Kapazität verringert."
+    "definition": "Die Formel beschreibt die elektrische Kapazität C eines Plattenkondensators, die sich aus der Dielektrizitätskonstante εε des Vakuums (auch als Permittivität des freien Raums bekannt), der relativen Dielektrizitätskonstante εr\u200B des Materials zwischen den Platten, der Fläche A der Platten und dem Abstand d zwischen ihnen ergibt; die Kapazität ist direkt proportional zur Fläche der Platten und der Dielektrizitätskonstante und invers proportional zum Abstand zwischen den Platten, was bedeutet, dass ein größerer Abstand oder eine niedrigere Permittivität die Kapazität verringert.",
+    "image": "kapazität_platte.png"
   },
   "3.28 Ladungsformel für einen Kondensator": {
     "equation": "qi==ci*u",
-    "definition": " Die Formel beschreibt die elektrische Ladung Qi eines Kondensators, die sich als Produkt der Kapazität Ci des Kondensators und der angelegten Spannung U berechnet; dies bedeutet, dass die Ladung direkt proportional zur Kapazität und zur Spannung ist, wobei eine höhere Kapazität oder Spannung zu einer größeren Ladung führt. Die Formel zeigt, wie viel elektrische Ladung der Kondensator speichern kann, wenn eine bestimmte Spannung angelegt wird, und ist grundlegend für das Verständnis der Energie- und Ladungsspeicherung in Kondensatoren."
+    "definition": " Die Formel beschreibt die elektrische Ladung Qi eines Kondensators, die sich als Produkt der Kapazität Ci des Kondensators und der angelegten Spannung U berechnet; dies bedeutet, dass die Ladung direkt proportional zur Kapazität und zur Spannung ist, wobei eine höhere Kapazität oder Spannung zu einer größeren Ladung führt. Die Formel zeigt, wie viel elektrische Ladung der Kondensator speichern kann, wenn eine bestimmte Spannung angelegt wird, und ist grundlegend für das Verständnis der Energie- und Ladungsspeicherung in Kondensatoren.",
+    "image": "ladungsformel.png"
   },
   "3.42 Zeitkonstante für einen R-C-Kreis exp": {
     "equation": "uCt == u*(q-lösexp^(t/(r*c)))",
-    "definition": "Die Formel beschreibt die Spannung uC(t) über einem Kondensator in einem Widerstands-Kondensator-Kreis (R-C-Kreis) als Funktion der Zeit t nach einer plötzlichen Änderung der angelegten Spannung U, wobei τ die Zeitkonstante des Kreises ist, die als τ=R⋅Cτ=R⋅C definiert ist; die Formel zeigt, dass die Spannung des Kondensators exponentiell ansteigt und asymptotisch gegen den Wert der angelegten Spannung UU konvergiert, wobei die Rate dieses Anstiegs durch die Zeitkonstante ττ bestimmt wird. Dies beschreibt den Vorgang, bei dem sich der Kondensator nach einer plötzlichen Spannungsänderung langsam auf den neuen Spannungswert auflädt."
+    "definition": "Die Formel beschreibt die Spannung uC(t) über einem Kondensator in einem Widerstands-Kondensator-Kreis (R-C-Kreis) als Funktion der Zeit t nach einer plötzlichen Änderung der angelegten Spannung U, wobei τ die Zeitkonstante des Kreises ist, die als τ=R⋅Cτ=R⋅C definiert ist; die Formel zeigt, dass die Spannung des Kondensators exponentiell ansteigt und asymptotisch gegen den Wert der angelegten Spannung U konvergiert, wobei die Rate dieses Anstiegs durch die Zeitkonstante τ bestimmt wird. Dies beschreibt den Vorgang, bei dem sich der Kondensator nach einer plötzlichen Spannungsänderung langsam auf den neuen Spannungswert auflädt.",
+    "image": "cat.png"
   },
   "3.59 Magnetische Flussdichte-Gleichung": {
     "equation": "b == u * h",
-    "definition": "Die Formel beschreibt die Beziehung zwischen der magnetischen Flussdichte B und dem Magnetfeld H, wobei μ die magnetische Permeabilität des Mediums ist; B ist die Größe, die die Stärke und Richtung des Magnetfelds beschreibt, das durch ein Material erzeugt wird, und H ist die Magnetfeldstärke. Die magnetische Permeabilität μμ ist ein Materialparameter, der angibt, wie leicht das Material magnetisiert werden kann, und beeinflusst, wie das Magnetfeld H in das Magnetfeld B übersetzt wird."
+    "definition": "Die Formel beschreibt die Beziehung zwischen der magnetischen Flussdichte B und dem Magnetfeld H, wobei μ die magnetische Permeabilität des Mediums ist; B ist die Größe, die die Stärke und Richtung des Magnetfelds beschreibt, das durch ein Material erzeugt wird, und H ist die Magnetfeldstärke. Die magnetische Permeabilität μμ ist ein Materialparameter, der angibt, wie leicht das Material magnetisiert werden kann, und beeinflusst, wie das Magnetfeld H in das Magnetfeld B übersetzt wird.",
+    "image": "flussdichte.png"
   },
   "3.63 Magnetischer Kreis": {
-    "equation": "r == l/(k*a)",
-    "definition": " Die Formel beschreibt die Induktivität L eines Spulenwickels als Funktion der geometrischen und materialbezogenen Eigenschaften der Spule, wobei κ die magnetische Permeabilität des Kerns ist, A die Querschnittsfläche der Spule und R die Länge der Spule darstellt; die Induktivität L misst die Fähigkeit der Spule, ein Magnetfeld zu speichern und zu beeinflussen, wenn ein elektrischer Strom durch sie fließt, und ist direkt proportional zur Permeabilität und der Fläche und invers proportional zur Länge der Spule"
+    "equation": "rm == lm/(u*a)",
+    "definition": " Die Formel beschreibt die Induktivität L eines Spulenwickels als Funktion der geometrischen und materialbezogenen Eigenschaften der Spule, wobei κ die magnetische Permeabilität des Kerns ist, A die Querschnittsfläche der Spule und R die Länge der Spule darstellt; die Induktivität L misst die Fähigkeit der Spule, ein Magnetfeld zu speichern und zu beeinflussen, wenn ein elektrischer Strom durch sie fließt, und ist direkt proportional zur Permeabilität und der Fläche und invers proportional zur Länge der Spule",
+    "image": "Magnetischerkreis.png"
   },
   "3.83 Lorentzkraft-Gleichung": {
     "equation": "f == i*l*b * sin(alpha) ",
-    "definition": " Die Formel beschreibt die Magnitude der Lorentzkraft ∣F∣, die auf einen stromdurchflossenen Draht von Länge ∣L∣ wirkt, wenn er sich in einem Magnetfeld ∣B∣befindet, wobei ∣I∣ die Größe des elektrischen Stroms und αα der Winkel zwischen der Richtung des Stroms und dem Magnetfeld ist; die Lorentzkraft ist proportional zum Produkt des Stroms, der Länge des Drahts und der Magnetfeldstärke, sowie zum Sinus des Winkels αα, der den Winkel zwischen der Stromrichtung und dem Magnetfeld beschreibt. Diese Formel ist zentral für das Verständnis der Wechselwirkung von elektrischem Strom und Magnetfeldern und erklärt die physikalische Grundlage von elektromagnetischen Kräften in der Elektrodynamik."
+    "definition": " Die Formel beschreibt die Magnitude der Lorentzkraft ∣F∣, die auf einen stromdurchflossenen Draht von Länge ∣L∣ wirkt, wenn er sich in einem Magnetfeld ∣B∣befindet, wobei ∣I∣ die Größe des elektrischen Stroms und αα der Winkel zwischen der Richtung des Stroms und dem Magnetfeld ist; die Lorentzkraft ist proportional zum Produkt des Stroms, der Länge des Drahts und der Magnetfeldstärke, sowie zum Sinus des Winkels αα, der den Winkel zwischen der Stromrichtung und dem Magnetfeld beschreibt. Diese Formel ist zentral für das Verständnis der Wechselwirkung von elektrischem Strom und Magnetfeldern und erklärt die physikalische Grundlage von elektromagnetischen Kräften in der Elektrodynamik.",
+    "image": "cat.png"
   },
   "3.92 Induktivität einer Spule": {
     "equation": "l == (uz * n^2 * a)  / l",
-    "definition": " Die Formel beschreibt die Induktivität L einer Spule mit N Windungen, die sich um einen Kern mit der Querschnittsfläche und der Länge l wickelt, wobei μ0 die Permeabilität des Vakuums ist; die Induktivität L ist proportional zum Quadrat der Anzahl der Windungen N der Spule und zur Querschnittsfläche A, und invers proportional zur Länge l der Spule. Diese Beziehung zeigt, wie die geometrischen und materialbezogenen Eigenschaften der Spule die Fähigkeit beeinflussen, ein Magnetfeld zu speichern, wenn ein elektrischer Strom durch sie fließt, und wie die Induktivität durch die Anordnung und Anzahl der Windungen sowie die Abmessungen der Spule bestimmt wird."
+    "definition": " Die Formel beschreibt die Induktivität L einer Spule mit N Windungen, die sich um einen Kern mit der Querschnittsfläche und der Länge l wickelt, wobei μ0 die Permeabilität des Vakuums ist; die Induktivität L ist proportional zum Quadrat der Anzahl der Windungen N der Spule und zur Querschnittsfläche A, und invers proportional zur Länge l der Spule. Diese Beziehung zeigt, wie die geometrischen und materialbezogenen Eigenschaften der Spule die Fähigkeit beeinflussen, ein Magnetfeld zu speichern, wenn ein elektrischer Strom durch sie fließt, und wie die Induktivität durch die Anordnung und Anzahl der Windungen sowie die Abmessungen der Spule bestimmt wird.",
+    "image": "cat.png"
   },
   "3.116 Spannung über einer Induktivität exp": {
     "equation": "",
-    "definition": "Die Formel beschreibt die Spannung uL(t) über einer Induktivität L als Funktion der Zeit t, nachdem ein plötzlicher Spannungssprung von U angelegt wurde, wobei τ die Zeitkonstante des Kreises ist, die durch das Verhältnis der Induktivität L und des Widerstands RR gegeben ist (τ=L/Rτ=L/R). Die Spannung über der Induktivität nimmt exponentiell ab und ist negativ gegenüber der angelegten Spannung UU; die Zeitkonstante τ bestimmt, wie schnell die Spannung auf den neuen Zustand reagiert, wobei der exponentielle Abfall die natürliche Antwort der Induktivität auf eine plötzliche Änderung der Spannung beschreibt."
+    "definition": "Die Formel beschreibt die Spannung uL(t) über einer Induktivität L als Funktion der Zeit t, nachdem ein plötzlicher Spannungssprung von U angelegt wurde, wobei τ die Zeitkonstante des Kreises ist, die durch das Verhältnis der Induktivität L und des Widerstands RR gegeben ist (τ=L/Rτ=L/R). Die Spannung über der Induktivität nimmt exponentiell ab und ist negativ gegenüber der angelegten Spannung UU; die Zeitkonstante τ bestimmt, wie schnell die Spannung auf den neuen Zustand reagiert, wobei der exponentielle Abfall die natürliche Antwort der Induktivität auf eine plötzliche Änderung der Spannung beschreibt.",
+    "image": "cat.png"
   },
   "4.22 Echtleistung": {
   "equation": "p== u*i*cos(phi)",
-  "definition": "Die Formel beschreibt die tatsächliche elektrische Leistung P, die in einem Wechselstromkreis erbracht wird, als Produkt der elektrischen Spannung U, des elektrischen Stroms I und des Kosinus des Phasenwinkels φφ zwischen der Spannung und dem Strom; der Faktor cos⁡ auch als Leistungsfaktor bekannt, berücksichtigt die Phasenverschiebung zwischen Spannung und Strom und zeigt, wie viel der gesamten Leistung tatsächlich in nützliche Arbeit oder Wärme umgesetzt wird. Diese Gleichung ist zentral für die Berechnung der effektiven Leistung in einem Wechselstromkreis und unterscheidet sich von der scheinbaren Leistung, die keine Berücksichtigung der Phasenverschiebung enthält."
+  "definition": "Die Formel beschreibt die tatsächliche elektrische Leistung P, die in einem Wechselstromkreis erbracht wird, als Produkt der elektrischen Spannung U, des elektrischen Stroms I und des Kosinus des Phasenwinkels φφ zwischen der Spannung und dem Strom; der Faktor cos⁡ auch als Leistungsfaktor bekannt, berücksichtigt die Phasenverschiebung zwischen Spannung und Strom und zeigt, wie viel der gesamten Leistung tatsächlich in nützliche Arbeit oder Wärme umgesetzt wird. Diese Gleichung ist zentral für die Berechnung der effektiven Leistung in einem Wechselstromkreis und unterscheidet sich von der scheinbaren Leistung, die keine Berücksichtigung der Phasenverschiebung enthält.",
+  "image": "cat.png"
 },
   "4.28 Resonanzfrequenz": {
     "equation": "f == 1 /(2*Pi*sqrt(l*c))",
-    "definition": "Die Formel beschreibt die Resonanzfrequenz f0 eines seriellen RLC-Schaltkreises, wobei L die Induktivität und C die Kapazität des Schaltkreises darstellen; f0 ist die Frequenz, bei der der Schaltkreis eine maximale Resonanz und minimale Impedanz aufweist, und die Formel zeigt, dass die Resonanzfrequenz umgekehrt proportional zur Quadratwurzel des Produkts von Induktivität und Kapazität ist. Diese Frequenz ist entscheidend für die Anwendungen in der Signalverarbeitung und Kommunikationssystemen, da bei dieser Frequenz der Schaltkreis optimal auf externe Signale reagiert."
+    "definition": "Die Formel beschreibt die Resonanzfrequenz f0 eines seriellen RLC-Schaltkreises, wobei L die Induktivität und C die Kapazität des Schaltkreises darstellen; f0 ist die Frequenz, bei der der Schaltkreis eine maximale Resonanz und minimale Impedanz aufweist, und die Formel zeigt, dass die Resonanzfrequenz umgekehrt proportional zur Quadratwurzel des Produkts von Induktivität und Kapazität ist. Diese Frequenz ist entscheidend für die Anwendungen in der Signalverarbeitung und Kommunikationssystemen, da bei dieser Frequenz der Schaltkreis optimal auf externe Signale reagiert.",
+    "image": "cat.png"
   },
   "4.49 Impedanz der Induktivität": {
     "equation": "zl == j* (2*Pi *f * l)",
-    "definition": " Die Formel beschreibt die Impedanz ZL eines Induktors in einem Wechselstromkreis, wobei j die imaginäre Einheit und XL die Induktive Reaktanz ist; die Induktive Reaktanz XL ist gegeben durch XL=2πfxl=2πfL, wobei ff die Frequenz des Wechselstroms und L die Induktivität des Induktors darstellt. Die Impedanz ZL ist somit rein imaginär und stellt den Widerstand dar, den der Induktor dem Wechselstrom entgegensetzt, wobei die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist."
+    "definition": " Die Formel beschreibt die Impedanz ZL eines Induktors in einem Wechselstromkreis, wobei j die imaginäre Einheit und XL die Induktive Reaktanz ist; die Induktive Reaktanz XL ist gegeben durch XL=2πfxl=2πfL, wobei ff die Frequenz des Wechselstroms und L die Induktivität des Induktors darstellt. Die Impedanz ZL ist somit rein imaginär und stellt den Widerstand dar, den der Induktor dem Wechselstrom entgegensetzt, wobei die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist.",
+    "image": "cat.png"
   },
   "4.50 Impedanz der Induktivität": {
     "equation": "zc== -j * 1/((2*Pi*f)*c)  ",
-    "definition": "Die Formel beschreibt die Impedanz ZC eines Kondensators in einem Wechselstromkreis, wobei j die imaginäre Einheit und XC die Kapazitive Reaktanz ist; die Kapazitive Reaktanz XC ist gegeben durch XC=1ωXC, wobei ωω die Kreisfrequenz (ω=2πfω=2πf) und C die Kapazität des Kondensators darstellt. Die Impedanz ZC ist daher ebenfalls rein imaginär und hat einen negativen Vorzeichenwert, was bedeutet, dass die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist. Diese Formel zeigt, wie der Widerstand eines Kondensators gegenüber Wechselstrom von der Frequenz des Stroms und der Kapazität des Kondensators abhängt."
+    "definition": "Die Formel beschreibt die Impedanz ZC eines Kondensators in einem Wechselstromkreis, wobei j die imaginäre Einheit und XC die Kapazitive Reaktanz ist; die Kapazitive Reaktanz XC ist gegeben durch XC=1ωXC, wobei ωω die Kreisfrequenz (ω=2πfω=2πf) und C die Kapazität des Kondensators darstellt. Die Impedanz ZC ist daher ebenfalls rein imaginär und hat einen negativen Vorzeichenwert, was bedeutet, dass die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist. Diese Formel zeigt, wie der Widerstand eines Kondensators gegenüber Wechselstrom von der Frequenz des Stroms und der Kapazität des Kondensators abhängt.",
+    "image": "cat.png"
   },
   "Test": {
     "equation": "zc== -j * 1/((2*Pi*f)*c*c)  ",
-    "definition": "Test"
+    "definition": "Test",
+    "image": "cat.png"
   }
 }

@@ -51,6 +51,17 @@ public class Json {
     /**
      * Retrieves the definition for the given equation name from the JSON object.
      *
+     * @param equationName the name of the equation whose definition is to be retrieved
+     * @return the definition string
+     */
+    public static String getImage(String equationName){
+        JSONObject to_search = equations.getJSONObject(equationName);
+        return to_search.getString("image");
+    }
+
+    /**
+     * Retrieves the definition for the given equation name from the JSON object.
+     *
      * @param unitName the name of the equation whose definition is to be retrieved
      * @return the definition string
      */

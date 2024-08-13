@@ -2,6 +2,8 @@ package com.example.elektrocalc;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import java.util.*;
@@ -19,6 +21,9 @@ public class Controller {
     private TextArea Definition;
     @FXML
     private ComboBox<String> EquationSelect;
+
+    @FXML
+    private ImageView drawing;
 
     // Global Variabel
     private String globalEquation;
@@ -116,6 +121,8 @@ public class Controller {
         int fontsizse = 20;
         Result.setFont(new Font(fontsizse));
         currentEquation.setFont(new Font(fontsizse));
+        //Image image = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("cat.png")));
+        //drawing.setImage(image);
     }
     /**
      * Handles the selection of an equation from the combo box.
@@ -133,7 +140,8 @@ public class Controller {
         toCalcEquation = Json.getEquation(selectedEquation);
 
         //Sets Definition Text
-        Definition.setText(Json.getDefinition(EquationSelect.getSelectionModel().getSelectedItem()));
+        //Definition.setText(Json.getDefinition(EquationSelect.getSelectionModel().getSelectedItem()));
+        enableDefinitions(selectedEquation);
         //Makes Local Equation for GUI
         String localEquation = globalEquation;
         //hashmap to find duplicats
@@ -163,6 +171,16 @@ public class Controller {
         if (lastTextField!=null) lastTextField.setDisable(false);
 
     }
+    /**
+     * Handles the selection of an equation from the combo box.
+     * Sets up  the definitions and drawings for that equation
+     */
+    private void enableDefinitions(String selectedEquation){
+        Definition.setText(Json.getDefinition(selectedEquation));
+        Image image = new Image(Objects.requireNonNull(Main.class.getResourceAsStream(Json.getImage(selectedEquation))));
+        drawing.setImage(image);
+    }
+
     /**
      * Enables the appropriate text field, label, and radio button based on the specified index.
      *
