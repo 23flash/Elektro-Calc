@@ -176,8 +176,8 @@ public class Controller {
      * Sets up  the definitions and drawings for that equation
      */
     private void enableDefinitions(String selectedEquation){
-        Definition.setText(Json.getDefinition(selectedEquation));
         try {
+            Definition.setText(Json.getDefinition(selectedEquation));
             Image image = new Image(Objects.requireNonNull(Main.class.getResourceAsStream(Json.getImage(selectedEquation))));
             drawing.setImage(image);
         } catch (Exception e) {
@@ -228,7 +228,7 @@ public class Controller {
         // Solve the equation and display the result
         String solved = EquationSolver.solve(toCalcEquation, variableAssignments);
         Result.setText(currentHistoryRes+ " = " + solved);
-        ResultHistory.appendText( currentHistoryRes+ " = " + solved + "\n");
+        ResultHistory.appendText( toCalcEquation.replace("==", " = ") + " = " + solved + "\n");
     }
     /**
      * Handles the selection of a calculation variable via radio buttons.

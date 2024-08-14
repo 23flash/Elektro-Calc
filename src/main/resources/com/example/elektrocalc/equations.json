@@ -25,7 +25,7 @@
     "image": "Wiederstand.png"
   },
   "2.15 Widerstand-Temperatur-Gesetz": {
-    "equation": "pT= (pTz)(1 +alpa * T - Tz)",
+    "equation": "rv == rTwenty * (1 + alph + vTwenty ) ",
     "definition": "Die Formel beschreibt, wie der elektrische Widerstand Rϑ eines Materials bei einer Temperatur ϑ von der Widerstandswerte R20 bei einer Referenztemperatur von 20°C abhängt, wobei α der Temperaturkoeffizient des Widerstands ist, der angibt, wie stark sich der Widerstand mit der Temperatur ändert, und Δϑ20 die Differenz zwischen der aktuellen Temperatur ϑ und der Referenztemperatur 20°C darstellt; diese Beziehung ermöglicht es, den Widerstand eines Materials bei verschiedenen Temperaturen zu berechnen und zu verstehen, wie sich der Widerstand durch Temperaturänderungen beeinflussen lässt.",
     "image": "Wiederstand_Temp.png"
   },
