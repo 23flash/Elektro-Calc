@@ -97,7 +97,7 @@ Die Einheiten und ihre Zuordnung sind in der Datei `units.json` definiert:
 
 ## Programmcode Modifizieren
 - zur Entwicklung Intellij Idea 
-- zur GUI Entwicklung Scenebuilder mit dem die `app.fxml` modifiziert wird
+- zur GUI Entwicklung [Scenebuilder](https://gluonhq.com/products/scene-builder/) mit dem die `app.fxml` modifiziert wird
 ### Klassen Struktur
   Alle Klassen sind im Code Kommentiert
 - **Main**: Ist der Entry Point und enthält Einstellungen für die Application wie was für ein Icon es hat
