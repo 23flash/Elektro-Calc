@@ -21,7 +21,6 @@ public class Controller {
     private TextArea Definition;
     @FXML
     private ComboBox<String> EquationSelect;
-
     @FXML
     private ImageView drawing;
 
@@ -149,7 +148,7 @@ public class Controller {
     private void handleComboSelect(ActionEvent event) {
         hideAllInputs();
         String toSetSymbol = "";
-        // Get the selected equation and set the global and calculation equations
+        // Retrieve and set the selected equation
         String selectedEquation = EquationSelect.getSelectionModel().getSelectedItem();
         globalEquation = Json.getEquation(selectedEquation);
         toCalcEquation = Json.getEquation(selectedEquation);
@@ -187,8 +186,9 @@ public class Controller {
 
     }
     /**
-     * Handles the selection of an equation from the combo box.
-     * Sets up  the definitions and drawings for that equation
+     * Sets the definition and image for the selected equation.
+     *
+     * @param selectedEquation the selected equation
      */
     private void enableDefinitions(String selectedEquation){
         try {
@@ -307,7 +307,9 @@ public class Controller {
         }
     }
     /**
-     * Clears Result History
+     * Clears the result history text area.
+     *
+     * @param event the action event
      */
     @FXML
     private void handleClearHistory(ActionEvent event) {
