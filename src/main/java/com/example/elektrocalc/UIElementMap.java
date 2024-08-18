@@ -1,5 +1,5 @@
 package com.example.elektrocalc;
-
+import java.io.IOException;
 /**
  * A generic class that holds a triplet of elements.
  *

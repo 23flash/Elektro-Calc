@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import java.util.*;
-
+import java.io.IOException;
 
 public class Controller {
     // UI elements

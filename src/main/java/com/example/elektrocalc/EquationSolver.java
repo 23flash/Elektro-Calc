@@ -4,7 +4,7 @@ import org.matheclipse.core.eval.EvalUtilities;
 import org.matheclipse.core.eval.ExprEvaluator;
 import org.matheclipse.core.interfaces.IExpr;
 import java.util.Map;
-
+import java.io.IOException;
 public class EquationSolver {
     /**
      * Permutes the given equation to solve for the specified variable.
