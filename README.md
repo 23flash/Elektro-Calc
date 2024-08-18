@@ -44,6 +44,7 @@ Hier ist ein Screenshot der Applikation:
 
 ### Erklärung
 
+
 ### Icon der Applikation
 Das folgende Bild zeigt das handgezeichnete Icon der Applikation, welches im "Icon Tray" schnell zu finden ist.
 
@@ -96,7 +97,7 @@ Die Einheiten und ihre Zuordnung sind in der Datei `units.json` definiert:
 - Der Key `name` enthält den vollständigen Namen der Einheit.
 
 ## Programmcode Modifizieren
-- zur Entwicklung Intellij Idea 
+- zur Entwicklung [Intellij Idea](https://www.jetbrains.com/idea/download/?section=windows) 
 - zur GUI Entwicklung [Scenebuilder](https://gluonhq.com/products/scene-builder/) mit dem die `app.fxml` modifiziert wird
 ### Klassen Struktur
   Alle Klassen sind im Code Kommentiert
