@@ -43,8 +43,17 @@ Hier ist ein Screenshot der Applikation:
 ![Applikation Screenshot](src/main/resources/com/example/elektrocalc/Applikation.png)
 
 ### Erklärung
+- In der oberen Combo Box wird die Formel ausgewählt!
 
+![combo.png](combo.png)
+- nach dem Auswählen wird das gui angepasst / Formel, Definition, GUI Elemente und Bild erscheinen
+- man wählt nun die zu berechnende Variable aus durch clicken des Radio Buttons
 
+![noclick.png](noclick.png)
+![click.png](click.png)
+- man trägt die werte bei den anderen Variablen ein und clickt auf den Großen calculate Button das Ergebnis erscheint einmal in Result und einmal in Histroy
+
+![solu.png](solu.png)
 ### Icon der Applikation
 Das folgende Bild zeigt das handgezeichnete Icon der Applikation, welches im "Icon Tray" schnell zu finden ist.
 
