@@ -1,10 +1,11 @@
 # Projektübersicht
 
 ## Einleitung
-Dieses Projekt wurde im Rahmen einer Hausarbeit erstellt. Ich werde keine Issues Beantworten/Pull requests Akzeptieren  
-Es steht unter der MIT License. 
-Die Aufgabe bestand darin ein Programm zu schreiben, was mit diversen Formeln aus der Vorlesung "Elektrotechische Grundlagen" rechenen kann und nützliche Informationen zu ihnen anzeigt. 
-Das Ziel besteht darin gelernte Formeln besser zu verstehen und ein nützliches Tool dabei zu schreiben.
+- Dieses Projekt wurde im Rahmen einer Hausarbeit erstellt. 
+- Ich werde keine Issues Beantworten/Pull requests Akzeptieren  
+- Es steht unter der MIT License. 
+- Die Aufgabe bestand darin ein Programm zu schreiben, was mit diversen Formeln aus der Vorlesung "Elektrotechische Grundlagen" rechenen kann und nützliche Informationen zu ihnen anzeigt. 
+- Das Ziel besteht darin gelernte Formeln besser zu verstehen und ein nützliches Tool dabei zu schreiben.
 ## Voraussetzungen
 - **Java-Version 22** (WICHTIG: Das Programm funktioniert **NICHT** mit älteren Versionen)
 - **IntelliJ IDEA** (Ultimate oder Community Edition)
