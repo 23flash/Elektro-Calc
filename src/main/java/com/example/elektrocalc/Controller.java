@@ -137,8 +137,7 @@ public class Controller {
         int fontsizse = 20;
         Result.setFont(new Font(fontsizse));
         currentEquation.setFont(new Font(fontsizse));
-        //Image image = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("cat.png")));
-        //drawing.setImage(image);
+
     }
     /**
      * Handles the selection of an equation from the combo box.
@@ -217,12 +216,18 @@ public class Controller {
                 TextField textField = elements.getFirst();
                 Text text = elements.getSecond();
                 RadioButton radioButton = elements.getThird();
+                Text textE = elements.getForth();
 
                 text.setText(toSetSymbol);
                 text.setVisible(true);
                 textField.setVisible(true);
                 radioButton.setVisible(true);
                 radioButton.setDisable(false);
+                textE.setVisible(true);
+                try {
+                    textE.setText(Json.getUnit(toSetSymbol));
+                }catch (Exception e){
+                }
             }
         }
     }
@@ -279,9 +284,11 @@ public class Controller {
             TextField textField = elements.getFirst();
             Text text = elements.getSecond();
             RadioButton radioButton = elements.getThird();
-
+            Text textE = elements.getForth();
             text.setVisible(false);
             text.setText("");
+            textE.setVisible(false);
+            textE.setText("");
             textField.setVisible(false);
             textField.setText("");
             radioButton.setVisible(false);

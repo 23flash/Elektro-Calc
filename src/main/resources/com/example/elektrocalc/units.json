@@ -1,98 +1,130 @@
 {
   "i": {
-    "unit": "Amperes (A)"
+    "unit": "A",
+    "name": "Ampere"
   },
   "q": {
-    "unit": "Coulombs (C)"
+    "unit": "C",
+    "name": "Coulomb"
   },
   "t": {
-    "unit": "Seconds (s)"
+    "unit": "s",
+    "name": "Second"
   },
   "p": {
-    "unit": "Watts (W)"
+    "unit": "W",
+    "name": "Watt"
   },
   "u": {
-    "unit": "Volts (V)"
+    "unit": "V",
+    "name": "Volt"
   },
   "r": {
-    "unit": "Ohms (Ω)"
+    "unit": "Ω",
+    "name": "Ohm"
   },
   "f": {
-    "unit": "Hertz (Hz)"
+    "unit": "Hz",
+    "name": "Hertz"
   },
   "roh": {
-    "unit": "Ohm-meters (Ω·m)"
+    "unit": "Ω·m",
+    "name": "Ohm-meter"
   },
   "l": {
-    "unit": "Meters (m)"
+    "unit": "m",
+    "name": "Meter"
   },
   "a": {
-    "unit": "Square meters (m²)"
+    "unit": "m²",
+    "name": "Square Meter"
   },
   "alpha": {
-    "unit": "1/°C"
+    "unit": "1/°C",
+    "name": "Temperature Coefficient of Resistance"
   },
   "v (temperature)": {
-    "unit": "Degrees Celsius (°C)"
+    "unit": "°C",
+    "name": "Degree Celsius"
   },
   "rj": {
-    "unit": "Ohms (Ω)"
+    "unit": "Ω",
+    "name": "Ohm"
   },
   "rges": {
-    "unit": "Ohms (Ω)"
+    "unit": "Ω",
+    "name": "Ohm"
   },
   "rOne": {
-    "unit": "Ohms (Ω)"
+    "unit": "Ω",
+    "name": "Ohm"
   },
   "rTwo": {
-    "unit": "Ohms (Ω)"
+    "unit": "Ω",
+    "name": "Ohm"
   },
   "er": {
-    "unit": "Dimensionless (relative permittivity)"
+    "unit": "",
+    "name": "Relative Permittivity"
   },
   "c": {
-    "unit": "Farads (F)"
+    "unit": "F",
+    "name": "Farad"
   },
   "ci": {
-    "unit": "Farads (F)"
+    "unit": "F",
+    "name": "Farad"
   },
   "qi": {
-    "unit": "Coulombs (C)"
+    "unit": "C",
+    "name": "Coulomb"
   },
   "UCt": {
-    "unit": "Volts (V)"
+    "unit": "V",
+    "name": "Volt"
   },
   "mu": {
-    "unit": "Henries per meter (H/m)"
+    "unit": "H/m",
+    "name": "Henry per Meter"
   },
   "h": {
-    "unit": "Amperes per meter (A/m)"
+    "unit": "A/m",
+    "name": "Ampere per Meter"
   },
   "k": {
-    "unit": "Henries per meter (H/m)"
+    "unit": "H/m",
+    "name": "Henry per Meter"
   },
   "r (magnetic)": {
-    "unit": "Ohms (Ω)"
+    "unit": "Ω",
+    "name": "Ohm"
   },
   "f (Lorentz)": {
-    "unit": "Newtons (N)"
+    "unit": "N",
+    "name": "Newton"
   },
   "L": {
-    "unit": "Henries (H)"
+    "unit": "H",
+    "name": "Henry"
   },
   "mu0": {
-    "unit": "Henries per meter (H/m)"
+    "unit": "H/m",
+    "name": "Henry per Meter"
   },
   "n": {
-    "unit": "Dimensionless (number of turns)"
+    "unit": "Dimensionless",
+    "name": "Number of Turns"
   },
   "phi": {
-    "unit": "Radians (rad)"
+    "unit": "rad",
+    "name": "Radian"
   },
   "zl": {
-    "unit": "Ohms (Ω)"
+    "unit": "Ω",
+    "name": "Ohm"
   },
   "zc": {
-    "unit": "Ohms (Ω)"
+    "unit": "Ω",
+    "name": "Ohm"
   }
 }
