@@ -117,9 +117,4 @@ Die Applikation nutzt die folgenden Abhängigkeiten, die in der `pom.xml` aufgel
 - **org.openjfx (JavaFX)**: Für alle GUI-Elemente. 
   - das Layout **javafx-fxml**
 
-# Grobeinschätzung der Arbeitszeit
 
-- **Zeichnen**: ca. 13 Stunden
-- **Dokumentation**: ca. 20 Stunden
-- **Programmieren**: ca. 100 Stunden
-- **Recherche** (GUI-Programmierung, Bibliotheken, Programmiersprache): ca. 12 Stunden
