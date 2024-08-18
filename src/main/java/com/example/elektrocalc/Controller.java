@@ -31,7 +31,7 @@ public class Controller {
     private TextField lastTextField = null;
     private String currentHistoryRes;
     // Maps RadioButtons to UIElementMap objects
-    private Map<RadioButton, UIElementMap<TextField, Text, RadioButton>> uiElementMap;
+    private Map<RadioButton, UIElementMap<TextField, Text, RadioButton,Text>> uiElementMap;
 
     // Textfields
     @FXML
@@ -64,6 +64,22 @@ public class Controller {
     private Text SixText;
     @FXML
     private Text SevenText;
+
+    //TextE
+    @FXML
+    private Text OneTextE;
+    @FXML
+    private Text TwoTextE;
+    @FXML
+    private Text ThreeTextE;
+    @FXML
+    private Text FourTextE;
+    @FXML
+    private Text FiveTextE;
+    @FXML
+    private Text SixTextE;
+    @FXML
+    private Text SevenTextE;
 
     //Radio Buttons
     @FXML
@@ -104,13 +120,13 @@ public class Controller {
 
         //Map UI ElementsTogether
         uiElementMap = new HashMap<>();
-        uiElementMap.put(OneRadio, new UIElementMap<>(OneTextField, OneText, OneRadio));
-        uiElementMap.put(TwoRadio, new UIElementMap<>(TwoTextField, TwoText, TwoRadio));
-        uiElementMap.put(ThreeRadio, new  UIElementMap<>(ThreeTextField, ThreeText, ThreeRadio));
-        uiElementMap.put(FourRadio, new UIElementMap<>(FourTextField, FourText, FourRadio));
-        uiElementMap.put(FiveRadio, new UIElementMap<>(FiveTextField, FiveText, FiveRadio));
-        uiElementMap.put(SixRadio, new UIElementMap<>(SixTextField, SixText, SixRadio));
-        uiElementMap.put(SevenRadio, new UIElementMap<>(SevenTextField, SevenText, SevenRadio));
+        uiElementMap.put(OneRadio, new UIElementMap<>(OneTextField, OneText, OneRadio,OneTextE));
+        uiElementMap.put(TwoRadio, new UIElementMap<>(TwoTextField, TwoText, TwoRadio,TwoTextE));
+        uiElementMap.put(ThreeRadio, new  UIElementMap<>(ThreeTextField, ThreeText, ThreeRadio,ThreeTextE));
+        uiElementMap.put(FourRadio, new UIElementMap<>(FourTextField, FourText, FourRadio,FourTextE));
+        uiElementMap.put(FiveRadio, new UIElementMap<>(FiveTextField, FiveText, FiveRadio,FiveTextE));
+        uiElementMap.put(SixRadio, new UIElementMap<>(SixTextField, SixText, SixRadio,SixTextE));
+        uiElementMap.put(SevenRadio, new UIElementMap<>(SevenTextField, SevenText, SevenRadio,SevenTextE));
 
         // Add radio buttons to the toggle group
         CalcSelect = new ToggleGroup();
@@ -121,8 +137,7 @@ public class Controller {
         int fontsizse = 20;
         Result.setFont(new Font(fontsizse));
         currentEquation.setFont(new Font(fontsizse));
-        //Image image = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("cat.png")));
-        //drawing.setImage(image);
+
     }
     /**
      * Handles the selection of an equation from the combo box.
@@ -195,18 +210,24 @@ public class Controller {
     private void enableRightFields(int whichTextField, String toSetSymbol ) {
         if (whichTextField >= 0 && whichTextField < uiElementMap.size()) {
             RadioButton[] radioButtons = {OneRadio, TwoRadio, ThreeRadio, FourRadio, FiveRadio, SixRadio, SevenRadio};
-            UIElementMap<TextField, Text, RadioButton> elements = uiElementMap.get(radioButtons[whichTextField]);
+            UIElementMap<TextField, Text, RadioButton,Text> elements = uiElementMap.get(radioButtons[whichTextField]);
 
             if (elements != null) {
                 TextField textField = elements.getFirst();
                 Text text = elements.getSecond();
                 RadioButton radioButton = elements.getThird();
+                Text textE = elements.getForth();
 
                 text.setText(toSetSymbol);
                 text.setVisible(true);
                 textField.setVisible(true);
                 radioButton.setVisible(true);
                 radioButton.setDisable(false);
+                textE.setVisible(true);
+                try {
+                    textE.setText(Json.getUnit(toSetSymbol));
+                }catch (Exception e){
+                }
             }
         }
     }
@@ -218,7 +239,7 @@ public class Controller {
     private void handleCalcButtonAction() {
         //map the variables to the right strings to calc
         Map<String, Double> variableAssignments = new HashMap<>();
-        for (UIElementMap<TextField, Text, RadioButton> elements : uiElementMap.values()) {
+        for (UIElementMap<TextField, Text, RadioButton,Text> elements : uiElementMap.values()) {
             TextField textField = elements.getFirst();
             Text text = elements.getSecond();
             if (textField.isVisible()== true&&textField.isDisabled()==false){
@@ -242,7 +263,7 @@ public class Controller {
         Toggle selectedToggle = CalcSelect.getSelectedToggle();
         if (selectedToggle != null) {
             RadioButton selectedRadioButton = (RadioButton) selectedToggle;
-            UIElementMap<TextField, Text, RadioButton> elements = uiElementMap.get(selectedRadioButton);
+            UIElementMap<TextField, Text, RadioButton,Text> elements = uiElementMap.get(selectedRadioButton);
                 TextField textField = elements.getFirst();
                 Text associatedText = elements.getSecond();
                 textField.setDisable(true);
@@ -259,13 +280,15 @@ public class Controller {
      */
     private void hideAllInputs(){
         //hide the all unused GUI Elements
-        for (UIElementMap<TextField, Text, RadioButton> elements : uiElementMap.values()) {
+        for (UIElementMap<TextField, Text, RadioButton,Text> elements : uiElementMap.values()) {
             TextField textField = elements.getFirst();
             Text text = elements.getSecond();
             RadioButton radioButton = elements.getThird();
-
+            Text textE = elements.getForth();
             text.setVisible(false);
             text.setText("");
+            textE.setVisible(false);
+            textE.setText("");
             textField.setVisible(false);
             textField.setText("");
             radioButton.setVisible(false);
@@ -278,7 +301,7 @@ public class Controller {
      * Adds all radio buttons to the toggle group.
      */
     private void addToToggleGroup(){
-        for (UIElementMap<TextField, Text, RadioButton> elements : uiElementMap.values()) {
+        for (UIElementMap<TextField, Text, RadioButton,Text> elements : uiElementMap.values()) {
             RadioButton radioButton = elements.getThird();
             radioButton.setToggleGroup(CalcSelect);
         }

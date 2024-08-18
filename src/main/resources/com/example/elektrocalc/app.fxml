@@ -16,14 +16,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="783.0" prefWidth="827.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.elektrocalc.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="793.0" prefWidth="841.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.elektrocalc.Controller">
    <children>
       <Button id="Calc" layoutX="28.0" layoutY="354.0" mnemonicParsing="false" onAction="#handleCalcButtonAction" prefHeight="45.0" prefWidth="331.0" text="Calculate" />
       <GridPane alignment="CENTER" cacheShape="false" layoutX="26.0" layoutY="132.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="213.0" prefWidth="331.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="86.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="166.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="46.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="197.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="9.0" prefWidth="9.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="26.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="16.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="29.0" />
         </columnConstraints>
         <rowConstraints>
@@ -50,17 +52,24 @@
             <TextField fx:id="FiveTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="SixTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <TextField fx:id="SevenTextField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <RadioButton fx:id="OneRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="112.0" textAlignment="RIGHT" GridPane.columnIndex="3">
+            <RadioButton fx:id="OneRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="112.0" textAlignment="RIGHT" GridPane.columnIndex="5">
                <toggleGroup>
                   <ToggleGroup fx:id="CalcSelect" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton fx:id="TwoRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <RadioButton fx:id="ThreeRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <RadioButton fx:id="FourRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <RadioButton fx:id="FiveRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <RadioButton fx:id="SixRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-            <RadioButton fx:id="SevenRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <RadioButton fx:id="TwoRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <RadioButton fx:id="ThreeRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <RadioButton fx:id="FourRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <RadioButton fx:id="FiveRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <RadioButton fx:id="SixRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <RadioButton fx:id="SevenRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <Text fx:id="OneTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="26.0" GridPane.columnIndex="3" />
+            <Text fx:id="TwoTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="26.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Text fx:id="ThreeTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="24.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Text fx:id="FourTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="26.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Text fx:id="FiveTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="26.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Text fx:id="SixTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="26.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Text fx:id="SevenTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="26.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
          </children>
       </GridPane>
       <TextArea fx:id="ResultHistory" layoutX="30.0" layoutY="487.0" prefHeight="250.0" prefWidth="331.0" />
@@ -68,7 +77,7 @@
       <Text fx:id="Result1" layoutX="30.0" layoutY="420.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result:" wrappingWidth="62.94970703125" />
       <Text layoutX="23.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Variables:" />
       <ComboBox fx:id="EquationSelect" layoutX="23.0" layoutY="22.0" onAction="#handleComboSelect" prefHeight="33.0" prefWidth="331.0" promptText="Select Equation" />
-      <Text layoutX="394.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition:" wrappingWidth="91.13330078125" />
+      <Text layoutX="390.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Definition:" wrappingWidth="91.13330078125" />
       <TextArea fx:id="Definition" layoutX="394.0" layoutY="135.0" prefHeight="335.0" prefWidth="415.0" />
       <ImageView fitHeight="160.0" fitWidth="166.0" layoutX="643.0" layoutY="-11.0">
          <image>
