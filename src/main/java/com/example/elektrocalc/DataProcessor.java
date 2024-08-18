@@ -50,7 +50,7 @@ public  class DataProcessor {
         data = data.toLowerCase();
 
         // Array of constants and special keys to be filtered out
-        String[] keys = {"sqrt", "cos", "pi", "sin", "tan"};
+        String[] keys = {"sqrt", "cos", "pi", "sin", "tan","Sqrt", "Cos", "Pi", "Sin", "Tan","ArcSin","ArcCos","ArcTan","Csc","Sec"};
 
         // Loop through the array and replace occurrences
         for (String key : keys) {

@@ -1,61 +1,124 @@
-## Dieses Projekt ist im Rahmen einer Uni Hausarbeit entstanden
+# Projektübersicht
 
-# Voraussetzung
-- Java Version 22 (WICHTIG das Pogramm funktioniert NICHT mit älteren Versionen)
-- Intellij Idea 
-- Internet Verbindung (Einige Dependencys werden durch Maven aus dem Netz gezogen)
-- am besten Linux basiertes Betriebssystem aber auch Windows
-# Instalation
-- 
-- auf https://www.jetbrains.com/idea/download/?section=windows und Intellij Idea ultimate oder community herunterladen
-- die Zip entpacken und in Intellij als projekt ordner auswählen
-- intellij ist in der lage die Korrekte java installation automatisch zu installieren
-- zu Main.java in intellij navigieren und Umschalt + F10 drücken / das grüne Play symbol drücken 
+## Einleitung
+Dieses Projekt wurde im Rahmen einer Hausarbeit erstellt. 
+Es steht unter der MIT License.
+Die Aufgabe bestand darin ein Programm zu schreiben, was mit diversen Formeln aus der Vorlesung "Elektrotechische Grundlagen" rechenen kann und nützliche Informationen zu ihnen anzeigt. 
+Das Ziel besteht darin gelernte Formeln besser zu verstehen und ein nützliches Tool dabei zu schreiben.
+## Voraussetzungen
+- **Java-Version 22** (WICHTIG: Das Programm funktioniert **NICHT** mit älteren Versionen)
+- **IntelliJ IDEA** (Ultimate oder Community Edition)
+- **Internetverbindung** (Einige Abhängigkeiten werden durch Maven aus dem Netz geladen)
+- **Betriebssystem:** Linux-basiert empfohlen, funktioniert aber auch unter Windows
 
+## Installation
 
-# Ausführen der Applikation
+1. **IntelliJ IDEA herunterladen:**
+  - Besuche die offizielle Seite: [IntelliJ IDEA Download](https://www.jetbrains.com/idea/download/?section=windows)
+  - Lade entweder die Ultimate oder die Community Edition herunter.
 
-# Aufbau der Applikation
-## GUI
-Das Folgende Bild ist das Handgezeichnete Icon der Applikation damit es schnell im "icon tray" zu Finden
-![cat.png](src%2Fmain%2Fresources%2Fcom%2Fexample%2Felektrocalc%2Fcat.png)
+2. **Projekt einrichten:**
+  - Entpacke das heruntergeladene ZIP-Archiv.
+  - Wähle den entpackten Ordner in IntelliJ IDEA als Projektordner aus.
 
-## Handhabung
-- die 
-## Formeln oder Einheiten hinzufügen
-### alle Formeln sowie deren definitionen werden in der equations.json gespeichert
-  ```json
+3. **Java-Installation:**
+  - IntelliJ IDEA erkennt und installiert automatisch die erforderliche Java-Version.
+  - wenn nicht Java 22 manuell installieren
+
+4. **Projekt ausführen:**
+  - Navigiere in IntelliJ IDEA zu `Main.java`.
+  - Drücke `Umschalt + F10` oder klicke auf das grüne "Play"-Symbol, um das Programm zu starten.
+
+## Ausführen der Applikation
+(Ergänze hier eine Beschreibung, wie die Applikation nach dem Start verwendet wird.)
+
+## Aufbau der Applikation
+
+### Benutzeroberfläche (GUI)
+
+### Anwendungsansicht
+Hier ist ein Screenshot der Applikation:
+
+![Applikation Screenshot](src/main/resources/com/example/elektrocalc/Applikation.png)
+
+### Erklärung
+
+### Icon der Applikation
+Das folgende Bild zeigt das handgezeichnete Icon der Applikation, welches im "Icon Tray" schnell zu finden ist.
+
+![Applikations-Icon](src/main/resources/com/example/elektrocalc/cat.png)
+
+### Schaubilder
+Das folgende Bild zeigt eins handgezeichnetes Schau bilder: 
+
+![rui.png](src/main/resources/com/example/elektrocalc/rui.png)
+# Erweitern und Modifizieren
+
+### Formeln oder Einheiten hinzufügen
+- Die Formeln werden im JSON-Format gespeichert.
+- Es ist wichtig, das vorgegebene Format strikt einzuhalten, um Fehler zu vermeiden, insbesondere wenn die Formelsammlung erweitert werden soll.
+
+### Beispiel einer gespeicherten Formel (`equations.json`):
+```json
+{
   "Test": {
-"equation": "zc== -j * 1/((2*Pi*f)*c*c)  ",
-"definition": "Test",
-"image": "cat.png"
+    "equation": "zc == -j * 1/((2*Pi*f)*c*c)",
+    "definition": "Test",
+    "image": "cat.png"
+  }
 }
-  ```
-- formeln müssen statt = ein == angeben
-- zudem müssen die Formel zeichen in Lowercase geschriebene sein da die Symja Biblothek die ich zum umstellen und berechne Benötige einige reservierte Zeichen hat und ich diese nicht alle Filtern kann damit es Einheitlich ist habe ich mich dazu entschieden alle Formeln Lower case zu haben.
-- man kann pi sqrt tan cos arctan etc verwenden
-- definitionen müssen ein langer durchgehnder String sein
-- das bild muss in com.example.elektrocalc liegen und der image name mit Dateinendung vollständig und richtig angegeben sein
-### alle Einheiten und deren Zugehörigkeit in units.json
-  ```json
+```
+## Formeln hinzufügen
+- **Formatierung:** Formeln müssen das Gleichheitszeichen `==` verwenden und dürfen maximal 7 Variablen enthalten (aufgrund der Einschränkungen der GUI).
+- **Kleinbuchstaben:** Alle Formelzeichen müssen in Kleinbuchstaben geschrieben werden, da die Symja-Bibliothek reservierte Zeichen enthält, die nicht gefiltert werden können. Dies sorgt für Einheitlichkeit.
+- **Erlaubte Funktionen:** Du kannst `pi`, `sqrt`, `tan`, `cos`, `arctan` etc. verwenden.
+- **Definitionen:** Definitionen müssen ein durchgehender, langer String sein.
+- **Bild:** Das Bild muss im Verzeichnis `com.example.elektrocalc` liegen und der Bildname muss vollständig und korrekt angegeben werden.
+
+## Einheiten und deren Zugehörigkeit
+
+Die Einheiten und ihre Zuordnung sind in der Datei `units.json` definiert:
+
+```json
+{
   "i": {
-    "unit": "Amperes (A)"
+    "unit": "A",
+    "name": "Ampere"
   },
   "q": {
-    "unit": "Coulombs (C)"
-  },
-  ```
- - die Keys müssen Legedlich mit denen der Formel übereinstimmen  
-- es muss sonst nichts beachted werden
+    "unit": "C",
+    "name": "Coulomb"
+  }
+}
+```
+- Der Key `unit` entspricht den Variablen in den Formeln.
+- Der Key `name` enthält den vollständigen Namen der Einheit.
+
+## Programmcode Modifizieren
+- zur Entwicklung Intellij Idea 
+- zur GUI Entwicklung Scenebuilder mit dem die `app.fxml` modifiziert wird
+### Klassen Struktur
+  Alle Klassen sind im Code Kommentiert
+- **Main**: Ist der Entry Point und enthält Einstellungen für die Application wie was für ein Icon es hat
+- **Controller**: Ist zum Manipulieren des GUIs und alle Button aktionen zuständig
+- **DataProcessor**: Ist zum Formatieren der Daten in bestimmte Strukturen zuständig damit sie Verarbeitet werden können
+- **Json**: liest die json Datein an und hat vorgefertigte function um die Daten zu extrahieren
+- **EquationSolver**: stehlt die Formeln um / Rechnet mit diesen
+- **UIElementMap**: ist eine Art Hashmap die GUI Elemente zusammen Mapped
+
 # Abhängigkeiten der Applikation
-- sind in der poml.xml aufgelisted 
-- hier eine kurze Zusammenfassung:
-  - org.json (json) um Json files zu verarbeiten und zu Nutzen
-  - org.matheclipse (Symja) zum Interpretieren der Formeln und umstellen
-  - io.github.mkpaz (atlantafx-base) für fertige themes der app
-  - org.openjfx (java fx) für alle möglichen GUI elemente
-# Grobeinschätzung der Eigenden Arbeits Zeit
-- Zeichnen ca. 13 Stunden 
-- Dokumentaion ca. 20 Stunden
-- Programmieren ca. 100 Stunden 
-- Rechereche ( GUI Pogrammierung ,Libarys, welche Pogrammiersprache) ca. 12 Stunden
+Es handelt sich um ein `Maven Projekt`
+Die Applikation nutzt die folgenden Abhängigkeiten, die in der `pom.xml` aufgelistet sind:
+
+- **org.json**: Für die Verarbeitung und Nutzung von JSON-Dateien.
+- **org.matheclipse (Symja)**: Zum Interpretieren und Umstellen von Formeln.
+- **io.github.mkpaz (atlantafx-base)**: Für fertige Themes der App.
+- **org.openjfx (JavaFX)**: Für alle GUI-Elemente. 
+  - das Layout **javafx-fxml**
+
+# Grobeinschätzung der Arbeitszeit
+
+- **Zeichnen**: ca. 13 Stunden
+- **Dokumentation**: ca. 20 Stunden
+- **Programmieren**: ca. 100 Stunden
+- **Recherche** (GUI-Programmierung, Bibliotheken, Programmiersprache): ca. 12 Stunden
