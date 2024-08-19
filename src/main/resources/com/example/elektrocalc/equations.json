@@ -66,7 +66,7 @@
   },
   "3.83 Lorentzkraft-Gleichung": {
     "equation": "f == i*l*b * sin(alpha) ",
-    "definition": " Die Formel beschreibt die Magnitude der Lorentzkraft ∣F∣, die auf einen stromdurchflossenen Draht von Länge ∣L∣ wirkt, wenn er sich in einem Magnetfeld ∣B∣befindet, wobei ∣I∣ die Größe des elektrischen Stroms und αα der Winkel zwischen der Richtung des Stroms und dem Magnetfeld ist; die Lorentzkraft ist proportional zum Produkt des Stroms, der Länge des Drahts und der Magnetfeldstärke, sowie zum Sinus des Winkels αα, der den Winkel zwischen der Stromrichtung und dem Magnetfeld beschreibt. Diese Formel ist zentral für das Verständnis der Wechselwirkung von elektrischem Strom und Magnetfeldern und erklärt die physikalische Grundlage von elektromagnetischen Kräften in der Elektrodynamik. Vektor muss einzeln Berechnet werdenm",
+    "definition": " Die Formel beschreibt die Magnitude der Lorentzkraft ∣F∣, die auf einen stromdurchflossenen Draht von Länge ∣L∣ wirkt, wenn er sich in einem Magnetfeld ∣B∣befindet, wobei ∣I∣ die Größe des elektrischen Stroms und αα der Winkel zwischen der Richtung des Stroms und dem Magnetfeld ist; die Lorentzkraft ist proportional zum Produkt des Stroms, der Länge des Drahts und der Magnetfeldstärke, sowie zum Sinus des Winkels αα, der den Winkel zwischen der Stromrichtung und dem Magnetfeld beschreibt. Diese Formel ist zentral für das Verständnis der Wechselwirkung von elektrischem Strom und Magnetfeldern und erklärt die physikalische Grundlage von elektromagnetischen Kräften in der Elektrodynamik. Vektor muss einzeln Berechnet werden",
     "image": "Lorentkraft.png"
   },
   "3.92 Induktivität einer Spule": {
