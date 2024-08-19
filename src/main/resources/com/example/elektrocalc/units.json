@@ -22,7 +22,10 @@
   "uq": {
     "unit": "V",
     "name": "Volt"
-  },
+  },"uct": {
+  "unit": "V",
+  "name": "Volt"
+},
   "uj": {
     "unit": "V",
     "name": "Volt"
@@ -30,6 +33,14 @@
   "ut": {
     "unit": "V",
     "name": "Volt"
+  },
+  "τ": {
+    "unit": "s",
+    "name": "Sekunde"
+  },
+  "b": {
+    "unit": "Gs",
+    "name": "Gaus"
   },
   "ua": {
     "unit": "",
@@ -79,9 +90,21 @@
     "unit": "Ω",
     "name": "Ohm"
   },
+  "lm": {
+    "unit": "Φ",
+    "name": ""
+  },
+  "rm": {
+    "unit": "Ω",
+    "name": "H−1"
+  },
   "rges": {
     "unit": "Ω",
     "name": "Ohm"
+  },
+  "µ": {
+    "unit": "F·m^−1",
+    "name": "Permeability"
   },
   "rOne": {
     "unit": "Ω",
@@ -92,7 +115,7 @@
     "name": "Ohm"
   },
   "er": {
-    "unit": "",
+    "unit": "F·m^−1",
     "name": "Relative Permittivity"
   },
   "c": {
@@ -107,7 +130,11 @@
     "unit": "C",
     "name": "Coulomb"
   },
-  "UCt": {
+  "Uct": {
+    "unit": "V",
+    "name": "Volt"
+  },
+  "ult": {
     "unit": "V",
     "name": "Volt"
   },

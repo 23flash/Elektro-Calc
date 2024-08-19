@@ -50,9 +50,9 @@
     "image": "ladungsformel.png"
   },
   "3.42 Zeitkonstante für einen R-C-Kreis exp": {
-    "equation": "uCt == u*(q-lösexp^(t/(r*c)))",
+    "equation": "uCt == u*(1-exp^(t/τ))",
     "definition": "Die Formel beschreibt die Spannung uC(t) über einem Kondensator in einem Widerstands-Kondensator-Kreis (R-C-Kreis) als Funktion der Zeit t nach einer plötzlichen Änderung der angelegten Spannung U, wobei τ die Zeitkonstante des Kreises ist, die als τ=R⋅Cτ=R⋅C definiert ist; die Formel zeigt, dass die Spannung des Kondensators exponentiell ansteigt und asymptotisch gegen den Wert der angelegten Spannung U konvergiert, wobei die Rate dieses Anstiegs durch die Zeitkonstante τ bestimmt wird. Dies beschreibt den Vorgang, bei dem sich der Kondensator nach einer plötzlichen Spannungsänderung langsam auf den neuen Spannungswert auflädt.",
-    "image": ""
+    "image": "zeit-rc.png"
   },
   "3.59 Magnetische Flussdichte-Gleichung": {
     "equation": "b == u * h",
@@ -60,8 +60,8 @@
     "image": "flussdichte.png"
   },
   "3.63 Magnetischer Kreis": {
-    "equation": "rm == lm/(u*a)",
-    "definition": " Die Formel beschreibt die Induktivität L eines Spulenwickels als Funktion der geometrischen und materialbezogenen Eigenschaften der Spule, wobei κ die magnetische Permeabilität des Kerns ist, A die Querschnittsfläche der Spule und R die Länge der Spule darstellt; die Induktivität L misst die Fähigkeit der Spule, ein Magnetfeld zu speichern und zu beeinflussen, wenn ein elektrischer Strom durch sie fließt, und ist direkt proportional zur Permeabilität und der Fläche und invers proportional zur Länge der Spule",
+    "equation": "rm == lm/(µ*a)",
+    "definition": "Die Formel beschreibt die Induktivität L eines Spulenwickels als Funktion der geometrischen und materialbezogenen Eigenschaften der Spule, wobei κ die magnetische Permeabilität des Kerns ist, A die Querschnittsfläche der Spule und R die Länge der Spule darstellt; die Induktivität L misst die Fähigkeit der Spule, ein Magnetfeld zu speichern und zu beeinflussen, wenn ein elektrischer Strom durch sie fließt, und ist direkt proportional zur Permeabilität und der Fläche und invers proportional zur Länge der Spule",
     "image": "Magnetischerkreis.png"
   },
   "3.83 Lorentzkraft-Gleichung": {
@@ -70,14 +70,14 @@
     "image": "Lorentkraft.png"
   },
   "3.92 Induktivität einer Spule": {
-    "equation": "induktivitätL == (uz * n^2 * a)  / l",
+    "equation": "induL == (uz * n^2 * a)  / l",
     "definition": " Die Formel beschreibt die Induktivität L einer Spule mit N Windungen, die sich um einen Kern mit der Querschnittsfläche und der Länge l wickelt, wobei μ0 die Permeabilität des Vakuums ist; die Induktivität L ist proportional zum Quadrat der Anzahl der Windungen N der Spule und zur Querschnittsfläche A, und invers proportional zur Länge l der Spule. Diese Beziehung zeigt, wie die geometrischen und materialbezogenen Eigenschaften der Spule die Fähigkeit beeinflussen, ein Magnetfeld zu speichern, wenn ein elektrischer Strom durch sie fließt, und wie die Induktivität durch die Anordnung und Anzahl der Windungen sowie die Abmessungen der Spule bestimmt wird.",
     "image": "Induktivität.png"
   },
   "3.116 Spannung über einer Induktivität exp": {
-    "equation": "",
+    "equation": "uLt == -u*exp^(-t/τ)",
     "definition": "Die Formel beschreibt die Spannung uL(t) über einer Induktivität L als Funktion der Zeit t, nachdem ein plötzlicher Spannungssprung von U angelegt wurde, wobei τ die Zeitkonstante des Kreises ist, die durch das Verhältnis der Induktivität L und des Widerstands RR gegeben ist (τ=L/Rτ=L/R). Die Spannung über der Induktivität nimmt exponentiell ab und ist negativ gegenüber der angelegten Spannung UU; die Zeitkonstante τ bestimmt, wie schnell die Spannung auf den neuen Zustand reagiert, wobei der exponentielle Abfall die natürliche Antwort der Induktivität auf eine plötzliche Änderung der Spannung beschreibt.",
-    "image": ""
+    "image": "spannuginfuk.png"
   },
   "4.22 Echtleistung": {
   "equation": "p== u*i*cos(phi)",

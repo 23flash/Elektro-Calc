@@ -23,8 +23,8 @@
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="86.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="184.99996337890622" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="9.0" prefWidth="36.19996337890626" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="41.00003662109373" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="9.0" prefWidth="18.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="67.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.0" minWidth="10.0" prefWidth="16.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="29.0" />
         </columnConstraints>
@@ -63,13 +63,13 @@
             <RadioButton fx:id="FiveRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="5" GridPane.rowIndex="4" />
             <RadioButton fx:id="SixRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="48.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="5" GridPane.rowIndex="5" />
             <RadioButton fx:id="SevenRadio" mnemonicParsing="false" onAction="#handleCalcSelect" prefHeight="19.0" prefWidth="66.0" textAlignment="RIGHT" toggleGroup="$CalcSelect" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-            <Text fx:id="OneTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="44.40002250671387" GridPane.columnIndex="3" />
-            <Text fx:id="TwoTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="42.80004692077637" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Text fx:id="ThreeTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="43.19994926452637" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Text fx:id="FourTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="45.20001220703125" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Text fx:id="FiveTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="46.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <Text fx:id="SixTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="45.20007133483887" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-            <Text fx:id="SevenTextE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" wrappingWidth="42.79998779296875" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Text fx:id="OneTextE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="67.40002250671387" GridPane.columnIndex="3" />
+            <Text fx:id="TwoTextE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="67.80004692077637" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Text fx:id="ThreeTextE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="64.19994926452637" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Text fx:id="FourTextE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="65.20001220703125" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Text fx:id="FiveTextE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="65.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Text fx:id="SixTextE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.20007133483887" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Text fx:id="SevenTextE" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="68.79998779296875" GridPane.columnIndex="3" GridPane.rowIndex="6" />
          </children>
       </GridPane>
       <TextArea fx:id="ResultHistory" layoutX="30.0" layoutY="487.0" prefHeight="250.0" prefWidth="404.0" />
