@@ -19,7 +19,35 @@
     "unit": "V",
     "name": "Volt"
   },
+  "uq": {
+    "unit": "V",
+    "name": "Volt"
+  },
+  "uj": {
+    "unit": "V",
+    "name": "Volt"
+  },
+  "ut": {
+    "unit": "V",
+    "name": "Volt"
+  },
+  "ua": {
+    "unit": "",
+    "name": ""
+  },
   "r": {
+    "unit": "Ω",
+    "name": "Ohm"
+  },
+  "rone": {
+    "unit": "Ω",
+    "name": "Ohm"
+  },
+  "rtwo": {
+    "unit": "Ω",
+    "name": "Ohm"
+  },
+  "rv": {
     "unit": "Ω",
     "name": "Ohm"
   },
@@ -27,7 +55,7 @@
     "unit": "Hz",
     "name": "Hertz"
   },
-  "roh": {
+  "ρ": {
     "unit": "Ω·m",
     "name": "Ohm-meter"
   },

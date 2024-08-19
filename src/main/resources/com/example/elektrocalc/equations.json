@@ -1,6 +1,6 @@
 {
   "1.10 Definition des elekt. Stroms": {
-    "equation": "i == (q / t)",
+    "equation": "i == q/t",
     "definition": "Der elektrische Strom ist die Menge der Ladung, die in einer bestimmten Zeitspanne durch einen Leiterquerschnitt fließt. Der Strom I wird durch die Gleichung I = ΔQ/Δt definiert, wobei ΔQ die durch den Querschnitt fließende Ladung und Δt die Zeitspanne ist. Der elektrische Strom fließt entgegen der tatsächlichen Bewegungsrichtung der Elektronen. Die Einheit der elektrischen Stromstärke ist 1 Ampere (A).",
     "image": "ElekStrom.png"
   },
@@ -15,17 +15,17 @@
     "image": "rui.png"
   },
   "1.18 Sinuswellen Geichung": {
-    "equation": "ut== u * Sin(2 * Pi * f * t)",
-    "definition": "Die Definition lautet: Die sinusförmige Wechselspannung u(t) beschreibt die zeitliche Variation der elektrischen Spannung als eine Sinusfunktion, wobei ˆu die Amplitude der Spannung ist, die den maximalen Wert der Spannung angibt, 2π die Kreisfrequenz, f die Frequenz der Wechselspannung in Hertz und t die Zeit darstellt; diese Gleichung wird verwendet, um die periodische Natur von Wechselspannungen zu modellieren, die sich kontinuierlich mit der Zeit ändern und in vielen elektrischen und elektronischen Anwendungen vorkommen.",
+    "equation": "ut== ua * Sin(2 * Pi * f * t)",
+    "definition": "Die Definition lautet: Die sinusförmige Wechselspannung u(t) beschreibt die zeitliche Variation der elektrischen Spannung als eine Sinusfunktion, wobei ua die Amplitude der Spannung ist, die den maximalen Wert der Spannung angibt, 2π die Kreisfrequenz, f die Frequenz der Wechselspannung in Hertz und t die Zeit darstellt; diese Gleichung wird verwendet, um die periodische Natur von Wechselspannungen zu modellieren, die sich kontinuierlich mit der Zeit ändern und in vielen elektrischen und elektronischen Anwendungen vorkommen.",
     "image": "SinusWellen.png"
   },
   "2.11 Widerstandsgleichung": {
-    "equation": "r == (roh * l)/a",
+    "equation": "r == (ρ * l)/a",
     "definition": "Der elektrische Widerstand R eines Leiters ist proportional zur Länge L des Leiters und dem spezifischen Widerstand ρ (Rho) des Materials, aus dem der Leiter besteht, und umgekehrt proportional zur Querschnittsfläche A des Leiters; diese Gleichung beschreibt, wie der Widerstand eines Leiters durch seine physikalischen Eigenschaften beeinflusst wird, wobei ein längerer oder dünnerer Leiter einen höheren Widerstand aufweist und ein kürzerer oder dickeren Leiter einen niedrigeren Widerstand hat.",
     "image": "Wiederstand.png"
   },
   "2.15 Widerstand-Temperatur-Gesetz": {
-    "equation": "rv == rTwenty * (1 + alph + vTwenty ) ",
+    "equation": "rv == rTwenty * (1 + α + vTwenty ) ",
     "definition": "Die Formel beschreibt, wie der elektrische Widerstand Rϑ eines Materials bei einer Temperatur ϑ von der Widerstandswerte R20 bei einer Referenztemperatur von 20°C abhängt, wobei α der Temperaturkoeffizient des Widerstands ist, der angibt, wie stark sich der Widerstand mit der Temperatur ändert, und Δϑ20 die Differenz zwischen der aktuellen Temperatur ϑ und der Referenztemperatur 20°C darstellt; diese Beziehung ermöglicht es, den Widerstand eines Materials bei verschiedenen Temperaturen zu berechnen und zu verstehen, wie sich der Widerstand durch Temperaturänderungen beeinflussen lässt.",
     "image": "Wiederstand_Temp.png"
   },
