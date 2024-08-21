@@ -8,7 +8,7 @@ import java.io.IOException;
 import static java.lang.String.format;
 
 /**
- * Utility class for processing data between TextField and double representations.
+ * Utility class for processing data between various formats.
  */
 public  class DataProcessor {
     /**
@@ -42,6 +42,12 @@ public  class DataProcessor {
         return parsed;
     }
 
+    /**
+     * Filter the variables out of a String
+     *
+     * @param data the String value to be formatted
+     * @return the string data a String
+     */
     public static String FormatStringToAnalyse(String data) {
         // Deletes double ==
         data = data.replace("==", "=");

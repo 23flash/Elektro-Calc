@@ -10,6 +10,15 @@ import java.util.*;
 import java.io.IOException;
 
 public class Controller {
+    // Global Variabel
+    private String globalEquation;
+    private String toCalcEquation;
+    private TextField lastTextField = null;
+    private String currentHistoryRes;
+
+    // Maps RadioButtons to UIElementMap objects
+    private Map<RadioButton, UIElementMap<TextField, Text, RadioButton,Text>> uiElementMap;
+
     // UI elements
     @FXML
     private Label Result;
@@ -24,14 +33,7 @@ public class Controller {
     @FXML
     private ImageView drawing;
 
-    // Global Variabel
-    private String globalEquation;
-    private String toCalcEquation;
-    private TextField lastTextField = null;
-    private String currentHistoryRes;
-    // Maps RadioButtons to UIElementMap objects
-    private Map<RadioButton, UIElementMap<TextField, Text, RadioButton,Text>> uiElementMap;
-
+    
     // Textfields
     @FXML
     private TextField OneTextField;
@@ -227,6 +229,8 @@ public class Controller {
                 try {
                     textE.setText(Json.getUnit(toSetSymbol));
                 }catch (Exception e){
+                    // Log the exception or handle it appropriately
+                    System.err.println("Error setting unit for: " + toSetSymbol);
                 }
             }
         }

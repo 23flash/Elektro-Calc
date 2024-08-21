@@ -45,6 +45,7 @@ Hier ist ein Screenshot der Applikation:
 ![combo.png](combo.png)
 - nach dem Auswählen wird das gui angepasst / Formel, Definition, GUI Elemente und Bild erscheinen
 - man wählt nun die zu berechnende Variable aus durch clicken des Radiobuttons
+- das erste Auswählen nach dem Start kann einige Sekunden dauern danach läuf alles ohne ruckler
 
 ![noclick.png](noclick.png)
 ![click.png](click.png)
