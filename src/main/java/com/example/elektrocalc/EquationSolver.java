@@ -34,7 +34,7 @@ public class EquationSolver {
         String newEquation = DataProcessor.FormatStringToReplace(equation);
 
         //Debug
-        System.out.println(newEquation);
+        //System.out.println(newEquation);
         ////
 
         for (Map.Entry<String, Double> entry : variableAssignments.entrySet()) {
@@ -42,7 +42,7 @@ public class EquationSolver {
         }
 
         //Debug
-        System.out.println(newEquation);
+        //System.out.println(newEquation);
         ////
 
 

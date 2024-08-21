@@ -91,12 +91,12 @@
   },
   "4.49 Impedanz der Induktivität": {
     "equation": "zl == j* (2*Pi *f * l)",
-    "definition": " Die Formel beschreibt die Impedanz ZL eines Induktors in einem Wechselstromkreis, wobei j die imaginäre Einheit und XL die Induktive Reaktanz ist; die Induktive Reaktanz XL ist gegeben durch XL=2πfxl=2πfL, wobei ff die Frequenz des Wechselstroms und L die Induktivität des Induktors darstellt. Die Impedanz ZL ist somit rein imaginär und stellt den Widerstand dar, den der Induktor dem Wechselstrom entgegensetzt, wobei die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist.",
+    "definition": "Kann nicht Komplexe Zahlen berechen. Die Formel beschreibt die Impedanz ZL eines Induktors in einem Wechselstromkreis, wobei j die imaginäre Einheit und XL die Induktive Reaktanz ist; die Induktive Reaktanz XL ist gegeben durch XL=2πfxl=2πfL, wobei ff die Frequenz des Wechselstroms und L die Induktivität des Induktors darstellt. Die Impedanz ZL ist somit rein imaginär und stellt den Widerstand dar, den der Induktor dem Wechselstrom entgegensetzt, wobei die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist.",
     "image": "impetanz.png"
   },
   "4.50 Impedanz der Induktivität": {
     "equation": "zc== -j * 1/((2*Pi*f)*c)  ",
-    "definition": "Die Formel beschreibt die Impedanz ZC eines Kondensators in einem Wechselstromkreis, wobei j die imaginäre Einheit und XC die Kapazitive Reaktanz ist; die Kapazitive Reaktanz XC ist gegeben durch XC=1ωXC, wobei ωω die Kreisfrequenz (ω=2πfω=2πf) und C die Kapazität des Kondensators darstellt. Die Impedanz ZC ist daher ebenfalls rein imaginär und hat einen negativen Vorzeichenwert, was bedeutet, dass die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist. Diese Formel zeigt, wie der Widerstand eines Kondensators gegenüber Wechselstrom von der Frequenz des Stroms und der Kapazität des Kondensators abhängt.",
+    "definition": "Kann nicht Komplexe Zahlen berechen. Die Formel beschreibt die Impedanz ZC eines Kondensators in einem Wechselstromkreis, wobei j die imaginäre Einheit und XC die Kapazitive Reaktanz ist; die Kapazitive Reaktanz XC ist gegeben durch XC=1ωXC, wobei ωω die Kreisfrequenz (ω=2πfω=2πf) und C die Kapazität des Kondensators darstellt. Die Impedanz ZC ist daher ebenfalls rein imaginär und hat einen negativen Vorzeichenwert, was bedeutet, dass die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist. Diese Formel zeigt, wie der Widerstand eines Kondensators gegenüber Wechselstrom von der Frequenz des Stroms und der Kapazität des Kondensators abhängt.",
     "image": "impetanz.png"
   }
 }
