@@ -48,17 +48,21 @@ Hier ist ein Screenshot der Applikation:
 
 ![noclick.png](noclick.png)
 ![click.png](click.png)
+
 - man trägt die werte bei den anderen Variablen ein und clickt auf den Großen calculate Button das Ergebnis erscheint einmal in Result und einmal in Histroy
+
 ![solu.png](solu.png)
 ### Icon der Applikation
-Das folgende Bild zeigt das handgezeichnete Icon der Applikation, welches im "Icon Tray" schnell zu finden ist.
+- Das folgende Bild zeigt das handgezeichnete Icon der Applikation, welches im "Icon Tray" schnell zu finden ist.
 
 ![Applikations-Icon](src/main/resources/com/example/elektrocalc/cat.png)
 
 ### Schaubilder
-Das folgende Bild zeigt eins handgezeichnetes Schau bilder: 
+- alle Bilder sind handgezeichnet in Figma und Krita
+- Das folgende Bild zeigt eins handgezeichnetes Schau bilder: 
 
 ![rui.png](src/main/resources/com/example/elektrocalc/rui.png)
+
 # Erweitern und Modifizieren
 
 ### Formeln oder Einheiten hinzufügen
