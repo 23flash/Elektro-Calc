@@ -167,7 +167,8 @@
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <configuration>
-                            <mainClass>com.example.elektrocalc.Main</mainClass>
+                    <mainClass>com.example.elektrocalc.Main</mainClass>
+                    <executable>/home/anton/.jdks/openjdk-22.0.2/ </executable>
                 </configuration>
                 <executions>
                     <execution>
