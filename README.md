@@ -10,7 +10,7 @@
 - **Java-Version 22** (WICHTIG: Das Programm funktioniert **NICHT** mit älteren Versionen)
 - **IntelliJ IDEA** (Ultimate oder Community Edition)
 - **Internetverbindung** (Einige Abhängigkeiten werden durch Maven aus dem Netz geladen)
-- **Betriebssystem:** Linux-basiert empfohlen, funktioniert aber auch unter Windows
+- **Betriebssystem:** Linux(getestet), Windows (getestet), OSX (nicht getestet) 
 
 ## Installation
 
@@ -27,11 +27,8 @@
   - wenn nicht Java 22 manuell installieren
 
 4. **Projekt ausführen:**
-  - Navigiere in IntelliJ IDEA zu `Main.java`.
+  - Navigiere in IntelliJ IDEA zu `Main.java`. (src/main/java/com/example/elektrocalc/Main.java)
   - Drücke `Umschalt + F10` oder klicke auf das grüne "Play"-Symbol, um das Programm zu starten.
-
-## Ausführen der Applikation
-(Ergänze hier eine Beschreibung, wie die Applikation nach dem Start verwendet wird.)
 
 ## Aufbau der Applikation
 
@@ -47,12 +44,11 @@ Hier ist ein Screenshot der Applikation:
 
 ![combo.png](combo.png)
 - nach dem Auswählen wird das gui angepasst / Formel, Definition, GUI Elemente und Bild erscheinen
-- man wählt nun die zu berechnende Variable aus durch clicken des Radio Buttons
+- man wählt nun die zu berechnende Variable aus durch clicken des Radiobuttons
 
 ![noclick.png](noclick.png)
 ![click.png](click.png)
 - man trägt die werte bei den anderen Variablen ein und clickt auf den Großen calculate Button das Ergebnis erscheint einmal in Result und einmal in Histroy
-
 ![solu.png](solu.png)
 ### Icon der Applikation
 Das folgende Bild zeigt das handgezeichnete Icon der Applikation, welches im "Icon Tray" schnell zu finden ist.
@@ -103,7 +99,7 @@ Die Einheiten und ihre Zuordnung sind in der Datei `units.json` definiert:
 }
 ```
 - Der Key `unit` entspricht den Variablen in den Formeln.
-- Der Key `name` enthält den vollständigen Namen der Einheit.
+- Der Key `name` enthält den vollständigen Namen der Einheit. (Wird nicht genutzt)
 
 ## Programmcode Modifizieren
 - zur Entwicklung [Intellij Idea](https://www.jetbrains.com/idea/download/?section=windows) 
