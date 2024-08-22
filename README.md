@@ -1,11 +1,12 @@
 # Projektübersicht
 
 ## Einleitung
-- Dieses Projekt wurde im Rahmen einer Hausarbeit erstellt. 
-- Ich werde keine Issues Beantworten/Pull requests Akzeptieren  
+- Dieses Projekt wurde im Rahmen einer Hausarbeit erstellt.
 - Es steht unter der MIT License. 
-- Die Aufgabe bestand darin ein Programm zu schreiben, was mit diversen Formeln aus der Vorlesung "Elektrotechische Grundlagen" rechenen kann und nützliche Informationen zu ihnen anzeigt. 
+- Der Code ist auf [Github](https://github.com/23flash/Elektro-Calc) Verfügbar
+- Die Aufgabe bestand darin ein Programm zu schreiben, was mit diversen Formeln aus der Vorlesung "Elektrotechische Grundlagen" rechnen kann und nützliche Informationen zu ihnen anzeigt. 
 - Das Ziel besteht darin gelernte Formeln besser zu verstehen und ein nützliches Tool dabei zu schreiben.
+
 ## Voraussetzungen
 - **Java-Version 22** (WICHTIG: Das Programm funktioniert **NICHT** mit älteren Versionen)
 - **IntelliJ IDEA** (Ultimate oder Community Edition)
@@ -23,8 +24,8 @@
   - Wähle den entpackten Ordner in IntelliJ IDEA als Projektordner aus.
 
 3. **Java-Installation:**
-  - IntelliJ IDEA erkennt und installiert automatisch die erforderliche Java-Version.
-  - wenn nicht Java 22 manuell installieren
+  - IntelliJ IDEA erkennt und installiert automatisch die erforderliche Java-Version und Maven Dependencies.
+  - falls nicht, sicherstellen das die neuste Intellij version installiert ist die das automatisch macht
 
 4. **Projekt ausführen:**
   - Navigiere in IntelliJ IDEA zu `Main.java`. (src/main/java/com/example/elektrocalc/Main.java)
@@ -83,9 +84,10 @@ Hier ist ein Screenshot der Applikation:
 ## Formeln hinzufügen
 - **Formatierung:** Formeln müssen das Gleichheitszeichen `==` verwenden und dürfen maximal 7 Variablen enthalten (aufgrund der Einschränkungen der GUI).
 - **Kleinbuchstaben:** Alle Formelzeichen müssen in Kleinbuchstaben geschrieben werden, da die Symja-Bibliothek reservierte Zeichen enthält, die nicht gefiltert werden können. Dies sorgt für Einheitlichkeit.
-- **Erlaubte Funktionen:** Du kannst `pi`, `sqrt`, `tan`, `cos`, `arctan` etc. verwenden.
+- **Erlaubte Funktionen:** Man kann `pi`, `sqrt`, `tan`, `cos`, `arctan` etc. verwenden.
 - **Definitionen:** Definitionen müssen ein durchgehender, langer String sein.
-- **Bild:** Das Bild muss im Verzeichnis `com.example.elektrocalc` liegen und der Bildname muss vollständig und korrekt angegeben werden.
+- **Bild:** Das Bild muss im Verzeichnis `com.example.elektrocalc` liegen und der Bildname muss vollständig und korrekt angegeben werden. 
+  - Platz halter Bild: `cat.png`
 
 ## Einheiten und deren Zugehörigkeit
 
@@ -109,6 +111,7 @@ Die Einheiten und ihre Zuordnung sind in der Datei `units.json` definiert:
 ## Programmcode Modifizieren
 - zur Entwicklung [Intellij Idea](https://www.jetbrains.com/idea/download/?section=windows) 
 - zur GUI Entwicklung [Scenebuilder](https://gluonhq.com/products/scene-builder/) mit dem die `app.fxml` modifiziert wird
+
 ### Klassen Struktur
   Alle Klassen sind im Code Kommentiert
 - **Main**: Ist der Entry Point und enthält Einstellungen für die Application wie was für ein Icon es hat
@@ -127,5 +130,6 @@ Die Applikation nutzt die folgenden Abhängigkeiten, die in der `pom.xml` aufgel
 - **io.github.mkpaz (atlantafx-base)**: Für fertige Themes der App.
 - **org.openjfx (JavaFX)**: Für alle GUI-Elemente. 
   - das Layout **javafx-fxml**
+
 
 
