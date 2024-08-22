@@ -90,12 +90,12 @@
     "image": "Resonanzfrequenz.png"
   },
   "4.49 Impedanz der Induktivität": {
-    "equation": "Z_L == j * (2 * Pi * f * L)",
+    "equation": "z_l == j * (2 * Pi * f * L)",
     "definition": "Die Formel beschreibt die Impedanz Z_L eines Induktors in einem Wechselstromkreis, wobei j die imaginäre Einheit und X_L die Induktive Reaktanz ist; die Induktive Reaktanz X_L ist gegeben durch X_L = 2πfL, wobei f die Frequenz des Wechselstroms und L die Induktivität des Induktors darstellt. Die Impedanz Z_L ist somit rein imaginär und stellt den Widerstand dar, den der Induktor dem Wechselstrom entgegensetzt. Die Phase des Stroms ist um 90 Grad gegenüber der Spannung verschoben. Beispiel: In einem Hochfrequenzfilter wird die Impedanz des Induktors verwendet, um bestimmte Frequenzen herauszufiltern und die Signalqualität zu optimieren.",
     "image": "impedanz.png"
   },
   "4.50 Impedanz der Kapazität": {
-    "equation": "Z_C == -j * (1 / (2 * Pi * f * C))",
+    "equation": "t_c == -j * (1 / (2 * Pi * f * C))",
     "definition": "Die Formel beschreibt die Impedanz Z_C eines Kondensators in einem Wechselstromkreis, wobei j die imaginäre Einheit und X_C die Kapazitive Reaktanz ist; die Kapazitive Reaktanz X_C ist gegeben durch X_C = 1 / (2πfC), wobei f die Frequenz des Wechselstroms und C die Kapazität des Kondensators darstellt. Die Impedanz Z_C ist ebenfalls rein imaginär und hat einen negativen Vorzeichenwert, was bedeutet, dass die Phase des Stroms um 90 Grad gegenüber der Spannung verschoben ist. Diese Formel zeigt, wie der Widerstand eines Kondensators gegenüber Wechselstrom von der Frequenz des Stroms und der Kapazität des Kondensators abhängt. Beispiel: In einem AC-Filter wird die Impedanz des Kondensators verwendet, um Frequenzen zu blockieren oder durchzulassen, abhängig von der Frequenz des Wechselstroms.",
     "image": "impedanz.png"
   }
